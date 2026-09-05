@@ -1033,14 +1033,28 @@ const MODAL_CONTENT = {
         function openNumberModal() {
             modalTitle.textContent = "طلب رقم جديد"; selectedNumberType = 'من اختياركم';
             const govOptions = governorates.map(g => `<option value="${g}">${g}</option>`).join('');
+            
             modalBody.innerHTML = `
                 <div class="number-modal-content">
                     <p>اختار إزاي عايز رقمك يوصلك، وسيب بياناتك وهنتواصل معاك.</p>
                     
+                    <!-- تنبيه البطاقة -->
                     <div class="id-card-notice">
                         <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
                         <div class="id-card-notice-text">
                             <strong>تنبيه مهم:</strong> عشان نقدر نفعل الخط، هتحتاج تبعت <strong>صورة بطاقة الرقم القومي</strong> على الواتساب بعد ما تسيب بياناتك. بدونه مش هنقدر نكمل التفعيل.
+                        </div>
+                    </div>
+
+                    <!-- التنبيه الجديد اللي طلبته -->
+                    <div style="
+                        display: flex; align-items: flex-start; gap: 12px;
+                        background: rgba(46, 204, 113, 0.1); border: 1px solid rgba(46, 204, 113, 0.25);
+                        border-radius: 12px; padding: 14px 16px; margin-bottom: 20px;
+                    ">
+                        <svg viewBox="0 0 24 24" width="22" height="22" stroke="#2ecc71" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        <div style="font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6;">
+                            <strong style="color: #2ecc71; font-weight: 700;">ملحوظة هامة:</strong> الخط لما تشتريه بيبقى عليه <strong>2800 وحدة مجاناً</strong> بينزلوا على الخط كل أول شهر تقدر تستخدمهم نت ومكالمات.
                         </div>
                     </div>
 
@@ -1065,14 +1079,35 @@ const MODAL_CONTENT = {
                 </form>`;
             modalOverlay.classList.add('active'); document.body.classList.add('modal-open');
         }
-
         // ===== TEAM MODAL WITH PRICE =====
         function openTeamModal() {
             modalTitle.textContent = "طلب فريق عمل (خطين)";
             const govOptions = governorates.map(g=>`<option value="${g}">${g}</option>`).join('');
+            
             modalBody.innerHTML = `
                 <div class="team-modal-content">
                     <p>عشان تفعل ميزة المكالمات المجانية، هتحتاج تطلب خطين.</p>
+                    
+                    <!-- تنبيه البطاقة -->
+                    <div class="id-card-notice">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                        <div class="id-card-notice-text">
+                            <strong>تنبيه مهم:</strong> عشان نقدر نفعل الخطين، هتحتاج تبعت <strong>صورة بطاقة الرقم القومي</strong> على الواتساب بعد ما تسيب بياناتك. بدونه مش هنقدر نكمل التفعيل.
+                        </div>
+                    </div>
+
+                    <!-- تنبيه الهدية -->
+                    <div style="
+                        display: flex; align-items: flex-start; gap: 12px;
+                        background: rgba(46, 204, 113, 0.1); border: 1px solid rgba(46, 204, 113, 0.25);
+                        border-radius: 12px; padding: 14px 16px; margin-bottom: 20px;
+                    ">
+                        <svg viewBox="0 0 24 24" width="22" height="22" stroke="#2ecc71" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        <div style="font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6;">
+                            <strong style="color: #2ecc71; font-weight: 700;">ملحوظة هامة:</strong> كل خط هيكون عليه <strong>2800 وحدة مجاناً</strong> بينزلوا على الخط كل أول شهر تقدر تستخدمهم نت ومكالمات.
+                        </div>
+                    </div>
+
                     <ul>
                         <li>خط ليك وخط لصاحبك</li>
                         <li>مكالمات بينكم ببلاش</li>
@@ -1094,7 +1129,6 @@ const MODAL_CONTENT = {
                 </form>`;
             modalOverlay.classList.add('active'); document.body.classList.add('modal-open');
         }
-
         // ===== ⭐ FORM HANDLERS (CLEANED) =====
         function selectNumberType(el, type) {
             document.querySelectorAll('.number-type-option').forEach(o => o.classList.remove('selected'));
