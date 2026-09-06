@@ -1068,8 +1068,8 @@ const MODAL_CONTENT = {
                 <div class="order-summary" style="margin-top:20px; margin-bottom:20px;">
                     <div class="order-row total" style="border:none; padding:0; margin:0; justify-content:center; text-align:center;">
                         <span style="color:#fff;">سعر الخط:</span>
-                        <span style="font-size:1.3rem;">200 جنيه</span>
-                    </div>
+                        <span style="font-size:1.3rem;">250 جنيه</span>
+						</div>
                 </div>
 
                 <form onsubmit="handleNumberSubmit(event)">
@@ -1118,8 +1118,8 @@ const MODAL_CONTENT = {
                 <div class="order-summary" style="margin-top:20px; margin-bottom:20px;">
                     <div class="order-row total" style="border:none; padding:0; margin:0; justify-content:center; text-align:center;">
                         <span style="color:#fff;">سعر الخطين:</span>
-                        <span style="font-size:1.3rem;">380 جنيه</span>
-                    </div>
+                        <span style="font-size:1.3rem;">400 جنيه</span>
+						</div>
                 </div>
 
                 <form onsubmit="handleTeamSubmit(event)">
@@ -1150,7 +1150,7 @@ const MODAL_CONTENT = {
 
             if (!v) return;
 
-            const waUrl = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(`مرحبًا، أريد طلب رقم جديد.\n\nالاسم: ${name.value}\nالمحافظة: ${gov.value}\nطريقة الاختيار: ${selectedNumberType}\nسعر الخط: 200 جنيه`)}`;
+            const waUrl = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(`مرحبًا، أريد طلب رقم جديد.\n\nالاسم: ${name.value}\nالمحافظة: ${gov.value}\nطريقة الاختيار: ${selectedNumberType}\nسعر الخط: 250 جنيه`)}`;
 
             const tempLink = document.createElement('a');
             tempLink.href = waUrl;
