@@ -196,8 +196,53 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .pkg-new-price { font-size: 2.2rem; font-weight: 800; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 5px; }
 .pkg-new-price small { font-size: 1rem; font-weight: 600; }
 .pkg-save { display: inline-block; background: rgba(16, 185, 129, 0.1); color: #34d399; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.2); }
+.pkg-actions { display: grid; gap: 9px; margin-top: auto; }
+.pkg-compare-btn { width: 100%; min-height: 42px; padding: 9px 12px; border: 1px solid var(--border-subtle); border-radius: 11px; background: transparent; color: var(--text-muted); font: 700 0.82rem var(--font); cursor: pointer; transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease; }
+.pkg-compare-btn:hover, .pkg-compare-btn[aria-pressed="true"] { border-color: var(--accent-line); background: color-mix(in srgb,var(--accent-primary) 10%,transparent); color: var(--accent-gold); }
+.pkg-compare-btn:focus-visible, .compare-dock button:focus-visible, .compare-order:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
+.pkg-compare-btn:disabled { opacity: 0.45; cursor: not-allowed; }
 .pkg-btn { width: 100%; margin-top: auto; padding: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); color: #fff; border-radius: 12px; font-weight: 700; cursor: pointer; transition: 0.3s; font-family: var(--font); font-size: 1rem; }
 .pkg-btn:hover { background: var(--gradient-main); border-color: transparent; box-shadow: 0 10px 25px rgba(37,99,235,0.3); }
+.pkg-actions .pkg-btn { margin-top: 0; }
+.compare-dock { position: fixed; z-index: 998; left: 50%; right: auto; bottom: 22px; width: min(520px,calc(100vw - 116px)); display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 11px 13px 11px 16px; border: 1px solid var(--accent-line); border-radius: 18px; background: color-mix(in srgb,var(--modal-bg) 94%,transparent); box-shadow: 0 14px 42px rgba(0,0,0,0.35); backdrop-filter: blur(16px); opacity: 0; visibility: hidden; transform: translate(-50%,16px); transition: opacity 0.22s ease, visibility 0.22s ease, transform 0.22s ease; }
+.compare-dock.is-visible { opacity: 1; visibility: visible; transform: translate(-50%,0); }
+.compare-dock-copy { min-width: 0; }
+.compare-dock-copy strong, .compare-dock-copy span { display: block; }
+.compare-dock-copy strong { color: var(--text-primary); font-size: 0.84rem; font-weight: 800; }
+.compare-dock-copy span { color: var(--text-muted); font-size: 0.7rem; }
+.compare-dock-actions { display: flex; flex: 0 0 auto; align-items: center; gap: 7px; }
+.compare-dock button { min-height: 38px; padding: 8px 12px; border: 1px solid var(--border-subtle); border-radius: 10px; background: transparent; color: var(--text-primary); font: 700 0.76rem var(--font); cursor: pointer; }
+.compare-dock .compare-open { border-color: transparent; background: var(--gradient-main); color: #fff; }
+.compare-dock .compare-open:disabled { opacity: 0.45; cursor: not-allowed; }
+body.compare-active .back-to-top { bottom: 96px; }
+.compare-table-wrap { overflow-x: auto; margin: 0 -4px; }
+.compare-table { width: 100%; min-width: 390px; border-collapse: collapse; text-align: center; }
+.compare-table th, .compare-table td { padding: 13px 10px; border-bottom: 1px solid var(--border-subtle); }
+.compare-table thead th { color: var(--text-primary); font-size: 0.88rem; }
+.compare-table thead th:first-child, .compare-table tbody th { color: var(--text-muted); text-align: start; }
+.compare-table tbody td { color: var(--text-primary); font-size: 0.9rem; font-weight: 700; }
+.compare-table .compare-saving { color: #34d399; }
+.compare-rate-label { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.compare-details-toggle { padding: 4px 9px; border: 1px solid var(--accent-line); border-radius: 8px; background: color-mix(in srgb,var(--accent-primary) 9%,transparent); color: var(--accent-gold); font: 700 0.7rem var(--font); cursor: pointer; }
+.compare-details-toggle:hover { background: color-mix(in srgb,var(--accent-primary) 18%,transparent); }
+.compare-details-toggle:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
+.compare-calculations { display: grid; gap: 12px; margin-top: 16px; }
+.compare-calculations[hidden] { display: none; }
+.compare-calculation { padding: 14px 16px; border: 1px solid var(--border-subtle); border-radius: 14px; background: color-mix(in srgb,var(--accent-primary) 5%,var(--surface-glass)); }
+.compare-calculation h4 { margin-bottom: 8px; color: var(--text-primary); font-size: 0.92rem; }
+.compare-calculation p { margin: 5px 0; color: var(--text-muted); font-size: 0.82rem; line-height: 1.7; }
+.compare-calculation strong { color: var(--accent-gold); font-variant-numeric: tabular-nums; }
+.compare-calculation-note { margin-top: 12px; color: var(--text-muted); font-size: 0.75rem; line-height: 1.7; }
+.contact-note { margin-top: 18px; padding: 12px 14px; border: 1px solid var(--border-subtle); border-radius: 12px; color: var(--text-muted); font-size: 0.8rem; line-height: 1.7; text-align: center; }
+.compare-order { width: 100%; min-height: 42px; padding: 8px; border: 1px solid var(--accent-line); border-radius: 10px; background: color-mix(in srgb,var(--accent-primary) 12%,transparent); color: var(--text-primary); font: 700 0.78rem var(--font); cursor: pointer; }
+@media (max-width: 480px) {
+    .compare-dock { bottom: 12px; width: calc(100vw - 24px); padding: 9px 10px; gap: 8px; }
+    body.compare-active .back-to-top { bottom: 82px; }
+    .compare-dock-copy strong { font-size: 0.76rem; }
+    .compare-dock-copy span { font-size: 0.65rem; }
+    .compare-dock-actions { gap: 5px; }
+    .compare-dock button { padding: 7px 9px; font-size: 0.7rem; }
+}
 
 /* TEAM SECTION */
 .team-section { padding: 80px 0; overflow: hidden; }
@@ -399,6 +444,13 @@ header.scrolled { backdrop-filter: none; background: rgba(0,0,0,0.95); }
 .dev-links { grid-template-columns: 1fr; }
 .contact-people { grid-template-columns: 1fr; }
 }
+@media (max-width: 360px) {
+.nav-actions { gap: 6px; }
+.nav-actions .theme-toggle,
+.nav-actions .customizer-toggle { width: 44px; min-width: 44px; padding-inline: 0; }
+.nav-actions .theme-toggle span,
+.nav-actions .customizer-toggle span { display: none; }
+}
 @media (prefers-reduced-motion: reduce) {
 .dev-modal { animation: none; }
 .modal-overlay.developer-modal-active, .modal-overlay.developer-modal-active .modal-panel { transition: none; }
@@ -409,6 +461,7 @@ body header, body section, body footer { transition: none; }
 
 :root { --text-primary: #f8fafc; --text-muted: rgba(255,255,255,0.68); }
 .theme-toggle { min-width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 0 12px; border: 1px solid var(--border-subtle); border-radius: 13px; background: var(--surface-glass); color: var(--text-primary); font: 700 0.82rem var(--font); cursor: pointer; transition: 0.25s ease; }
+.nav-actions { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
 .theme-toggle:hover { border-color: var(--accent-gold); transform: translateY(-1px); }
 .theme-toggle svg { width: 19px; height: 19px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .theme-toggle .moon-icon { display: none; }
@@ -423,7 +476,7 @@ body[data-theme="light"] .theme-toggle .moon-icon { display: block; }
 .customizer-toggle:hover,
 .site-customizer[open] .customizer-toggle { border-color: var(--accent-gold); }
 .customizer-toggle svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.customizer-panel { position: absolute; z-index: 1100; top: calc(100% + 12px); inset-inline-end: 0; width: 292px; padding: 0; overflow: hidden; border: 1px solid var(--border-subtle); border-radius: 20px; background: var(--modal-bg); box-shadow: 0 24px 64px rgba(0,0,0,0.25); transform-origin: top right; animation: customizerIn 0.24s var(--ease-out) both; }
+.customizer-panel { position: absolute; z-index: 1100; top: calc(100% + 12px); inset-inline-end: 0; width: 292px; max-height: calc(100vh - 90px); padding: 0; overflow-y: auto; border: 1px solid var(--border-subtle); border-radius: 20px; background: var(--modal-bg); box-shadow: 0 24px 64px rgba(0,0,0,0.25); transform-origin: top right; animation: customizerIn 0.24s var(--ease-out) both; }
 @keyframes customizerIn { from { opacity: 0; transform: translateY(-7px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
 .customizer-heading { padding: 16px 18px 13px; background: linear-gradient(135deg,color-mix(in srgb,var(--accent-primary) 15%,transparent),transparent); border-bottom: 1px solid var(--border-subtle); }
 .customizer-heading strong { display: block; color: var(--text-primary); font-size: 0.92rem; font-weight: 900; }
@@ -434,6 +487,22 @@ body[data-theme="light"] .theme-toggle .moon-icon { display: block; }
 .customizer-field select { width: 100%; min-height: 42px; padding: 8px 12px; border: 1px solid var(--border-subtle); border-radius: 11px; background: var(--surface-glass); color: var(--text-primary); font: 600 0.82rem var(--font); cursor: pointer; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
 .customizer-field select:focus { border-color: var(--accent-primary); box-shadow: 0 0 0 3px color-mix(in srgb,var(--accent-primary) 17%,transparent); outline: none; }
 .customizer-field select option { background: var(--modal-bg); color: var(--text-primary); }
+.font-size-controls { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 5px; border: 1px solid var(--border-subtle); border-radius: 13px; background: var(--surface-glass); }
+.font-size-button { width: 38px; height: 38px; display: inline-grid; place-items: center; border: 1px solid var(--border-subtle); border-radius: 10px; background: color-mix(in srgb,var(--accent-primary) 10%,transparent); color: var(--text-primary); font: 800 1.25rem var(--font); cursor: pointer; transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
+.font-size-button:hover:not(:disabled) { border-color: var(--accent-primary); background: color-mix(in srgb,var(--accent-primary) 18%,transparent); transform: translateY(-1px); }
+.font-size-button:focus-visible, .back-to-top:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 3px; }
+.font-size-button:disabled { opacity: 0.4; cursor: not-allowed; }
+.font-size-value { min-width: 54px; color: var(--text-primary); font-size: 0.82rem; font-weight: 800; text-align: center; font-variant-numeric: tabular-nums; }
+.reading-progress { position: fixed; z-index: 1002; inset: 0 0 auto; height: 3px; background: rgba(255,255,255,0.08); pointer-events: none; }
+.reading-progress span { display: block; width: 100%; height: 100%; background: var(--gradient-gold); transform: scaleX(0); transform-origin: right center; transition: transform 0.12s linear; }
+.back-to-top { position: fixed; z-index: 999; inset-inline-start: 24px; bottom: 24px; width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid var(--accent-line); border-radius: 50%; background: color-mix(in srgb,var(--modal-bg) 88%,transparent); color: var(--text-primary); box-shadow: 0 8px 24px rgba(0,0,0,0.25); cursor: pointer; opacity: 0; visibility: hidden; transform: translateY(10px); transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.2s ease; }
+.back-to-top.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { background: var(--accent-primary); }
+.back-to-top svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 480px) {
+    .customizer-panel { width: min(292px, calc(100vw - 24px)); }
+    .back-to-top { inset-inline-start: 16px; bottom: 16px; width: 44px; height: 44px; }
+}
 .accent-options { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 8px; }
 .accent-option { display: grid; justify-items: center; gap: 5px; min-width: 0; padding: 7px 3px; border: 1px solid transparent; border-radius: 11px; background: transparent; color: var(--text-muted); font: 600 0.65rem var(--font); cursor: pointer; transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease; }
 .accent-option:hover { background: color-mix(in srgb,var(--accent-primary) 8%,transparent); color: var(--text-primary); transform: translateY(-1px); }
@@ -493,11 +562,9 @@ body[data-theme="light"] .nav-links a:focus-visible { color: var(--accent-deep);
     .accent-swatch { transition: none; }
 }
 @media (max-width: 768px) {
-    .site-customizer { order: 3; }
     .customizer-toggle { width: 44px; padding: 0; }
     .customizer-toggle span { display: none; }
     .customizer-panel { position: fixed; top: 76px; inset-inline-end: 16px; width: min(292px,calc(100vw - 32px)); }
-    .hamburger { order: 4; }
 }
 body[data-theme="light"] {
     --bg-deep: #f4f7fb;
@@ -584,7 +651,7 @@ body[data-theme="light"] .id-card-notice-text { color: #475569; }
 body[data-theme="light"] .id-card-notice-text strong { color: #a16207; }
 body[data-theme="light"] .modal-content [style*="color: rgba(255,255,255"] { color: #475569 !important; }
 @media (max-width: 768px) {
-    .theme-toggle { order: 2; margin-inline-start: auto; margin-inline-end: 10px; }
+    .nav-actions .theme-toggle { order: 0; margin: 0; }
     .hamburger { order: 3; }
     body[data-theme="light"] .nav-links { background: rgba(248,250,252,0.98); }
     body[data-theme="light"] .nav-links a { color: #334155; background: rgba(15,23,42,0.035); border-color: rgba(15,23,42,0.07); }
@@ -822,6 +889,21 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
 </head>
 <body class="page-loading">
 
+<div class="reading-progress" role="progressbar" aria-label="تقدم القراءة" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="readingProgressBar"></span></div>
+<button class="back-to-top" id="backToTop" type="button" aria-label="العودة إلى أعلى الصفحة" title="العودة إلى أعلى الصفحة">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m18 15-6-6-6 6"/><path d="M12 9v12"/></svg>
+</button>
+<aside class="compare-dock" id="compareDock" aria-live="polite" aria-label="مقارنة الباقات">
+    <div class="compare-dock-copy">
+        <strong id="compareCount">0 من 2 باقة</strong>
+        <span id="compareHint">اختار باقتين من نفس النوع للمقارنة</span>
+    </div>
+    <div class="compare-dock-actions">
+        <button type="button" id="clearCompare">مسح</button>
+        <button class="compare-open" type="button" id="openCompare" disabled>قارن الآن</button>
+    </div>
+</aside>
+
 <!-- PRELOADER -->
 <div id="preloader">
     <div class="loader-logo"><img src="https://hapijournal.com/wp-content/uploads/2024/07/5-1.jpg" alt=""></div>
@@ -863,51 +945,61 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
                 <li><a href="#packages" data-section="packages"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>الباقات</a></li>
                 <li><a href="#team" data-section="team"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>فريق العمل</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" type="button" aria-label="تفعيل الوضع النهاري" title="تفعيل الوضع النهاري">
-                <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
-                <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>
-                <span>المظهر</span>
-            </button>
-            <details class="site-customizer" id="siteCustomizer">
-                <summary class="customizer-toggle" aria-label="تخصيص الموقع" title="تخصيص الموقع">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42m-9.88 9.88-1.42 1.42"/><circle cx="12" cy="12" r="4"/></svg>
-                    <span>تخصيص</span>
-                </summary>
-                <div class="customizer-panel">
-                    <div class="customizer-heading">
-                        <strong>خلّي الموقع على ذوقك</strong>
-                        <span>اختار الخط واللون اللي يريحك</span>
-                    </div>
-                    <div class="customizer-options">
-                        <div class="customizer-field">
-                            <label for="fontSelect">خط الموقع</label>
-                            <select id="fontSelect">
-                                <option value="Cairo">القاهرة — Cairo</option>
-                                <option value="Tajawal">تجوال — Tajawal</option>
-                                <option value="Almarai">المراعي — Almarai</option>
-                                <option value="Alexandria">الإسكندرية — Alexandria</option>
-                                <option value="Changa">تشانجا — Changa</option>
-                                <option value="IBMPlexSansArabic">آي بي إم بليكس — IBM Plex Arabic</option>
-                                <option value="Mada">مدى — Mada</option>
-                                <option value="NotoSansArabic">نوتو عربي — Noto Sans Arabic</option>
-                                <option value="Rubik">روبيك — Rubik</option>
-                            </select>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="تفعيل الوضع النهاري" title="تفعيل الوضع النهاري">
+                    <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>
+                    <span>المظهر</span>
+                </button>
+                <details class="site-customizer" id="siteCustomizer">
+                    <summary class="customizer-toggle" aria-label="تخصيص الموقع" title="تخصيص الموقع">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42m-9.88 9.88-1.42 1.42"/><circle cx="12" cy="12" r="4"/></svg>
+                        <span>تخصيص</span>
+                    </summary>
+                    <div class="customizer-panel">
+                        <div class="customizer-heading">
+                            <strong>خلّي الموقع على ذوقك</strong>
+                            <span>اختار الخط والحجم واللون اللي يريحك</span>
                         </div>
-                        <div class="customizer-field">
-                            <label id="accentLabel">لون الموقع</label>
-                            <div class="accent-options" id="accentOptions" role="group" aria-labelledby="accentLabel">
-                                <button class="accent-option" type="button" data-accent="blue" aria-label="أزرق" title="أزرق"><span class="accent-swatch" style="--swatch:#3b82f6"></span><span>أزرق</span></button>
-                                <button class="accent-option" type="button" data-accent="teal" aria-label="تركواز" title="تركواز"><span class="accent-swatch" style="--swatch:#0f9f91"></span><span>تركواز</span></button>
-                                <button class="accent-option" type="button" data-accent="purple" aria-label="بنفسجي" title="بنفسجي"><span class="accent-swatch" style="--swatch:#8b5cf6"></span><span>بنفسجي</span></button>
-                                <button class="accent-option" type="button" data-accent="rose" aria-label="أحمر" title="أحمر"><span class="accent-swatch" style="--swatch:#e60000"></span><span>أحمر</span></button>
-                                <button class="accent-option" type="button" data-accent="amber" aria-label="عنبر" title="عنبر"><span class="accent-swatch" style="--swatch:#d97706"></span><span>عنبر</span></button>
-                                <button class="accent-option" type="button" data-accent="green" aria-label="أخضر" title="أخضر"><span class="accent-swatch" style="--swatch:#16a34a"></span><span>أخضر</span></button>
-                                <button class="accent-option" type="button" data-accent="cyan" aria-label="سماوي" title="سماوي"><span class="accent-swatch" style="--swatch:#0891b2"></span><span>سماوي</span></button>
+                        <div class="customizer-options">
+                            <div class="customizer-field">
+                                <label id="fontSizeLabel">حجم خط الموقع</label>
+                                <div class="font-size-controls" role="group" aria-labelledby="fontSizeLabel">
+                                    <button class="font-size-button" id="decreaseFontSize" type="button" aria-label="تصغير خط الموقع" title="تصغير الخط">−</button>
+                                    <output class="font-size-value" id="fontSizeValue" aria-live="polite">100%</output>
+                                    <button class="font-size-button" id="increaseFontSize" type="button" aria-label="تكبير خط الموقع" title="تكبير الخط">+</button>
+                                </div>
+                            </div>
+                            <div class="customizer-field">
+                                <label for="fontSelect">خط الموقع</label>
+                                <select id="fontSelect">
+                                    <option value="Cairo">القاهرة — Cairo</option>
+                                    <option value="Tajawal">تجوال — Tajawal</option>
+                                    <option value="Almarai">المراعي — Almarai</option>
+                                    <option value="Alexandria">الإسكندرية — Alexandria</option>
+                                    <option value="Changa">تشانجا — Changa</option>
+                                    <option value="IBMPlexSansArabic">آي بي إم بليكس — IBM Plex Arabic</option>
+                                    <option value="Mada">مدى — Mada</option>
+                                    <option value="NotoSansArabic">نوتو عربي — Noto Sans Arabic</option>
+                                    <option value="Rubik">روبيك — Rubik</option>
+                                </select>
+                            </div>
+                            <div class="customizer-field">
+                                <label id="accentLabel">لون الموقع</label>
+                                <div class="accent-options" id="accentOptions" role="group" aria-labelledby="accentLabel">
+                                    <button class="accent-option" type="button" data-accent="blue" aria-label="أزرق" title="أزرق"><span class="accent-swatch" style="--swatch:#3b82f6"></span><span>أزرق</span></button>
+                                    <button class="accent-option" type="button" data-accent="teal" aria-label="تركواز" title="تركواز"><span class="accent-swatch" style="--swatch:#0f9f91"></span><span>تركواز</span></button>
+                                    <button class="accent-option" type="button" data-accent="purple" aria-label="بنفسجي" title="بنفسجي"><span class="accent-swatch" style="--swatch:#8b5cf6"></span><span>بنفسجي</span></button>
+                                    <button class="accent-option" type="button" data-accent="rose" aria-label="أحمر" title="أحمر"><span class="accent-swatch" style="--swatch:#e60000"></span><span>أحمر</span></button>
+                                    <button class="accent-option" type="button" data-accent="amber" aria-label="عنبر" title="عنبر"><span class="accent-swatch" style="--swatch:#d97706"></span><span>عنبر</span></button>
+                                    <button class="accent-option" type="button" data-accent="green" aria-label="أخضر" title="أخضر"><span class="accent-swatch" style="--swatch:#16a34a"></span><span>أخضر</span></button>
+                                    <button class="accent-option" type="button" data-accent="cyan" aria-label="سماوي" title="سماوي"><span class="accent-swatch" style="--swatch:#0891b2"></span><span>سماوي</span></button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </details>
+                </details>
+            </div>
             <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         </nav>
     </div>
@@ -977,8 +1069,8 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
             <h2 class="section-title">اختار الباقة اللي تناسبك</h2>
         </div>
         <div class="packages-tabs fade-up">
-            <button class="tab-btn active" onclick="switchTab('units')">باقات الوحدات</button>
-            <button class="tab-btn" onclick="switchTab('mega')">باقات الميجا</button>
+            <button class="tab-btn active" onclick="switchTab('units', this)">باقات الوحدات</button>
+            <button class="tab-btn" onclick="switchTab('mega', this)">باقات الميجا</button>
         </div>
         <div class="packages-grid" id="packagesGrid"></div>
     </div>
@@ -1053,8 +1145,37 @@ const CONFIG = { WHATSAPP_NUMBER: "201100097958" };
 const THEME_STORAGE_KEY = 'etisalat-theme';
 const FONT_STORAGE_KEY = 'khatak-font';
 const ACCENT_STORAGE_KEY = 'etisalat-accent';
+const FONT_SIZE_STORAGE_KEY = 'etisalat-font-size';
+const FONT_SIZE_MIN = 85;
+const FONT_SIZE_MAX = 125;
+const FONT_SIZE_STEP = 5;
 const themeToggle = document.getElementById('themeToggle');
 const fontSelect = document.getElementById('fontSelect');
+const fontSizeValue = document.getElementById('fontSizeValue');
+const decreaseFontSize = document.getElementById('decreaseFontSize');
+const increaseFontSize = document.getElementById('increaseFontSize');
+
+function applyFontSize(size) {
+    const normalizedSize = Math.round(size / FONT_SIZE_STEP) * FONT_SIZE_STEP;
+    const boundedSize = Math.min(FONT_SIZE_MAX, Math.max(FONT_SIZE_MIN, normalizedSize));
+    document.documentElement.style.fontSize = `${boundedSize}%`;
+    fontSizeValue.value = `${boundedSize}%`;
+    fontSizeValue.textContent = `${boundedSize}%`;
+    decreaseFontSize.disabled = boundedSize === FONT_SIZE_MIN;
+    increaseFontSize.disabled = boundedSize === FONT_SIZE_MAX;
+    return boundedSize;
+}
+
+const savedFontSize = Number(localStorage.getItem(FONT_SIZE_STORAGE_KEY));
+let currentFontSize = applyFontSize(Number.isFinite(savedFontSize) && savedFontSize > 0 ? savedFontSize : 100);
+decreaseFontSize.addEventListener('click', () => {
+    currentFontSize = applyFontSize(currentFontSize - FONT_SIZE_STEP);
+    localStorage.setItem(FONT_SIZE_STORAGE_KEY, String(currentFontSize));
+});
+increaseFontSize.addEventListener('click', () => {
+    currentFontSize = applyFontSize(currentFontSize + FONT_SIZE_STEP);
+    localStorage.setItem(FONT_SIZE_STORAGE_KEY, String(currentFontSize));
+});
 
 function applyTheme(theme) {
     document.body.dataset.theme = theme;
@@ -1146,77 +1267,75 @@ const governorates = ["القاهرة","الجيزة","الإسكندرية","ا
 
 let currentSelectedPlan = null;
 let selectedNumberType = 'من اختياركم';
+let plansForComparison = [];
 
 // ===== MODAL CONTENT DATABASE =====
 const MODAL_CONTENT = {
     about: {
         title: "عن الموقع",
         html: `<div class="modal-content">
-            <h4>بنسهّل عليك اختيارك</h4>
-            <p>إحنا منصة مستقلة بتجمعلك الخطوط والباقات والعروض في مكان واحد، عشان تقدر تعرف التفاصيل والأسعار وتختار اللي يناسب احتياجاتك بكل سهولة ومن غير تعقيد.</p>
-            <h4>ليه تختارنا؟</h4>
+            <h4>منصة مستقلة لعرض الخيارات</h4>
+            <p>الموقع بيعرض معلومات الخطوط والباقات الموجودة على صفحاته، عشان تراجع السعة والسعر قبل ما تبعت طلبك. الموقع مش تابع رسميًا لشركة اتصالات، ومش هو مقدم خدمة الاتصالات أو جهة تفعيل الخط.</p>
+            <h4>إيه اللي تقدر تعمله هنا؟</h4>
             <ul>
-                <li><strong>أسعار وعروض مميزة</strong> — بنوفرلك اختيارات بأسعار مناسبة ومنافسة.</li>
-                <li><strong>كل التفاصيل قدامك</strong> — تعرف وحدات الباقة ومميزاتها وسعرها قبل ما تطلب.</li>
-                <li><strong>اختيار أسهل وأسرع</strong> — قارن بين الباقات واختار الأنسب ليك في ثواني.</li>
-                <li><strong>طلب مباشر وسهل</strong> — اطلب الخط أو الباقة من خلال خطوات بسيطة.</li>
-                <li><strong>عروض متجددة</strong> — بنحرص على تحديث الباقات والعروض بشكل مستمر.</li>
-                <li><strong>خدمة ودعم</strong> — لو محتاج مساعدة، إحنا موجودين عشان نساعدك وتوصل للاختيار المناسب.</li>
+                <li>مراجعة باقات الوحدات وباقات الميجا والأسعار المعروضة.</li>
+                <li>مقارنة باقتين من النوع نفسه حسب السعة والسعر والتوفير المحسوب.</li>
+                <li>إرسال طلب خط أو باقة إلى واتساب لمراجعة التفاصيل والتوفر.</li>
             </ul>
-            <span class="last-updated">آخر تحديث: سبتمبر 2026</span>
+            <p>السعر والتوفر النهائيان يتأكدان عند التواصل قبل إتمام الطلب. أي تفعيل أو خدمة على الخط تخضع لشروط شركة الاتصالات المعنية.</p>
         </div>`
     },
     terms: {
         title: "شروط الاستخدام",
         html: `<div class="modal-content">
-            <h4>١. القبول بالشروط</h4>
-            <p>باستخدامك للمنصة، فإنك توافق على هذه الشروط والأحكام. لو مش موافق، يرجى عدم استخدام الموقع.</p>
-            <h4>٢. طبيعة الخدمة</h4>
+            <h4>١. طبيعة الموقع</h4>
+            <p>الموقع منصة مستقلة لعرض معلومات الخطوط والباقات، وليس موقعًا رسميًا لشركة اتصالات ولا ينفذ تفعيل الشبكة بنفسه.</p>
+            <h4>٢. الأسعار والتوفر</h4>
             <ul>
-                <li>المنصة وسيط لعرض العروض وليست شركة اتصالات رسمية</li>
-                <li>الأسعار والعروض قابلة للتغيير وهتعرف بالتحديثات من خلال جروب الواتساب</li>
+                <li>الأسعار والسعات الظاهرة تخص الخيارات المعروضة على الموقع وقت التصفح، ويلزم تأكيد السعر والتوفر قبل إتمام الطلب.</li>
+                <li>السعر المرجعي والتوفير وتكلفة الوحدة أرقام حسابية مبنية على بيانات الباقة الظاهرة، وليست ضمانًا لسعر أو طريقة احتساب لدى شركة الاتصالات.</li>
+                <li>التفعيل والتغطية وشروط استخدام الخط أو الباقة تخضع لشركة الاتصالات المعنية.</li>
+                <li>للاطلاع على تحديثات العروض، يمكن الانضمام إلى جروب واتساب:</li>
                 <li style="padding-right: 0; margin-top: 10px;">
-                    <a href="https://chat.whatsapp.com/LxZjuhozUld41bAgejGvVf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: rgba(37, 211, 102, 0.15); border: 1px solid rgba(37, 211, 102, 0.3); border-radius: 50px; color: #25D366; font-weight: 700; font-size: 0.85rem; transition: all 0.3s ease; text-decoration: none;">
+                    <a href="https://chat.whatsapp.com/LxZjuhozUld41bAgejGvVf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: rgba(37, 211, 102, 0.15); border: 1px solid rgba(37, 211, 102, 0.3); border-radius: 50px; color: #25D366; font-weight: 700; font-size: 0.85rem; transition: all 0.3s ease; text-decoration: none;">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                         انضم لجروب الواتساب
                     </a>
                 </li>
-                <li>إحنا بنسهّل عليك الاختيار، لكن التفعيل بيتم من خلال شركات الاتصالات</li>
             </ul>
-            <h4>٣. مسؤوليات المستخدم</h4>
+            <h4>٣. الطلب والبيانات</h4>
             <ul>
-                <li>تقديم بيانات صحيحة ودقيقة</li>
-                <li>عدم استخدام المنصة لأغراض غير قانونية</li>
-                <li>الحفاظ على سرية بيانات الحساب</li>
+                <li>نموذج الطلب بالموقع يطلب الاسم والمحافظة، ثم يفتح رسالة واتساب مجهزة للمراجعة والإرسال من جانبك.</li>
+                <li>راجع الرسالة والبيانات بنفسك قبل إرسالها، ولا تضف معلومات لا يحتاجها طلبك.</li>
+                <li>إرسال الرسالة ومتابعة الطلب يتمان عبر واتساب، وتخضع هذه الخدمة لشروط وسياسة الخصوصية الخاصة بواتساب.</li>
             </ul>
             <h4>٤. إخلاء المسؤولية</h4>
-            <p>المنصة مش مسؤولة عن أي تأخير أو مشكلة من شركات الاتصالات. إحنا بنوفر المعلومات بس، والتطبيق الفعلي بيكون من الشركات المختصة.</p>
-            <h4>٥. التعديلات</h4>
-            <p>لينا الحق نعدّل الشروط دي في أي وقت. الاستمرار في استخدام الموقع بعد التعديل بيعني موافقتك على الشروط الجديدة.</p>
-            <span class="last-updated">آخر تحديث: سبتمبر 2026</span>
+            <p>المعلومات المعروضة للتعريف والمقارنة، وقد تتغير. لا يضمن الموقع توفر رقم أو باقة أو موعد تفعيل أو نتيجة تعتمد على شركة الاتصالات أو واتساب.</p>
+            <h4>٥. الاستخدام والتحديثات</h4>
+            <p>استخدم الموقع لإجراء استفسارات وطلبات مشروعة. قد تتغير المعلومات أو هذه الشروط عند تحديث الموقع؛ راجع التفاصيل الظاهرة قبل إرسال أي طلب.</p>
         </div>`
     },
     contact: {
         title: "تواصل معنا",
         html: `<div class="modal-content contact-content">
             <div class="contact-intro">
-                <span class="contact-eyebrow">دعم etisalat</span>
+                <span class="contact-eyebrow">قنوات التواصل</span>
                 <h4>إحنا هنا عشان نساعدك</h4>
-                <p>اختار طريقة التواصل المناسبة، وفريقنا هيساعدك بكل سرور.</p>
+                <p>تواصل مباشرة مع أحد الأرقام الموضحة للاستفسار عن الطلب أو مراجعة تفاصيله.</p>
             </div>
             <div class="contact-people">
                 <article class="contact-person">
                     <h5>حسام</h5>
                     <p dir="ltr">+20 110 009 7958</p>
                     <div class="contact-actions">
-                <button type="button" class="contact-action call" onclick="openContactConfirm('call')">
+                <a class="contact-action call" href="tel:+201100097958">
                     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     اتصال هاتفي
-                </button>
-                <button type="button" class="contact-action whatsapp" onclick="openContactConfirm('whatsapp')">
+                </a>
+                <a class="contact-action whatsapp" href="https://wa.me/201100097958" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" width="22" height="22" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                     واتساب
-                </button>
+                </a>
             </div>
                 </article>
                 <article class="contact-person">
@@ -1228,38 +1347,28 @@ const MODAL_CONTENT = {
                     </div>
                 </article>
             </div>
-            <div class="contact-availability">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-                <div><strong>متواجدين لخدمتك</strong><span>الدعم الفني متاح على مدار الساعة.</span></div>
-            </div>
+            <p class="contact-note">أوقات الرد قد تختلف. يُرجى تأكيد السعر والتوفر قبل إتمام الطلب.</p>
         </div>`
     },
     "service-explain": {
         title: "شرح الخدمة",
         html: `<div class="modal-content">
             <h4>إزاي الخدمة بتشتغل؟</h4>
-            <p>العملية بسيطة جداً وفي خطوات قليلة:</p>
+            <p>الموقع يجهز لك طلبًا واضحًا على واتساب؛ إرسال الطلب ومتابعته يتمان من خلال المحادثة.</p>
             <h4>خطوات الاشتراك</h4>
             <ol>
-                <li><strong>اختار الباقة أو الرقم المناسب</strong> — تصفح العروض واختار اللي يناسبك</li>
-                <li><strong>سيب بياناتك الأساسية</strong> — الاسم ورقم التواصل والمحافظة</li>
-                <li><strong>هنتواصل معاك عبر WhatsApp</strong> — هنأكد معاك التفاصيل ونرتب التوصيل</li>
-                <li><strong>استلم الخط وابدأ استخدمه</strong> — هتستلم الخط من اقرب فرع اتصالات</li>
+                <li><strong>اختار الباقة أو طلب الخط</strong> — راجع السعة والسعر وطريقة اختيار الرقم إن وُجدت.</li>
+                <li><strong>اكتب بيانات النموذج</strong> — الاسم والمحافظة فقط، حسب نوع الطلب.</li>
+                <li><strong>راجع رسالة واتساب</strong> — النموذج يفتح رسالة جاهزة؛ راجعها وأرسلها بنفسك لبدء الاستفسار.</li>
+                <li><strong>أكد التفاصيل قبل الإتمام</strong> — تحقق من السعر والتوفر وطريقة التفعيل أو الاستلام مباشرة مع جهة التواصل.</li>
             </ol>
-            <h4>أنواع الخدمات المتاحة</h4>
+            <h4>الخيارات المعروضة</h4>
             <ul>
-                <li><strong>خطوط جديدة بأرقام مميزة</strong> — اختار من مجموعة أرقام متنوعة</li>
-                <li><strong>باقات وحدات بأسعار مخفضة</strong> — وفّر فلوسك مع عروضنا المميزة</li>
-                <li><strong>باقات ميجا إنترنت</strong> — استمتع بإنترنت سريع وبأسعار حلوة</li>
-                <li><strong>فريق العمل (مكالمات مجانية)</strong> — باقات للمكالمات الداخلية</li>
+                <li>طلب خط جديد مع اختيار طريقة الرقم من الخيارات الظاهرة في نموذج الطلب.</li>
+                <li>باقات وحدات وباقات ميجا؛ وتعرض المقارنة السعة والسعر المرجعي والتوفير وتكلفة الوحدة المحسوبة.</li>
+                <li>طلب خط جديد بسعر 250 جنيهًا كما هو معروض، أو طلب عرض فريق العمل لخطين بسعر 380 جنيهًا كما هو موضح في نموذج العرض.</li>
             </ul>
-            <h4>مميزات التعامل معانا</h4>
-            <ul>
-                <li>✅ أسعار منافسة وعروض حصرية</li>
-                <li>✅ دعم فني متواصل</li>
-                <li>✅ شفافية كاملة في الأسعار والتفاصيل</li>
-            </ul>
-            <span class="last-updated">آخر تحديث: سبتمبر 2026</span>
+            <p>الموقع منصة مستقلة لعرض المعلومات، وليس جهة تفعيل أو توصيل. راجع السعر والتوفر وأي شروط إضافية مع جهة التواصل قبل إتمام الطلب.</p>
         </div>`
     }
 };
@@ -1305,26 +1414,6 @@ document.addEventListener('click', (e) => { const t = e.target.closest('[data-mo
 modalClose.addEventListener('click', closeModal);
 modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
-
-// ===== CONTACT CONFIRMATION MODAL =====
-function openContactConfirm(type) {
-    let title = '', message = '', btnText = '', btnStyle = '', action = '';
-    if (type === 'call') {
-        title = 'تأكيد الاتصال'; message = 'هل تريد الاتصال بفريق الدعم الآن؟'; btnText = '📞 اتصال الآن'; btnStyle = 'background: #3b82f6; color: #fff;'; action = `window.location.href='tel:+201100097958'`;
-    } else if (type === 'whatsapp') {
-        title = 'تأكيد واتساب'; message = 'هل تريد فتح محادثة واتساب مع فريق الدعم؟'; btnText = '💬 فتح واتساب'; btnStyle = 'background: #25D366; color: #fff;'; action = `window.open('https://wa.me/201100097958', '_blank')`;
-    } else if (type === 'email') {
-        title = 'تأكيد البريد الإلكتروني'; message = 'هل تريد إرسال بريد إلكتروني لفريق الدعم؟'; btnText = '✉️ فتح البريد'; btnStyle = 'background: #2563eb; color: #fff;'; action = `window.location.href='mailto:support@khatak.com'`;
-    }
-    modalTitle.textContent = title;
-    modalBody.innerHTML = `
-        <div style="text-align: center; padding: 20px 0;">
-            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 30px;">${message}</p>
-            <button onclick="${action}; closeModal();" style="border: none; padding: 16px 40px; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; font-family: var(--font); transition: all 0.3s ease; ${btnStyle}">${btnText}</button>
-        </div>
-    `;
-    showModal();
-}
 
 // ===== DEVELOPER MODAL =====
 function openDevModal() {
@@ -1409,7 +1498,7 @@ function openTeamModal() {
         <div class="order-summary" style="margin-top:20px; margin-bottom:20px;">
             <div class="order-row total" style="border:none; padding:0; margin:0; justify-content:center; text-align:center;">
                 <span style="color:#fff;">سعر الخطين:</span>
-                <span style="font-size:1.3rem;">400 جنيه</span>
+                <span style="font-size:1.3rem;">380 جنيه</span>
             </div>
         </div>
         <form onsubmit="handleTeamSubmit(event)">
@@ -1454,14 +1543,130 @@ function handleTeamSubmit(e) {
 }
 
 // ===== PACKAGES =====
-function switchTab(type) { document.querySelectorAll('.packages-tabs .tab-btn').forEach(b=>b.classList.remove('active')); event.target.classList.add('active'); renderPackages(type==='units'?unitsPlans:megaPlans, type==='units'?'وحدات':'ميجا'); }
+function switchTab(type, tabButton) {
+    document.querySelectorAll('.packages-tabs .tab-btn').forEach(button => button.classList.toggle('active', button === tabButton));
+    renderPackages(type === 'units' ? unitsPlans : megaPlans, type === 'units' ? 'وحدات' : 'ميجا', type);
+}
 
-function renderPackages(plans, typeName) {
+function updateCompareUI() {
+    const dock = document.getElementById('compareDock');
+    const count = plansForComparison.length;
+    dock.classList.toggle('is-visible', count > 0);
+    document.body.classList.toggle('compare-active', count > 0);
+    document.getElementById('compareCount').textContent = `${count} من 2 باقة`;
+    document.getElementById('compareHint').textContent = count === 0
+        ? 'اختار باقتين من نفس النوع للمقارنة'
+        : count === 1
+            ? 'اختار باقة تانية من نفس النوع'
+            : 'جاهز! شوف الفرق واختار الأنسب ليك';
+    document.getElementById('openCompare').disabled = count !== 2;
+    document.querySelectorAll('.pkg-compare-btn').forEach(button => {
+        const selected = plansForComparison.some(item => item.type === button.dataset.compareType && item.plan.id === Number(button.dataset.compareId));
+        const incompatible = count > 0 && plansForComparison[0].type !== button.dataset.compareType;
+        button.setAttribute('aria-pressed', String(selected));
+        button.textContent = selected ? 'تمت الإضافة ✓' : '＋ قارن الباقة';
+        button.disabled = !selected && (count === 2 || incompatible);
+    });
+}
+
+function togglePlanComparison(button) {
+    const type = button.dataset.compareType;
+    const planId = Number(button.dataset.compareId);
+    const existingIndex = plansForComparison.findIndex(item => item.type === type && item.plan.id === planId);
+    if (existingIndex !== -1) {
+        plansForComparison.splice(existingIndex, 1);
+    } else if (plansForComparison.length === 2) {
+        showToast('امسح اختيارًا قبل إضافة باقة تانية', 'error');
+    } else if (plansForComparison.length && plansForComparison[0].type !== type) {
+        showToast('اختار باقتين من نفس النوع للمقارنة', 'error');
+    } else {
+        const group = type === 'units' ? unitsPlans : megaPlans;
+        const plan = group.find(item => item.id === planId);
+        if (!plan) {
+            showToast('تعذر العثور على الباقة المطلوبة', 'error');
+            return;
+        }
+        plansForComparison.push({ type, typeName: type === 'units' ? 'وحدات' : 'ميجا', plan });
+    }
+    updateCompareUI();
+}
+
+function openPlanComparison() {
+    if (plansForComparison.length !== 2) return;
+    const [first, second] = plansForComparison;
+    const packages = [first, second];
+    const values = packages.map(({ plan }) => ({
+        price: `${plan.sell} جنيه`,
+        original: `${plan.company} جنيه`,
+        saving: `${plan.company - plan.sell} جنيه`,
+        rate: `${(plan.sell / plan.value * 1000).toFixed(4)} جنيه`
+    }));
+    const calculationCards = packages.map(({ plan, typeName }) => {
+        const pricePerUnit = plan.sell / plan.value;
+        const pricePerThousand = plan.sell * 1000 / plan.value;
+        return `<article class="compare-calculation">
+            <h4>باقة ${plan.value} ${plan.unit}</h4>
+            <p>حساب سعر الوحدة: <strong>${plan.sell} جنيه ÷ ${plan.value} ${plan.unit} = ${pricePerUnit.toFixed(8)} جنيه لكل ${plan.unit}</strong> (تقريب عشري؛ الكسر الدقيق هو ${plan.sell} ÷ ${plan.value}).</p>
+            <p>تكلفة كل ١٠٠٠ ${plan.unit}: <strong>${plan.sell} × ١٠٠٠ ÷ ${plan.value} = ${pricePerThousand.toFixed(4)} جنيه</strong>.</p>
+            <p>التوفير المعروض: <strong>${plan.company} − ${plan.sell} = ${plan.company - plan.sell} جنيه</strong> مقارنة بالسعر المرجعي الظاهر.</p>
+        </article>`;
+    }).join('');
+    modalTitle.textContent = 'مقارنة الباقات';
+    modalBody.innerHTML = `
+        <div class="compare-table-wrap">
+            <table class="compare-table">
+                <thead><tr><th scope="col">التفاصيل</th>${packages.map(({ plan }) => `<th scope="col">${plan.value} ${plan.unit}</th>`).join('')}</tr></thead>
+                <tbody>
+                    <tr><th scope="row">سعر البيع</th>${values.map(item => `<td>${item.price}</td>`).join('')}</tr>
+                    <tr><th scope="row">السعر المرجعي المعروض</th>${values.map(item => `<td>${item.original}</td>`).join('')}</tr>
+                    <tr><th scope="row">قيمة التوفير</th>${values.map(item => `<td class="compare-saving">${item.saving}</td>`).join('')}</tr>
+                    <tr><th scope="row"><span class="compare-rate-label">تكلفة كل ١٠٠٠ ${first.plan.unit}<button class="compare-details-toggle" type="button" aria-expanded="false" aria-controls="compareCalculations">تفاصيل</button></span></th>${values.map(item => `<td>${item.rate}</td>`).join('')}</tr>
+                    <tr><th scope="row">اختيار الباقة</th>${packages.map(({ plan, type }) => `<td><button type="button" class="compare-order" data-compare-order="${type}:${plan.id}">اختارها</button></td>`).join('')}</tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="compare-calculations" id="compareCalculations" hidden>${calculationCards}</div>
+        <p class="compare-calculation-note">الحساب مبني على سعر البيع والسعة المعروضين على الموقع؛ تكلفة الوحدة متوسط حسابي للمقارنة وليست تعريفة رسمية أو ضمانًا لطريقة احتساب شركة الاتصالات.</p>`;
+    showModal();
+}
+
+document.getElementById('packagesGrid').addEventListener('click', event => {
+    const button = event.target.closest('.pkg-compare-btn');
+    if (button) togglePlanComparison(button);
+});
+document.getElementById('clearCompare').addEventListener('click', () => {
+    plansForComparison = [];
+    updateCompareUI();
+});
+document.getElementById('openCompare').addEventListener('click', openPlanComparison);
+modalBody.addEventListener('click', event => {
+    const button = event.target.closest('.compare-details-toggle');
+    if (!button) return;
+    const details = document.getElementById('compareCalculations');
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!isExpanded));
+    button.textContent = isExpanded ? 'تفاصيل' : 'إخفاء التفاصيل';
+    details.hidden = isExpanded;
+});
+document.addEventListener('click', event => {
+    const button = event.target.closest('.compare-order');
+    if (!button) return;
+    const [type, id] = button.dataset.compareOrder.split(':');
+    const plan = (type === 'units' ? unitsPlans : megaPlans).find(item => item.id === Number(id));
+    if (!plan) {
+        showToast('تعذر العثور على الباقة المطلوبة', 'error');
+        return;
+    }
+    openOrderModal(plan, type === 'units' ? 'وحدات' : 'ميجا');
+});
+
+function renderPackages(plans, typeName, planType) {
     const grid=document.getElementById('packagesGrid'); grid.innerHTML='';
     plans.forEach((plan,i)=>{ const saving=plan.company-plan.sell; const card=document.createElement('div'); card.className='glass-card pkg-card fade-up';
-    card.innerHTML=`<div class="pkg-header">${i===2?'<div class="pkg-badge">الأكثر طلباً 🔥</div>':''}<div class="pkg-type">باقة ${typeName}</div><div class="pkg-value">${plan.value} <span>${plan.unit}</span></div></div><div class="pkg-body"><div class="pkg-pricing"><span class="pkg-old-price">~~${plan.company} جنيه~~</span><div class="pkg-new-price">${plan.sell} <small>جنيه</small></div><div class="pkg-save">وفر ${saving} جنيه</div></div><button class="pkg-btn" onclick="openOrderModal(${JSON.stringify(plan).replace(/"/g,'&quot;')},'${typeName}')">اشترك الآن</button></div>`;
+    card.innerHTML=`<div class="pkg-header">${i===2?'<div class="pkg-badge">الأكثر طلباً 🔥</div>':''}<div class="pkg-type">باقة ${typeName}</div><div class="pkg-value">${plan.value} <span>${plan.unit}</span></div></div><div class="pkg-body"><div class="pkg-pricing"><span class="pkg-old-price">~~${plan.company} جنيه~~</span><div class="pkg-new-price">${plan.sell} <small>جنيه</small></div><div class="pkg-save">وفر ${saving} جنيه</div></div><div class="pkg-actions"><button class="pkg-compare-btn" type="button" data-compare-id="${plan.id}" data-compare-type="${planType}" aria-pressed="false">＋ قارن الباقة</button><button class="pkg-btn" onclick="openOrderModal(${JSON.stringify(plan).replace(/"/g,'&quot;')},'${typeName}')">اشترك الآن</button></div></div>`;
     grid.appendChild(card); });
     observeFadeUp();
+    updateCompareUI();
 }
 
 function openOrderModal(plan, typeName) {
@@ -1566,12 +1771,38 @@ function observeFadeUp() {
 const hamburger = document.getElementById('hamburger'), navLinks = document.getElementById('navLinks');
 hamburger.addEventListener('click', () => { hamburger.classList.toggle('active'); navLinks.classList.toggle('active'); });
 document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('active'); navLinks.classList.remove('active'); }));
-window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+const readingProgress = document.querySelector('.reading-progress');
+const readingProgressBar = document.getElementById('readingProgressBar');
+const backToTop = document.getElementById('backToTop');
+let scrollUpdateScheduled = false;
+function updateScrollUI() {
+    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollableHeight > 0 ? Math.min(100, Math.round((window.scrollY / scrollableHeight) * 100)) : 0;
+    readingProgressBar.style.transform = `scaleX(${progress / 100})`;
+    readingProgress.setAttribute('aria-valuenow', String(progress));
+    backToTop.classList.toggle('is-visible', window.scrollY > 320);
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+}
+function scheduleScrollUIUpdate() {
+    if (scrollUpdateScheduled) return;
+    scrollUpdateScheduled = true;
+    requestAnimationFrame(() => {
+        scrollUpdateScheduled = false;
+        updateScrollUI();
+    });
+}
+window.addEventListener('scroll', scheduleScrollUIUpdate, { passive: true });
+window.addEventListener('resize', scheduleScrollUIUpdate, { passive: true });
+backToTop.addEventListener('click', () => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) window.scrollTo(0, 0);
+    else window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+updateScrollUI();
 
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
     resizeCanvas(); animateCanvas(); loadServices(); observeFadeUp();
-    renderPackages(unitsPlans, 'وحدات');
+    renderPackages(unitsPlans, 'وحدات', 'units');
     // تم حذف استدعاء renderLines لأن القسم تم حذفه
 });
 </script>
