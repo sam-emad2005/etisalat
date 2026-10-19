@@ -2,13 +2,16 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>etisalat | عروض وخدمات اتصالات</title>
-<link rel="icon" type="image/jpeg" href="https://hapijournal.com/wp-content/uploads/2024/07/5-1.jpg"> 
-<link rel="apple-touch-icon" href="https://hapijournal.com/wp-content/uploads/2024/07/5-1.jpg"> 
-<meta property="og:image" content="https://hapijournal.com/wp-content/uploads/2024/07/5-1.jpg">
-<meta property="og:title" content="etisalat | عروض وخدمات اتصالات">
-<meta property="og:description" content="عروض وخدمات اتصالات بأسعار اقتصادية">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>etisalat | ???? ?????? ???????</title>
+<meta name="description" content="?????? ????? ??????? ?????????? ???? ??????? ????????? ????? ?????? ???????? ??????.">
+<meta name="theme-color" content="#e60000">
+<link rel="icon" type="image/jpeg" href="favicon.jpg">
+<link rel="icon" type="image/svg+xml" href="site-icon.svg">
+<link rel="apple-touch-icon" href="favicon.jpg">
+<link rel="manifest" href="manifest.webmanifest">
+<meta property="og:title" content="etisalat | ???? ?????? ???????">
+<meta property="og:description" content="?????? ??????? ????? ??????? ???????? ????? ?????? ??.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +27,7 @@
     --modal-bg: #0a0a0a;
     --footer-bg: #000000;
     
-    --accent-primary: #3b82f6; /* أزرق ملكي */
+    --accent-primary: #3b82f6; /* ???? ???? */
     --accent-gold: #60a5fa;
     --accent-deep: #1e40af;
     --accent-soft: rgba(59,130,246,0.14);
@@ -134,7 +137,7 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .nav-links a:hover { transform: translateY(-1px); }
 .nav-links a:hover svg, .nav-links a.active svg { color: #93c5fd; filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.6)); }
 .nav-links a:focus-visible { outline: 2px solid #60a5fa; outline-offset: 3px; }
-.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; padding: 8px; }
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; padding: 8px; border: 0; background: transparent; }
 .hamburger span { width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: 0.4s var(--ease-out); }
 .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,6px); }
 .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
@@ -185,6 +188,11 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .tab-btn.active, .tab-btn:hover { background: rgba(59,130,246,0.1); border-color: var(--accent-primary); color: var(--accent-primary); box-shadow: 0 0 15px rgba(59,130,246,0.1); }
 .packages-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; position: relative; min-height: 400px; }
 .pkg-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0; height: 100%; border: 1px solid rgba(255,255,255,0.05); background: linear-gradient(180deg, rgba(18,18,18,0.9) 0%, #000 100%); }
+.pkg-card.is-recommended { border-color: var(--accent-primary); box-shadow: 0 0 0 2px color-mix(in srgb,var(--accent-primary) 22%,transparent), 0 0 30px color-mix(in srgb,var(--accent-primary) 38%,transparent); animation: recommended-card-glow 1s ease-in-out 3; }
+@keyframes recommended-card-glow {
+    0%, 100% { border-color: var(--accent-primary); box-shadow: 0 0 0 2px color-mix(in srgb,var(--accent-primary) 18%,transparent), 0 0 20px color-mix(in srgb,var(--accent-primary) 28%,transparent); }
+    50% { border-color: var(--accent-gold); box-shadow: 0 0 0 4px color-mix(in srgb,var(--accent-gold) 30%,transparent), 0 0 44px color-mix(in srgb,var(--accent-gold) 62%,transparent); }
+}
 .pkg-header { width: 100%; padding: 25px 20px; background: radial-gradient(circle at top, rgba(255,255,255,0.03), transparent); border-bottom: 1px solid var(--border-subtle); position: relative; }
 .pkg-badge { position: absolute; top: 12px; left: 12px; background: var(--gradient-gold); color: #fff; font-size: 0.7rem; font-weight: 800; padding: 4px 10px; border-radius: 12px; box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35); z-index: 2; }
 .pkg-type { font-size: 0.85rem; color: var(--accent-primary); font-weight: 700; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
@@ -196,7 +204,7 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .pkg-new-price { font-size: 2.2rem; font-weight: 800; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 5px; }
 .pkg-new-price small { font-size: 1rem; font-weight: 600; }
 .pkg-save { display: inline-block; background: rgba(16, 185, 129, 0.1); color: #34d399; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.2); }
-.pkg-actions { display: grid; gap: 9px; margin-top: auto; }
+.pkg-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; margin-top: auto; }
 .pkg-compare-btn { width: 100%; min-height: 42px; padding: 9px 12px; border: 1px solid var(--border-subtle); border-radius: 11px; background: transparent; color: var(--text-muted); font: 700 0.82rem var(--font); cursor: pointer; transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease; }
 .pkg-compare-btn:hover, .pkg-compare-btn[aria-pressed="true"] { border-color: var(--accent-line); background: color-mix(in srgb,var(--accent-primary) 10%,transparent); color: var(--accent-gold); }
 .pkg-compare-btn:focus-visible, .compare-dock button:focus-visible, .compare-order:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
@@ -204,6 +212,95 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .pkg-btn { width: 100%; margin-top: auto; padding: 14px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); color: #fff; border-radius: 12px; font-weight: 700; cursor: pointer; transition: 0.3s; font-family: var(--font); font-size: 1rem; }
 .pkg-btn:hover { background: var(--gradient-main); border-color: transparent; box-shadow: 0 10px 25px rgba(37,99,235,0.3); }
 .pkg-actions .pkg-btn { margin-top: 0; }
+.pkg-actions .pkg-share-btn { grid-column: 1 / -1; }
+.packages-toolbar { display: grid; grid-template-columns: minmax(220px,1fr) minmax(190px,0.7fr) auto; gap: 12px; align-items: center; margin: 0 0 14px; }
+.packages-search,
+.packages-sort { width: 100%; min-height: 48px; padding: 10px 14px; border: 1px solid var(--border-subtle); border-radius: 13px; background: var(--surface-glass); color: var(--text-primary); font: 600 0.88rem var(--font); }
+.packages-search::placeholder { color: var(--text-muted); }
+.packages-search:focus,
+.packages-sort:focus { border-color: var(--accent-primary); outline: 3px solid color-mix(in srgb,var(--accent-primary) 20%,transparent); outline-offset: 1px; }
+.packages-sort option { color: #172033; background: #fff; }
+.favorites-filter { min-height: 48px; padding: 10px 16px; border: 1px solid var(--border-subtle); border-radius: 13px; background: var(--surface-glass); color: var(--text-muted); font: 700 0.86rem var(--font); cursor: pointer; transition: 0.2s ease; }
+.favorites-filter:hover,
+.favorites-filter[aria-pressed="true"] { border-color: var(--accent-line); background: color-mix(in srgb,var(--accent-primary) 10%,transparent); color: var(--accent-primary); }
+.packages-results-status { min-height: 26px; margin: 0 2px 10px; color: var(--text-muted); font-size: 0.78rem; }
+.packages-empty { grid-column: 1 / -1; align-self: start; padding: 34px 20px; border: 1px dashed var(--border-subtle); border-radius: 18px; color: var(--text-muted); text-align: center; }
+.packages-empty strong { display: block; margin-bottom: 6px; color: var(--text-primary); font-size: 1rem; }
+.packages-empty button { margin-top: 14px; padding: 9px 14px; border: 1px solid var(--accent-line); border-radius: 10px; background: color-mix(in srgb,var(--accent-primary) 10%,transparent); color: var(--accent-primary); font: 700 0.82rem var(--font); cursor: pointer; }
+.budget-finder { display: grid; grid-template-columns: minmax(0,0.9fr) minmax(280px,1.1fr); gap: 24px; align-items: center; margin: 0 0 30px; padding: clamp(20px,4vw,32px); border: 1px solid var(--accent-line); border-radius: 22px; background: radial-gradient(ellipse at 10% 0%,color-mix(in srgb,var(--accent-primary) 12%,transparent),transparent 60%),var(--surface-glass); box-shadow: 0 18px 48px rgba(0,0,0,0.08); }
+.budget-finder-copy .section-badge { margin-bottom: 12px; }
+.budget-finder-copy h3 { margin-bottom: 7px; color: var(--text-primary); font-size: clamp(1.15rem,2vw,1.45rem); font-weight: 900; }
+.budget-finder-copy p { color: var(--text-muted); font-size: 0.84rem; line-height: 1.8; }
+.budget-finder-controls { display: grid; grid-template-columns: minmax(125px,0.7fr) minmax(150px,1fr); gap: 12px 16px; align-items: end; }
+.budget-field { display: grid; gap: 8px; }
+.budget-field label { color: var(--text-primary); font-size: 0.78rem; font-weight: 800; }
+.budget-field select,
+.budget-field input[type="number"] { width: 100%; min-height: 46px; padding: 9px 12px; border: 1px solid var(--border-subtle); border-radius: 12px; background: var(--surface-glass); color: var(--text-primary); font: 700 0.86rem var(--font); }
+.budget-field input[type="range"] { width: 100%; min-height: 46px; accent-color: var(--accent-primary); cursor: pointer; }
+.budget-field select:focus-visible,
+.budget-field input:focus-visible { outline: 3px solid color-mix(in srgb,var(--accent-primary) 24%,transparent); outline-offset: 2px; }
+.budget-value { color: var(--accent-primary); font-size: 1rem; font-weight: 900; }
+.budget-recommendation { grid-column: 1 / -1; min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 2px; padding: 15px 17px; border: 1px solid var(--border-subtle); border-radius: 15px; background: color-mix(in srgb,var(--accent-primary) 5%,var(--surface-glass)); }
+.budget-recommendation-copy { min-width: 0; }
+.budget-recommendation-copy strong { display: block; color: var(--text-primary); font-size: 0.93rem; font-weight: 900; }
+.budget-recommendation-copy span { display: block; margin-top: 3px; color: var(--text-muted); font-size: 0.76rem; line-height: 1.65; }
+.budget-recommendation-actions { display: flex; flex: 0 0 auto; gap: 8px; }
+.budget-recommendation-actions button,
+.budget-recommendation-actions a { min-height: 42px; display: inline-flex; align-items: center; justify-content: center; padding: 8px 14px; border: 1px solid var(--accent-line); border-radius: 11px; background: var(--gradient-main); color: #fff; font: 800 0.78rem var(--font); cursor: pointer; text-decoration: none; }
+.budget-recommendation-actions button:disabled { opacity: 0.5; cursor: not-allowed; }
+.budget-recommendation-actions .budget-share { background: transparent; color: var(--accent-primary); }
+.budget-finder-note { grid-column: 1 / -1; color: var(--text-muted); font-size: 0.7rem; line-height: 1.7; }
+.plan-quiz { margin: 0 0 24px; padding: clamp(20px,4vw,30px); border: 1px solid var(--border-subtle); border-radius: 22px; background: var(--surface-glass); }
+.plan-quiz h3 { margin-bottom: 6px; color: var(--text-primary); font-size: clamp(1.1rem,2vw,1.4rem); font-weight: 900; }
+.plan-quiz-intro { margin-bottom: 18px; color: var(--text-muted); font-size: 0.82rem; line-height: 1.8; }
+.plan-quiz-fields { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; align-items: end; }
+.plan-quiz-field { display: grid; gap: 8px; }
+.plan-quiz-field label { color: var(--text-primary); font-size: 0.78rem; font-weight: 800; }
+.plan-quiz-field select,
+.plan-quiz-field input { width: 100%; min-height: 46px; padding: 9px 12px; border: 1px solid var(--border-subtle); border-radius: 12px; background: var(--surface-glass); color: var(--text-primary); font: 700 0.86rem var(--font); }
+.plan-quiz-field :focus-visible { outline: 3px solid color-mix(in srgb,var(--accent-primary) 24%,transparent); outline-offset: 2px; }
+.plan-quiz-submit { min-height: 46px; padding: 9px 18px; border: 1px solid var(--accent-line); border-radius: 12px; background: var(--gradient-main); color: #fff; font: 800 0.84rem var(--font); cursor: pointer; }
+.plan-quiz-result { margin-top: 16px; padding: 15px 17px; border: 1px solid var(--accent-line); border-radius: 15px; background: color-mix(in srgb,var(--accent-primary) 6%,var(--surface-glass)); }
+.plan-quiz-result[hidden] { display: none; }
+.plan-quiz-result h4 { margin-bottom: 4px; color: var(--text-primary); font-size: 0.94rem; font-weight: 900; }
+.plan-quiz-result p { color: var(--text-muted); font-size: 0.78rem; line-height: 1.7; }
+.plan-quiz-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.plan-quiz-actions button { min-height: 40px; padding: 8px 14px; border: 1px solid var(--accent-line); border-radius: 10px; background: var(--gradient-main); color: #fff; font: 800 0.76rem var(--font); cursor: pointer; }
+.plan-quiz-actions .quiz-secondary { background: transparent; color: var(--accent-primary); }
+.plan-quiz-submit:focus-visible,
+.plan-quiz-actions button:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
+.pkg-share-btn { width: 100%; min-height: 42px; display: flex; align-items: center; justify-content: center; padding: 9px 12px; border: 1px solid rgba(37,211,102,0.25); border-radius: 11px; background: rgba(37,211,102,0.07); color: #128c50; font: 700 0.82rem var(--font); cursor: pointer; text-decoration: none; transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
+.pkg-share-btn:hover { transform: translateY(-1px); background: rgba(37,211,102,0.13); border-color: rgba(37,211,102,0.45); }
+.pkg-share-btn:focus-visible,
+.budget-recommendation-actions button:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
+body[data-theme="light"] .pkg-share-btn { color: #128c50; }
+@media (max-width: 768px) {
+    .budget-finder { grid-template-columns: 1fr; gap: 18px; }
+}
+@media (max-width: 520px) {
+    .budget-finder-controls { grid-template-columns: 1fr; }
+    .budget-recommendation { align-items: stretch; flex-direction: column; }
+    .budget-recommendation-actions button,
+    .budget-recommendation-actions a { flex: 1; }
+    .plan-quiz-fields { grid-template-columns: 1fr; }
+    .plan-quiz-submit { width: 100%; }
+}
+.pkg-header { padding-top: 52px; }
+.pkg-favorite-btn { position: absolute; top: 12px; inset-inline-start: 12px; z-index: 2; display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid var(--border-subtle); border-radius: 11px; background: var(--surface-glass); color: var(--text-muted); font: 700 1.15rem/1 var(--font); cursor: pointer; transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
+.pkg-favorite-btn:hover,
+.pkg-favorite-btn[aria-pressed="true"] { border-color: rgba(230,0,0,0.35); background: rgba(230,0,0,0.08); color: #e60000; transform: scale(1.06); }
+.pkg-favorite-btn:focus-visible,
+.favorites-filter:focus-visible,
+.packages-empty button:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; }
+.pkg-old-price { text-decoration: line-through; }
+@media (max-width: 768px) {
+    .packages-toolbar { grid-template-columns: 1fr 1fr; }
+    .packages-search { grid-column: 1 / -1; }
+}
+@media (max-width: 420px) {
+    .packages-toolbar { grid-template-columns: 1fr; }
+    .packages-search { grid-column: auto; }
+}
 .compare-dock { position: fixed; z-index: 998; left: 50%; right: auto; bottom: 22px; width: min(520px,calc(100vw - 116px)); display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 11px 13px 11px 16px; border: 1px solid var(--accent-line); border-radius: 18px; background: color-mix(in srgb,var(--modal-bg) 94%,transparent); box-shadow: 0 14px 42px rgba(0,0,0,0.35); backdrop-filter: blur(16px); opacity: 0; visibility: hidden; transform: translate(-50%,16px); transition: opacity 0.22s ease, visibility 0.22s ease, transform 0.22s ease; }
 .compare-dock.is-visible { opacity: 1; visibility: visible; transform: translate(-50%,0); }
 .compare-dock-copy { min-width: 0; }
@@ -297,11 +394,50 @@ body.compare-active .back-to-top { bottom: 96px; }
 .number-type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
 .number-type-option { background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 16px; cursor: pointer; transition: 0.3s; text-align: center; position: relative; }
 .number-type-option:hover, .number-type-option.selected { border-color: var(--accent-gold); background: rgba(59, 130, 246, 0.08); }
-.number-type-option.selected::after { content: '✓'; position: absolute; top: 8px; left: 8px; width: 20px; height: 20px; border-radius: 50%; background: var(--accent-gold); color: #000; font-size: 0.7rem; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.number-type-option.selected::after { content: '?'; position: absolute; top: 8px; left: 8px; width: 20px; height: 20px; border-radius: 50%; background: var(--accent-gold); color: #000; font-size: 0.7rem; font-weight: 800; display: flex; align-items: center; justify-content: center; }
 .number-type-option h5 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
 .number-type-option p { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin: 0; }
 .order-summary { background: rgba(255,255,255,0.02); border-radius: 16px; padding: 15px; margin-bottom: 25px; border: 1px dashed var(--border-subtle); position: relative; }
-.order-summary::before { content: 'ملخص العرض'; position: absolute; top: -10px; right: 15px; background: var(--modal-bg); padding: 0 10px; font-size: 0.75rem; color: var(--accent-gold); font-weight: 700; }
+.order-review { margin: 0 0 18px; padding: 18px; border: 1px solid var(--accent-line); border-radius: 16px; background: color-mix(in srgb,var(--accent-primary) 6%,var(--surface-glass)); }
+.order-review h4 { margin: 0 0 6px; color: var(--text-primary); font-size: 1rem; }
+.order-review > p { margin: 0 0 12px; color: var(--text-muted); font-size: 0.8rem; line-height: 1.7; }
+.order-review-list { display: grid; gap: 0; margin: 0 0 12px; }
+.order-review-row { display: flex; justify-content: space-between; gap: 16px; padding: 8px 0; border-bottom: 1px solid var(--border-subtle); font-size: 0.84rem; }
+.order-review-row dt { color: var(--text-muted); }
+.order-review-row dd { margin: 0; color: var(--text-primary); font-weight: 800; text-align: end; }
+.order-review-note { margin: 12px 0 0 !important; padding: 10px 12px; border-radius: 10px; background: color-mix(in srgb,var(--accent-primary) 7%,transparent); color: var(--text-muted); font-size: 0.74rem !important; line-height: 1.7; }
+.order-review-actions { display: grid; grid-template-columns: 1fr 1.3fr; gap: 9px; margin-top: 14px; }
+.order-review-actions button,
+.order-review-actions a { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; padding: 10px; border: 1px solid var(--border-subtle); border-radius: 11px; background: transparent; color: var(--text-primary); font: 800 0.82rem var(--font); text-decoration: none; cursor: pointer; }
+.order-review-actions a { border-color: transparent; background: #25d366; color: #fff; }
+.order-review-actions button:focus-visible,
+.order-review-actions a:focus-visible { outline: 3px solid var(--accent-gold); outline-offset: 2px; }
+.form-group[hidden],
+.order-review[hidden] { display: none !important; }
+.offline-banner { position: fixed; z-index: 1003; inset: 3px 0 auto; padding: 9px 16px; background: #92400e; color: #fff; font-size: 0.8rem; font-weight: 700; text-align: center; }
+.offline-banner[hidden] { display: none; }
+.price-review-note { display: inline-flex; align-items: center; gap: 6px; margin: 0 0 12px; padding: 7px 11px; border: 1px solid var(--border-subtle); border-radius: 10px; color: var(--text-muted); font-size: 0.73rem; line-height: 1.6; }
+.price-review-note strong { color: var(--accent-primary); }
+.faq-section { padding: clamp(62px,8vw,96px) 0; scroll-margin-top: 100px; }
+.faq-header { max-width: 760px; margin: 0 auto 30px; text-align: center; }
+.faq-list { display: grid; gap: 12px; max-width: 900px; margin: 0 auto; }
+.faq-item { overflow: hidden; border: 1px solid var(--border-subtle); border-radius: 16px; background: var(--surface-glass); transition: border-color 0.2s ease, background-color 0.2s ease; }
+.faq-item[open] { border-color: var(--accent-line); background: var(--surface-glass-hover); }
+.faq-item summary { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 62px; padding: 16px 20px; color: var(--text-primary); font-size: 0.92rem; font-weight: 800; cursor: pointer; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; display: grid; place-items: center; flex: 0 0 28px; width: 28px; height: 28px; border: 1px solid var(--accent-line); border-radius: 9px; color: var(--accent-primary); font-size: 1.1rem; transition: transform 0.2s ease; }
+.faq-item[open] summary::after { content: '-'; }
+.faq-item summary:focus-visible { outline: 3px solid var(--accent-gold); outline-offset: -3px; }
+.faq-answer { padding: 0 20px 18px; color: var(--text-muted); font-size: 0.86rem; line-height: 1.85; }
+.faq-answer a { color: var(--accent-primary); font-weight: 800; }
+.skip-link { position: fixed; z-index: 10004; top: 10px; inset-inline-start: 10px; padding: 12px 18px; border-radius: 10px; background: var(--accent-primary); color: #fff; font-weight: 800; text-decoration: none; transform: translateY(-160%); }
+.skip-link:focus { transform: translateY(0); }
+:focus-visible { outline: 3px solid var(--accent-gold); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+.order-summary::before { content: '???? ?????'; position: absolute; top: -10px; right: 15px; background: var(--modal-bg); padding: 0 10px; font-size: 0.75rem; color: var(--accent-gold); font-weight: 700; }
 .order-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; color: rgba(255,255,255,0.7); }
 .order-row.total { border-top: 1px solid var(--border-subtle); padding-top: 10px; margin-top: 10px; font-weight: 800; color: #fff; font-size: 1.1rem; }
 .order-row.total span:last-child { color: var(--accent-gold); }
@@ -344,9 +480,12 @@ footer { border-top: 1px solid var(--border-subtle); padding: 40px 0 30px; text-
 .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
 .footer-link { color: rgba(255,255,255,0.5); font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: color 0.3s; }
 .footer-link:hover { color: var(--accent-gold); }
+.footer-link:focus-visible,
+.footer-dev:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 4px; }
 .footer-copyright { color: rgba(255,255,255,0.4); font-size: 0.85rem; margin-bottom: 16px; }
 .footer-disclaimer { max-width: 700px; margin: 0 auto; padding: 14px 20px; border-top: 1px solid var(--border-subtle); font-size: 0.72rem; line-height: 1.8; color: rgba(255,255,255,0.3); }
 .footer-dev { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; transition: 0.3s; }
+.footer-dev { width: 100%; border-inline: 0; border-bottom: 0; background: transparent; font-family: var(--font); }
 .footer-dev:hover { opacity: 0.8; }
 .footer-dev svg { width: 16px; height: 16px; stroke: var(--accent-gold); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .footer-dev span { font-size: 0.78rem; color: rgba(255,255,255,0.4); font-weight: 600; }
@@ -392,7 +531,7 @@ body[data-theme="light"] .contact-action.whatsapp { color: #128c50; }
 .toast.success .toast-dot { background: #10b981; box-shadow: 0 0 10px #10b981; }
 .toast.error .toast-dot { background: #ef4444; box-shadow: 0 0 10px #ef4444; }
 
-/* ⭐ PROFESSIONAL FADE UP ANIMATION */
+/* ? PROFESSIONAL FADE UP ANIMATION */
 .fade-up {
     opacity: 0;
     transform: translateY(40px) scale(0.98);
@@ -467,9 +606,9 @@ body header, body section, body footer { transition: none; }
 .theme-toggle .moon-icon { display: none; }
 body[data-theme="light"] .theme-toggle .sun-icon { display: none; }
 body[data-theme="light"] .theme-toggle .moon-icon { display: block; }
-.logo-icon img { width: 140%; height: 140%; max-width: none; object-fit: cover; }
+.logo-icon img { width: 100%; height: 100%; object-fit: contain; }
 .loader-logo { overflow: hidden; }
-.loader-logo img { width: 135%; height: 135%; max-width: none; object-fit: cover; }
+.loader-logo img { width: 100%; height: 100%; object-fit: contain; }
 .site-customizer { position: relative; }
 .customizer-toggle { min-width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 0 12px; border: 1px solid var(--border-subtle); border-radius: 13px; background: var(--surface-glass); color: var(--text-primary); font: 700 0.82rem var(--font); cursor: pointer; list-style: none; transition: 0.25s ease; }
 .customizer-toggle::-webkit-details-marker { display: none; }
@@ -509,7 +648,7 @@ body[data-theme="light"] .theme-toggle .moon-icon { display: block; }
 .accent-option[aria-pressed="true"] { border-color: var(--accent-line); background: color-mix(in srgb,var(--accent-primary) 10%,transparent); color: var(--text-primary); }
 .accent-swatch { position: relative; width: 28px; height: 28px; display: grid; place-items: center; border: 3px solid var(--modal-bg); border-radius: 50%; background: var(--swatch); box-shadow: 0 0 0 1px color-mix(in srgb,var(--swatch) 45%,transparent),0 4px 10px color-mix(in srgb,var(--swatch) 25%,transparent); transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .accent-swatch::after { content: ''; display: block; width: 100%; height: 100%; border-radius: inherit; background: linear-gradient(135deg,rgba(255,255,255,0.2),transparent 65%); }
-.accent-option[aria-pressed="true"] .accent-swatch::before { content: '✓'; position: absolute; z-index: 1; color: #fff; font-size: 0.75rem; font-weight: 900; text-shadow: 0 1px 3px rgba(0,0,0,0.55); }
+.accent-option[aria-pressed="true"] .accent-swatch::before { content: '?'; position: absolute; z-index: 1; color: #fff; font-size: 0.75rem; font-weight: 900; text-shadow: 0 1px 3px rgba(0,0,0,0.55); }
 .accent-option:hover .accent-swatch,
 .accent-option[aria-pressed="true"] .accent-swatch { transform: scale(1.08); box-shadow: 0 0 0 2px var(--swatch),0 4px 12px color-mix(in srgb,var(--swatch) 32%,transparent); }
 .site-customizer[open] .customizer-toggle { background: color-mix(in srgb,var(--accent-primary) 10%,var(--surface-glass)); }
@@ -626,6 +765,7 @@ body[data-theme="light"] .number-type-option,
 body[data-theme="light"] .order-summary { background-color: rgba(15,23,42,0.025); }
 body[data-theme="light"] .tab-btn { color: #475569; }
 body[data-theme="light"] .pkg-card { background: linear-gradient(180deg, #fff 0%, #f8fafc 100%); border-color: var(--border-subtle); }
+body[data-theme="light"] .pkg-card.is-recommended { border-color: var(--accent-primary); }
 body[data-theme="light"] .pkg-header { background: radial-gradient(circle at top, rgba(37,99,235,0.07), transparent); }
 body[data-theme="light"] .pkg-btn { color: #1e293b; }
 body[data-theme="light"] .modal-overlay { background: rgba(15,23,42,0.48); }
@@ -889,40 +1029,42 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
 </head>
 <body class="page-loading">
 
-<div class="reading-progress" role="progressbar" aria-label="تقدم القراءة" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="readingProgressBar"></span></div>
-<button class="back-to-top" id="backToTop" type="button" aria-label="العودة إلى أعلى الصفحة" title="العودة إلى أعلى الصفحة">
+<a class="skip-link" href="#main-content">???? ??? ??????? ???????</a>
+<div class="offline-banner" id="offlineBanner" role="status" aria-live="polite" hidden>??? ??? ???? ?????????. ?? ???? ??????? ???????? ?????? ?? ????? ?????? ???? ???? ??? ?????.</div>
+<div class="reading-progress" role="progressbar" aria-label="???? ???????" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="readingProgressBar"></span></div>
+<button class="back-to-top" id="backToTop" type="button" aria-label="?????? ??? ???? ??????" title="?????? ??? ???? ??????">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m18 15-6-6-6 6"/><path d="M12 9v12"/></svg>
 </button>
-<aside class="compare-dock" id="compareDock" aria-live="polite" aria-label="مقارنة الباقات">
+<aside class="compare-dock" id="compareDock" aria-live="polite" aria-label="?????? ???????">
     <div class="compare-dock-copy">
-        <strong id="compareCount">0 من 2 باقة</strong>
-        <span id="compareHint">اختار باقتين من نفس النوع للمقارنة</span>
+        <strong id="compareCount">0 ?? 2 ????</strong>
+        <span id="compareHint">????? ?????? ?? ??? ????? ????????</span>
     </div>
     <div class="compare-dock-actions">
-        <button type="button" id="clearCompare">مسح</button>
-        <button class="compare-open" type="button" id="openCompare" disabled>قارن الآن</button>
+        <button type="button" id="clearCompare">???</button>
+        <button class="compare-open" type="button" id="openCompare" disabled>???? ????</button>
     </div>
 </aside>
 
 <!-- PRELOADER -->
 <div id="preloader">
-    <div class="loader-logo"><img src="https://hapijournal.com/wp-content/uploads/2024/07/5-1.jpg" alt=""></div>
+    <div class="loader-logo"><img src="favicon.jpg" alt=""></div>
     <div class="loader-bar-container"><div class="loader-bar"></div></div>
-    <div class="loader-text">جاري التحميل...</div>
+    <div class="loader-text">???? ???????...</div>
 </div>
 
 <canvas id="networkCanvas"></canvas>
 
 <div class="toast-container" id="toastContainer">
-    <div class="toast" id="toast"><div class="toast-dot"></div><span id="toastMessage">رسالة</span></div>
+    <div class="toast" id="toast"><div class="toast-dot"></div><span id="toastMessage">?????</span></div>
 </div>
 
 <!-- MODAL SYSTEM -->
 <div class="modal-overlay" id="modalOverlay">
-    <div class="modal-panel" role="dialog" aria-modal="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
         <div class="modal-header">
-            <h3 id="modalTitle">عنوان</h3>
-            <button class="modal-close" id="modalClose" aria-label="إغلاق">
+            <h3 id="modalTitle">?????</h3>
+            <button class="modal-close" id="modalClose" aria-label="?????">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
         </div>
@@ -935,90 +1077,92 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
     <div class="container">
         <nav>
             <a href="#" class="logo">
-                <div class="logo-icon" aria-hidden="true"><img src="https://hapijournal.com/wp-content/uploads/2024/07/5-1.jpg" alt=""></div>
+                <div class="logo-icon" aria-hidden="true"><img src="favicon.jpg" alt=""></div>
                 <div class="logo-text">etisalat</div>
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#hero" data-section="hero"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>الرئيسية</a></li>
-                <li><a href="#get-number" data-section="get-number"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>رقمي</a></li>
-                <!-- تم حذف رابط الخطوط -->
-                <li><a href="#packages" data-section="packages"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>الباقات</a></li>
-                <li><a href="#team" data-section="team"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>فريق العمل</a></li>
+                <li><a href="#hero" data-section="hero"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>????????</a></li>
+                <li><a href="#get-number" data-section="get-number"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>????</a></li>
+                <!-- ?? ??? ???? ?????? -->
+                <li><a href="#packages" data-section="packages"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>???????</a></li>
+                <li><a href="#team" data-section="team"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>???? ?????</a></li>
+                <li><a href="#faq" data-section="faq"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>??????? ???????</a></li>
             </ul>
             <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" type="button" aria-label="تفعيل الوضع النهاري" title="تفعيل الوضع النهاري">
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="????? ????? ???????" title="????? ????? ???????">
                     <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
                     <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>
-                    <span>المظهر</span>
+                    <span>??????</span>
                 </button>
                 <details class="site-customizer" id="siteCustomizer">
-                    <summary class="customizer-toggle" aria-label="تخصيص الموقع" title="تخصيص الموقع">
+                    <summary class="customizer-toggle" aria-label="????? ??????" title="????? ??????">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42m-9.88 9.88-1.42 1.42"/><circle cx="12" cy="12" r="4"/></svg>
-                        <span>تخصيص</span>
+                        <span>?????</span>
                     </summary>
                     <div class="customizer-panel">
                         <div class="customizer-heading">
-                            <strong>خلّي الموقع على ذوقك</strong>
-                            <span>اختار الخط والحجم واللون اللي يريحك</span>
+                            <strong>???? ?????? ??? ????</strong>
+                            <span>????? ???? ?????? ?????? ???? ?????</span>
                         </div>
                         <div class="customizer-options">
                             <div class="customizer-field">
-                                <label id="fontSizeLabel">حجم خط الموقع</label>
+                                <label id="fontSizeLabel">??? ?? ??????</label>
                                 <div class="font-size-controls" role="group" aria-labelledby="fontSizeLabel">
-                                    <button class="font-size-button" id="decreaseFontSize" type="button" aria-label="تصغير خط الموقع" title="تصغير الخط">−</button>
+                                    <button class="font-size-button" id="decreaseFontSize" type="button" aria-label="????? ?? ??????" title="????? ????">-</button>
                                     <output class="font-size-value" id="fontSizeValue" aria-live="polite">100%</output>
-                                    <button class="font-size-button" id="increaseFontSize" type="button" aria-label="تكبير خط الموقع" title="تكبير الخط">+</button>
+                                    <button class="font-size-button" id="increaseFontSize" type="button" aria-label="????? ?? ??????" title="????? ????">+</button>
                                 </div>
                             </div>
                             <div class="customizer-field">
-                                <label for="fontSelect">خط الموقع</label>
+                                <label for="fontSelect">?? ??????</label>
                                 <select id="fontSelect">
-                                    <option value="Cairo">القاهرة — Cairo</option>
-                                    <option value="Tajawal">تجوال — Tajawal</option>
-                                    <option value="Almarai">المراعي — Almarai</option>
-                                    <option value="Alexandria">الإسكندرية — Alexandria</option>
-                                    <option value="Changa">تشانجا — Changa</option>
-                                    <option value="IBMPlexSansArabic">آي بي إم بليكس — IBM Plex Arabic</option>
-                                    <option value="Mada">مدى — Mada</option>
-                                    <option value="NotoSansArabic">نوتو عربي — Noto Sans Arabic</option>
-                                    <option value="Rubik">روبيك — Rubik</option>
+                                    <option value="Cairo">??????? � Cairo</option>
+                                    <option value="Tajawal">????? � Tajawal</option>
+                                    <option value="Almarai">??????? � Almarai</option>
+                                    <option value="Alexandria">?????????? � Alexandria</option>
+                                    <option value="Changa">?????? � Changa</option>
+                                    <option value="IBMPlexSansArabic">?? ?? ?? ????? � IBM Plex Arabic</option>
+                                    <option value="Mada">??? � Mada</option>
+                                    <option value="NotoSansArabic">???? ???? � Noto Sans Arabic</option>
+                                    <option value="Rubik">????? � Rubik</option>
                                 </select>
                             </div>
                             <div class="customizer-field">
-                                <label id="accentLabel">لون الموقع</label>
+                                <label id="accentLabel">??? ??????</label>
                                 <div class="accent-options" id="accentOptions" role="group" aria-labelledby="accentLabel">
-                                    <button class="accent-option" type="button" data-accent="blue" aria-label="أزرق" title="أزرق"><span class="accent-swatch" style="--swatch:#3b82f6"></span><span>أزرق</span></button>
-                                    <button class="accent-option" type="button" data-accent="teal" aria-label="تركواز" title="تركواز"><span class="accent-swatch" style="--swatch:#0f9f91"></span><span>تركواز</span></button>
-                                    <button class="accent-option" type="button" data-accent="purple" aria-label="بنفسجي" title="بنفسجي"><span class="accent-swatch" style="--swatch:#8b5cf6"></span><span>بنفسجي</span></button>
-                                    <button class="accent-option" type="button" data-accent="rose" aria-label="أحمر" title="أحمر"><span class="accent-swatch" style="--swatch:#e60000"></span><span>أحمر</span></button>
-                                    <button class="accent-option" type="button" data-accent="amber" aria-label="عنبر" title="عنبر"><span class="accent-swatch" style="--swatch:#d97706"></span><span>عنبر</span></button>
-                                    <button class="accent-option" type="button" data-accent="green" aria-label="أخضر" title="أخضر"><span class="accent-swatch" style="--swatch:#16a34a"></span><span>أخضر</span></button>
-                                    <button class="accent-option" type="button" data-accent="cyan" aria-label="سماوي" title="سماوي"><span class="accent-swatch" style="--swatch:#0891b2"></span><span>سماوي</span></button>
+                                    <button class="accent-option" type="button" data-accent="blue" aria-label="????" title="????"><span class="accent-swatch" style="--swatch:#3b82f6"></span><span>????</span></button>
+                                    <button class="accent-option" type="button" data-accent="teal" aria-label="??????" title="??????"><span class="accent-swatch" style="--swatch:#0f9f91"></span><span>??????</span></button>
+                                    <button class="accent-option" type="button" data-accent="purple" aria-label="??????" title="??????"><span class="accent-swatch" style="--swatch:#8b5cf6"></span><span>??????</span></button>
+                                    <button class="accent-option" type="button" data-accent="rose" aria-label="????" title="????"><span class="accent-swatch" style="--swatch:#e60000"></span><span>????</span></button>
+                                    <button class="accent-option" type="button" data-accent="amber" aria-label="????" title="????"><span class="accent-swatch" style="--swatch:#d97706"></span><span>????</span></button>
+                                    <button class="accent-option" type="button" data-accent="green" aria-label="????" title="????"><span class="accent-swatch" style="--swatch:#16a34a"></span><span>????</span></button>
+                                    <button class="accent-option" type="button" data-accent="cyan" aria-label="?????" title="?????"><span class="accent-swatch" style="--swatch:#0891b2"></span><span>?????</span></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </details>
             </div>
-            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            <button class="hamburger" id="hamburger" type="button" aria-label="??? ????? ??????" aria-controls="navLinks" aria-expanded="false"><span></span><span></span><span></span></button>
         </nav>
     </div>
 </header>
 
+<main id="main-content" tabindex="-1">
 <!-- Hero -->
 <section id="hero" class="hero">
     <div class="container hero-content fade-up">
-        <div class="section-badge">🚀 الجيل القادم من الاتصالات</div>
-        <h1>اتصل أكتر...<br><span class="gradient-word">وادفع أقل.</span></h1>
-        <p>خطوط وباقات مكالمات وإنترنت بأسعار اقتصادية، مع تجربة سهلة وسريعة من خلال الموقع.</p>
+        <div class="section-badge">?? ????? ?????? ?? ?????????</div>
+        <h1>???? ????...<br><span class="gradient-word">????? ???.</span></h1>
+        <p>???? ?????? ??????? ??????? ?????? ????????? ?? ????? ???? ?????? ?? ???? ??????.</p>
         <div class="hero-actions">
-            <a class="hero-action primary" href="#get-number">اطلب خطك الآن</a>
-            <a class="hero-action secondary" href="#packages">اكتشف الباقات</a>
+            <a class="hero-action primary" href="#get-number">???? ??? ????</a>
+            <a class="hero-action secondary" href="#packages">????? ???????</a>
         </div>
-        <div class="hero-proof" aria-label="مميزات خطك">
-            <span><b>01</b> عروض واضحة ومحدثة</span>
-            <span><b>02</b> خطوات طلب سهلة</span>
-            <span><b>03</b> دعم مباشر عبر واتساب</span>
+        <div class="hero-proof" aria-label="?????? ???">
+            <span><b>01</b> ???? ????? ??????</span>
+            <span><b>02</b> ????? ??? ????</span>
+            <span><b>03</b> ??? ????? ??? ??????</span>
         </div>
     </div>
 </section>
@@ -1027,17 +1171,17 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
 <section id="get-number" class="get-number-section">
     <div class="container">
         <div class="get-number-container fade-up">
-            <div class="section-badge">📱 الخطوة الأولى</div>
-            <h2 class="get-number-title">ابدأ بخطوة واحدة...<br>احصل على <span>رقمك!</span></h2>
-            <p class="get-number-desc">عشان تستفيد من كل الباقات والعروض اللي عندنا، لازم يكون معاك خط من عندنا الأول. لو لسه معاكش، اطلب خطك دلوقتي، وبعدها اختار الباقة اللي تناسبك واستفيد بأفضل سعر.</p>
+            <div class="section-badge">?? ?????? ??????</div>
+            <h2 class="get-number-title">???? ????? ?????...<br>???? ??? <span>????!</span></h2>
+            <p class="get-number-desc">???? ?????? ?? ?? ??????? ??????? ???? ?????? ???? ???? ???? ?? ?? ????? ?????. ?? ??? ?????? ???? ??? ??????? ?????? ????? ?????? ???? ?????? ??????? ????? ???.</p>
             <div class="number-features">
-                <div class="number-feature"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>رقم مميز تختاره أنت</div>
-                <div class="number-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>تفعيل فوري للخط</div>
-                <div class="number-feature"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>اختار باقتك بعد الاستلام</div>
+                <div class="number-feature"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>??? ???? ?????? ???</div>
+                <div class="number-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>????? ???? ????</div>
+                <div class="number-feature"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>????? ????? ??? ????????</div>
             </div>
             <button class="get-number-btn" onclick="openNumberModal()">
                 <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                اطلب رقمك الجديد دلوقتي
+                ???? ???? ?????? ??????
             </button>
         </div>
     </div>
@@ -1047,8 +1191,8 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
 <section id="services" class="services">
     <div class="container">
         <div class="services-header fade-up">
-            <div class="section-badge">ماذا نقدم</div>
-            <h2 class="section-title">خدمات معمولة عشان تناسب احتياجاتك</h2>
+            <div class="section-badge">???? ????</div>
+            <h2 class="section-title">????? ?????? ???? ????? ?????????</h2>
         </div>
         <div class="services-grid" id="servicesGrid">
             <div class="skeleton-card"><div class="skeleton sk-icon"></div><div class="skeleton sk-title"></div><div class="skeleton sk-text"></div><div class="skeleton sk-text short"></div></div>
@@ -1059,20 +1203,84 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
     </div>
 </section>
 
-<!-- ⭐ تم حذف قسم الخطوط بالكامل -->
+<!-- ? ?? ??? ??? ?????? ??????? -->
 
 <!-- Packages -->
 <section id="packages" class="packages-section">
     <div class="container">
         <div class="services-header fade-up">
-            <div class="section-badge">💎 عروض حصرية</div>
-            <h2 class="section-title">اختار الباقة اللي تناسبك</h2>
+            <div class="section-badge">?? ???? ?????</div>
+            <h2 class="section-title">????? ?????? ???? ??????</h2>
         </div>
-        <div class="packages-tabs fade-up">
-            <button class="tab-btn active" onclick="switchTab('units', this)">باقات الوحدات</button>
-            <button class="tab-btn" onclick="switchTab('mega', this)">باقات الميجا</button>
+        <div class="packages-tabs fade-up" role="tablist" aria-label="??? ???????">
+            <button class="tab-btn active" id="unitsTab" type="button" role="tab" aria-controls="packagesGrid" aria-selected="true" tabindex="0" onclick="switchTab('units', this)">????? ???????</button>
+            <button class="tab-btn" id="megaTab" type="button" role="tab" aria-controls="packagesGrid" aria-selected="false" tabindex="-1" onclick="switchTab('mega', this)">????? ??????</button>
         </div>
-        <div class="packages-grid" id="packagesGrid"></div>
+        <p class="price-review-note">??? ?????? ???????: <time id="pricesLastReviewed">??? ????</time>. ????? ????? ????? ??????? ??? ?????.</p>
+        <section class="plan-quiz fade-up" aria-labelledby="planQuizTitle">
+            <div class="section-badge">?? ????? ????</div>
+            <h3 id="planQuizTitle">?? ???? ?????? ???? ??? ? ?????</h3>
+            <p class="plan-quiz-intro">?????? ???????? ???????? ??? ??? ???????? ????????? ????????? ?? ??? ?? ???? ?? ?????? ?????.</p>
+            <form id="planQuizForm">
+                <div class="plan-quiz-fields">
+                    <div class="plan-quiz-field">
+                        <label for="quizUsage">??? ??????? ???</label>
+                        <select id="quizUsage" required>
+                            <option value="units">??????? ??????</option>
+                            <option value="mega">?????? ?????</option>
+                        </select>
+                    </div>
+                    <div class="plan-quiz-field">
+                        <label for="quizBudget">???????? ??????? (????)</label>
+                        <input id="quizBudget" type="number" min="50" max="500" step="5" value="150" required inputmode="numeric">
+                    </div>
+                    <div class="plan-quiz-field">
+                        <label for="quizPriority">???????? ????</label>
+                        <select id="quizPriority" required>
+                            <option value="capacity">???? ??? ??? ?????????</option>
+                            <option value="value">???? ????? ??? ????</option>
+                        </select>
+                    </div>
+                    <button class="plan-quiz-submit" type="submit">???? ??????</button>
+                </div>
+            </form>
+            <div class="plan-quiz-result" id="planQuizResult" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+        </section>
+        <section class="budget-finder fade-up" aria-labelledby="budgetFinderTitle">
+            <div class="budget-finder-copy">
+                <div class="section-badge">? ?????? ????</div>
+                <h3 id="budgetFinderTitle">???? ???????? ????? ??</h3>
+                <p>??? ???????? ???? ??????? ????? ?? ???? ??? ?????? ?? ??????? ????????.</p>
+            </div>
+            <div class="budget-finder-controls">
+                <div class="budget-field">
+                    <label for="budgetPlanType">??? ???? ???</label>
+                    <select id="budgetPlanType">
+                        <option value="units">?????</option>
+                        <option value="mega">?????? (????)</option>
+                    </select>
+                </div>
+                <div class="budget-field">
+                    <label for="budgetAmount">???????? ???????: <output class="budget-value" id="budgetAmountValue" for="budgetAmount">150 ????</output></label>
+                    <input id="budgetAmount" type="range" min="50" max="500" step="5" value="150">
+                </div>
+            </div>
+            <div class="budget-recommendation" id="budgetRecommendation" aria-live="polite" aria-atomic="true"></div>
+            <p class="budget-finder-note">??????? ???????? ???? ????? ??? ????? ???? ????? ?????????. ???? ?? ????? ??????? ??????? ?? ??? ??????? ??? ????? ?????.</p>
+        </section>
+        <div class="packages-toolbar fade-up" aria-label="????? ????? ????????">
+            <input class="packages-search" id="packageSearch" type="search" placeholder="???? ?????? ?? ?????..." aria-label="???? ?? ???????">
+            <select class="packages-sort" id="packageSort" aria-label="????? ???????">
+                <option value="recommended">??????? ???????</option>
+                <option value="price-asc">?????: ?? ????? ??????</option>
+                <option value="price-desc">?????: ?? ?????? ?????</option>
+                <option value="capacity-desc">?????: ?????? ?????</option>
+                <option value="saving-desc">???????: ?????? ?????</option>
+            </select>
+            <button class="favorites-filter" id="favoritesFilter" type="button" aria-pressed="false">? ???????</button>
+        </div>
+        <p class="packages-results-status" id="packagesResultsStatus" role="status" aria-live="polite"></p>
+        <div class="packages-grid" id="packagesGrid" role="tabpanel" aria-labelledby="unitsTab" tabindex="0" aria-label="??????? ???????"></div>
     </div>
 </section>
 
@@ -1080,19 +1288,19 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
 <section id="team" class="team-section">
     <div class="container">
         <div class="team-container fade-up">
-            <div class="section-badge">👥 ميزة حصرية</div>
-            <h2 class="team-title">خليك إنت وصاحبك على نفس <span>الفريق!</span></h2>
-            <p class="team-desc">لو إنت وصاحبك أو حد من قرايبك بتكلموا بعض كتير، ليه تدفعوا على كل مكالمة؟ مع نظام "فريق العمل"، تقدر تجمع خطين مع بعض في مكان واحد، وتتكلموا بينكم ببلاش من غير ما وحدات الباقة الأساسية تتأثر.</p>
+            <div class="section-badge">?? ???? ?????</div>
+            <h2 class="team-title">???? ??? ?????? ??? ??? <span>??????!</span></h2>
+            <p class="team-desc">?? ??? ?????? ?? ?? ?? ?????? ??????? ??? ????? ??? ?????? ??? ?? ??????? ?? ???? "???? ?????"? ???? ???? ???? ?? ??? ?? ???? ????? ???????? ????? ????? ?? ??? ?? ????? ?????? ???????? ?????.</p>
             <div class="team-steps">
-                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><span class="team-step-text">خطين مع بعض</span></div>
-                <span class="team-arrow">←</span>
-                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span class="team-step-text">فريق واحد</span></div>
-                <span class="team-arrow">←</span>
-                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><span class="team-step-text">مكالمات مجانية</span></div>
-                <span class="team-arrow">←</span>
-                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><span class="team-step-text">توفير أكتر</span></div>
+                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><span class="team-step-text">???? ?? ???</span></div>
+                <span class="team-arrow">?</span>
+                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span class="team-step-text">???? ????</span></div>
+                <span class="team-arrow">?</span>
+                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><span class="team-step-text">??????? ??????</span></div>
+                <span class="team-arrow">?</span>
+                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><span class="team-step-text">????? ????</span></div>
             </div>
-            <button class="team-btn" onclick="openTeamModal()">عايز تعمل فريق؟ اطلب خطين دلوقتي</button>
+            <button class="team-btn" onclick="openTeamModal()">???? ???? ????? ???? ???? ??????</button>
         </div>
     </div>
 </section>
@@ -1102,32 +1310,69 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
     <div class="container">
         <div class="app-container fade-up">
             <div class="app-content">
-                <div class="section-badge">📱 موقع واحد لكل شيء</div>
-                <h2>كل خدماتك في مكان واحد</h2>
-                <p>استعرض الخطوط والباقات والعروض اللي عندنا بكل سهولة وسرعة، واختار اللي يناسبك في ثواني.</p>
+                <div class="section-badge">?? ???? ???? ??? ???</div>
+                <h2>?? ?????? ?? ???? ????</h2>
+                <p>?????? ?????? ???????? ??????? ???? ????? ??? ????? ?????? ?????? ???? ?????? ?? ?????.</p>
             </div>
         </div>
     </div>
 </section>
 
+<section id="faq" class="faq-section">
+    <div class="container">
+        <div class="faq-header fade-up">
+            <div class="section-badge">?? ?????? ?????</div>
+            <h2 class="section-title">????? ????? ?? ????</h2>
+        </div>
+        <div class="faq-list fade-up">
+            <details class="faq-item">
+                <summary>?? ?????? ???? ?????? ????? ????????</summary>
+                <div class="faq-answer">??? ?????? ???? ?????? ???? ????????? ?????????? ???? ?????? ?????? ?????? ?? ??? ?????. ???????? ???????? ??? ????????.</div>
+            </details>
+            <details class="faq-item">
+                <summary>???? ???? ???? ?? ???</summary>
+                <div class="faq-answer">????? ????? ????? ????? ?????????? ?? ???? ???? ?????. ??? ????? ??? ??????? ???? ?????? ?????? ?????? ?????? ??????? ????? ???? ???????.</div>
+            </details>
+            <details class="faq-item">
+                <summary>?? ??????? ??????? ????????</summary>
+                <div class="faq-answer">??????? ??????? ???????? ???????? ??? ?????? ??? ?? ????? ??? ?????? ??????? ??? ???? ??????. ???? ????? ??????? ??????? ?? ??? ??????? ??? ????? ?????.</div>
+            </details>
+            <details class="faq-item">
+                <summary>??? ????? ??? ????? ??????? ?????? ???????</summary>
+                <div class="faq-answer">??????? ??????? ????? ??????? ?? ?????? ????????. ???? ??????? ???? ????? ????? ????? ?????? ????????? ???????? ????? ?????? ?? ??? ?????? ??? ????????.</div>
+            </details>
+            <details class="faq-item">
+                <summary>?? ??????? ?????? ???????? ?? ???????</summary>
+                <div class="faq-answer">??. ?????? ?? ???? ????? ????????? ???? ????? ?????? ??? ???????? ??? ????? ??? ??? ????? ??????? ???? ??????. ?? ????? ?????? ????? ??? ??? ?????? ?? ??? ???????.</div>
+            </details>
+            <details class="faq-item">
+                <summary>?? ???? ?????? ?????? ???? ???????</summary>
+                <div class="faq-answer">??? ????? ?????? ??? ?????? ??? ????? ???? ?? ????? ???? ?????? ??? ??????. ?????? ??????? ??????? ?? ???? ????? ??? ???? ????? ??? ?? ?????? ?? ?????? ??? ?????.</div>
+            </details>
+        </div>
+    </div>
+</section>
+</main>
+
 <!-- FOOTER -->
 <footer>
     <div class="container">
         <div class="footer-links">
-            <span class="footer-link" data-modal="about">عن الموقع</span>
-            <span class="footer-link" data-modal="terms">شروط الاستخدام</span>
-            <span class="footer-link" data-modal="contact">تواصل معنا</span>
-            <span class="footer-link" data-modal="service-explain">شرح الخدمة</span>
+            <span class="footer-link" data-modal="about">?? ??????</span>
+            <span class="footer-link" data-modal="terms">???? ?????????</span>
+            <span class="footer-link" data-modal="contact">????? ????</span>
+            <span class="footer-link" data-modal="service-explain">??? ??????</span>
+            <a class="footer-link" href="#faq">??????? ???????</a>
         </div>
-        <p class="footer-copyright">&copy; 2026 etisalat. جميع الحقوق محفوظة.</p>
+        <p class="footer-copyright">&copy; 2026 etisalat. ???? ?????? ??????.</p>
         <p class="footer-disclaimer">
-            تنويه: الموقع ده منصة مستقلة لعرض الخطوط والباقات والخدمات والعروض، ومش موقع رسمي تابع لأي شركة اتصالات، ومش بيمثل أو ينتمي لأي شركة إلا لو تم توضيح ده بشكل صريح.
-            جميع الأسماء والشعارات والعلامات التجارية المذكورة على الموقع هي ملك لأصحابها، وبيتم استخدامها فقط لغرض التعريف بالخدمات والعروض ووصفها.
+            ?????: ?????? ?? ???? ?????? ???? ?????? ???????? ???????? ???????? ??? ???? ???? ???? ??? ???? ???????? ??? ????? ?? ????? ??? ???? ??? ?? ?? ????? ?? ???? ????.
+            ???? ??????? ????????? ????????? ???????? ???????? ??? ?????? ?? ??? ????????? ????? ????????? ??? ???? ??????? ???????? ??????? ??????.
         </p>
-        <div class="footer-dev" onclick="openDevModal()">
+        <button class="footer-dev" type="button" onclick="openDevModal()">
             <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            <span>مطور الموقع</span>
-        </div>
+            <span>???? ??????</span>
+        </button>
     </div>
 </footer>
 
@@ -1142,6 +1387,8 @@ window.addEventListener('load', () => {
 
 // ===== CONFIG =====
 const CONFIG = { WHATSAPP_NUMBER: "201100097958" };
+// Set a YYYY-MM-DD date here only after the displayed prices have been reviewed.
+const PRICES_LAST_REVIEWED = '';
 const THEME_STORAGE_KEY = 'etisalat-theme';
 const FONT_STORAGE_KEY = 'khatak-font';
 const ACCENT_STORAGE_KEY = 'etisalat-accent';
@@ -1154,6 +1401,15 @@ const fontSelect = document.getElementById('fontSelect');
 const fontSizeValue = document.getElementById('fontSizeValue');
 const decreaseFontSize = document.getElementById('decreaseFontSize');
 const increaseFontSize = document.getElementById('increaseFontSize');
+
+if (PRICES_LAST_REVIEWED) {
+    const reviewedDate = new Date(`${PRICES_LAST_REVIEWED}T00:00:00`);
+    if (!Number.isNaN(reviewedDate.getTime())) {
+        const dateElement = document.getElementById('pricesLastReviewed');
+        dateElement.dateTime = PRICES_LAST_REVIEWED;
+        dateElement.textContent = new Intl.DateTimeFormat('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' }).format(reviewedDate);
+    }
+}
 
 function applyFontSize(size) {
     const normalizedSize = Math.round(size / FONT_SIZE_STEP) * FONT_SIZE_STEP;
@@ -1179,7 +1435,7 @@ increaseFontSize.addEventListener('click', () => {
 
 function applyTheme(theme) {
     document.body.dataset.theme = theme;
-    const nextLabel = theme === 'dark' ? 'تفعيل الوضع النهاري' : 'تفعيل الوضع الليلي';
+    const nextLabel = theme === 'dark' ? '????? ????? ???????' : '????? ????? ??????';
     themeToggle.setAttribute('aria-label', nextLabel);
     themeToggle.setAttribute('title', nextLabel);
     themeToggle.setAttribute('aria-pressed', String(theme === 'light'));
@@ -1239,136 +1495,141 @@ accentOptions.forEach(option => {
 });
 
 const FALLBACK_SERVICES = [
-    { title: "خطوط موبايل", desc: "خطوط مرنة بأرقام مميزة وأسعار تناسب الجميع.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>' },
-    { title: "باقات مكالمات", desc: "مكالمات بجودة عالية وأسعار اقتصادية.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>' },
-    { title: "باقات إنترنت", desc: "سرعات فائقة وتغطية واسعة تناسب كل احتياجاتك .", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>' },
-    { title: "عروض حصرية", desc: "عروض محدثة باستمرار مع خصومات خاصة لمستخدمي الموقع.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>' }
+    { title: "???? ??????", desc: "???? ???? ?????? ????? ?????? ????? ??????.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>' },
+    { title: "????? ???????", desc: "??????? ????? ????? ?????? ????????.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>' },
+    { title: "????? ??????", desc: "????? ????? ?????? ????? ????? ?? ????????? .", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>' },
+    { title: "???? ?????", desc: "???? ????? ???????? ?? ?????? ???? ???????? ??????.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>' }
 ];
 
 const unitsPlans = [
-    { id:1, value:2800, unit:'وحدة', base:70, company:108, sell:80 },
-    { id:2, value:3100, unit:'وحدة', base:80, company:123, sell:90 },
-    { id:3, value:4250, unit:'وحدة', base:115, company:177, sell:125 },
-    { id:4, value:6500, unit:'وحدة', base:145, company:223, sell:155 },
-    { id:5, value:9000, unit:'وحدة', base:175, company:269, sell:185 },
-    { id:6, value:12000, unit:'وحدة', base:225, company:300, sell:235 }
+    { id:1, value:2800, unit:'????', base:70, company:108, sell:80 },
+    { id:2, value:3100, unit:'????', base:80, company:123, sell:90 },
+    { id:3, value:4250, unit:'????', base:115, company:177, sell:125 },
+    { id:4, value:6500, unit:'????', base:145, company:223, sell:155 },
+    { id:5, value:9000, unit:'????', base:175, company:269, sell:185 },
+    { id:6, value:12000, unit:'????', base:225, company:300, sell:235 }
 ];
 
 const megaPlans = [
-    { id:1, value:4250, unit:'ميجا', base:75, company:150, sell:95 },
-    { id:2, value:6000, unit:'ميجا', base:99, company:180, sell:120 },
-    { id:3, value:10500, unit:'ميجا', base:145, company:350, sell:165 },
-    { id:4, value:18000, unit:'ميجا', base:235, company:370, sell:255 },
-    { id:5, value:29000, unit:'ميجا', base:350, company:500, sell:370 },
-    { id:6, value:45000, unit:'ميجا', base:450, company:700, sell:470 }
+    { id:1, value:4250, unit:'????', base:75, company:150, sell:95 },
+    { id:2, value:6000, unit:'????', base:99, company:180, sell:120 },
+    { id:3, value:10500, unit:'????', base:145, company:350, sell:165 },
+    { id:4, value:18000, unit:'????', base:235, company:370, sell:255 },
+    { id:5, value:29000, unit:'????', base:350, company:500, sell:370 },
+    { id:6, value:45000, unit:'????', base:450, company:700, sell:470 }
 ];
 
-const governorates = ["القاهرة","الجيزة","الإسكندرية","الدقهلية","البحر الأحمر","البحيرة","الفيوم","الغربية","الإسماعيلية","المنوفية","المنيا","القليوبية","الوادي الجديد","السويس","أسوان","أسيوط","بني سويف","بورسعيد","دمياط","الشرقية","جنوب سيناء","كفر الشيخ","مطروح","الأقصر","قنا","شمال سيناء","سوهاج"];
+const FAVORITES_STORAGE_KEY = 'etisalat-favorite-plans';
+const savedFavoritePlans = JSON.parse(localStorage.getItem(FAVORITES_STORAGE_KEY) || '[]');
+const favoritePlans = new Set(Array.isArray(savedFavoritePlans) ? savedFavoritePlans.filter(item => typeof item === 'string') : []);
+let activePlanType = 'units';
+let showFavoritesOnly = false;
+const governorates = ["???????","??????","??????????","????????","????? ??????","???????","??????","???????","???????????","????????","??????","?????????","?????? ??????","??????","?????","?????","??? ????","???????","?????","???????","???? ?????","??? ?????","?????","??????","???","???? ?????","?????"];
 
 let currentSelectedPlan = null;
-let selectedNumberType = 'من اختياركم';
+let selectedNumberType = '?? ????????';
 let plansForComparison = [];
 
 // ===== MODAL CONTENT DATABASE =====
 const MODAL_CONTENT = {
     about: {
-        title: "عن الموقع",
+        title: "?? ??????",
         html: `<div class="modal-content">
-            <h4>منصة مستقلة لعرض الخيارات</h4>
-            <p>الموقع بيعرض معلومات الخطوط والباقات الموجودة على صفحاته، عشان تراجع السعة والسعر قبل ما تبعت طلبك. الموقع مش تابع رسميًا لشركة اتصالات، ومش هو مقدم خدمة الاتصالات أو جهة تفعيل الخط.</p>
-            <h4>إيه اللي تقدر تعمله هنا؟</h4>
+            <h4>???? ?????? ???? ????????</h4>
+            <p>?????? ????? ??????? ?????? ???????? ???????? ??? ??????? ???? ????? ????? ?????? ??? ?? ???? ????. ?????? ?? ???? ?????? ????? ???????? ??? ?? ???? ???? ????????? ?? ??? ????? ????.</p>
+            <h4>??? ???? ???? ????? ????</h4>
             <ul>
-                <li>مراجعة باقات الوحدات وباقات الميجا والأسعار المعروضة.</li>
-                <li>مقارنة باقتين من النوع نفسه حسب السعة والسعر والتوفير المحسوب.</li>
-                <li>إرسال طلب خط أو باقة إلى واتساب لمراجعة التفاصيل والتوفر.</li>
+                <li>?????? ????? ??????? ?????? ?????? ???????? ????????.</li>
+                <li>?????? ?????? ?? ????? ???? ??? ????? ?????? ???????? ???????.</li>
+                <li>????? ??? ?? ?? ???? ??? ?????? ??????? ???????? ???????.</li>
             </ul>
-            <p>السعر والتوفر النهائيان يتأكدان عند التواصل قبل إتمام الطلب. أي تفعيل أو خدمة على الخط تخضع لشروط شركة الاتصالات المعنية.</p>
+            <p>????? ??????? ????????? ??????? ??? ??????? ??? ????? ?????. ?? ????? ?? ???? ??? ???? ???? ????? ???? ????????? ???????.</p>
         </div>`
     },
     terms: {
-        title: "شروط الاستخدام",
+        title: "???? ?????????",
         html: `<div class="modal-content">
-            <h4>١. طبيعة الموقع</h4>
-            <p>الموقع منصة مستقلة لعرض معلومات الخطوط والباقات، وليس موقعًا رسميًا لشركة اتصالات ولا ينفذ تفعيل الشبكة بنفسه.</p>
-            <h4>٢. الأسعار والتوفر</h4>
+            <h4>?. ????? ??????</h4>
+            <p>?????? ???? ?????? ???? ??????? ?????? ????????? ???? ?????? ?????? ????? ??????? ??? ???? ????? ?????? ?????.</p>
+            <h4>?. ??????? ???????</h4>
             <ul>
-                <li>الأسعار والسعات الظاهرة تخص الخيارات المعروضة على الموقع وقت التصفح، ويلزم تأكيد السعر والتوفر قبل إتمام الطلب.</li>
-                <li>السعر المرجعي والتوفير وتكلفة الوحدة أرقام حسابية مبنية على بيانات الباقة الظاهرة، وليست ضمانًا لسعر أو طريقة احتساب لدى شركة الاتصالات.</li>
-                <li>التفعيل والتغطية وشروط استخدام الخط أو الباقة تخضع لشركة الاتصالات المعنية.</li>
-                <li>للاطلاع على تحديثات العروض، يمكن الانضمام إلى جروب واتساب:</li>
+                <li>??????? ??????? ??????? ??? ???????? ???????? ??? ?????? ??? ??????? ????? ????? ????? ??????? ??? ????? ?????.</li>
+                <li>????? ??????? ???????? ?????? ?????? ????? ?????? ????? ??? ?????? ?????? ???????? ????? ?????? ???? ?? ????? ?????? ??? ???? ?????????.</li>
+                <li>??????? ???????? ????? ??????? ???? ?? ?????? ???? ????? ????????? ???????.</li>
+                <li>??????? ??? ??????? ??????? ???? ???????? ??? ???? ??????:</li>
                 <li style="padding-right: 0; margin-top: 10px;">
                     <a href="https://chat.whatsapp.com/LxZjuhozUld41bAgejGvVf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: rgba(37, 211, 102, 0.15); border: 1px solid rgba(37, 211, 102, 0.3); border-radius: 50px; color: #25D366; font-weight: 700; font-size: 0.85rem; transition: all 0.3s ease; text-decoration: none;">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                        انضم لجروب الواتساب
+                        ???? ????? ????????
                     </a>
                 </li>
             </ul>
-            <h4>٣. الطلب والبيانات</h4>
+            <h4>?. ????? ?????????</h4>
             <ul>
-                <li>نموذج الطلب بالموقع يطلب الاسم والمحافظة، ثم يفتح رسالة واتساب مجهزة للمراجعة والإرسال من جانبك.</li>
-                <li>راجع الرسالة والبيانات بنفسك قبل إرسالها، ولا تضف معلومات لا يحتاجها طلبك.</li>
-                <li>إرسال الرسالة ومتابعة الطلب يتمان عبر واتساب، وتخضع هذه الخدمة لشروط وسياسة الخصوصية الخاصة بواتساب.</li>
+                <li>????? ????? ??????? ???? ????? ?????????? ?? ???? ????? ?????? ????? ???????? ???????? ?? ?????.</li>
+                <li>???? ??????? ????????? ????? ??? ???????? ??? ??? ??????? ?? ??????? ????.</li>
+                <li>????? ??????? ??????? ????? ????? ??? ??????? ????? ??? ?????? ????? ?????? ???????? ?????? ???????.</li>
             </ul>
-            <h4>٤. إخلاء المسؤولية</h4>
-            <p>المعلومات المعروضة للتعريف والمقارنة، وقد تتغير. لا يضمن الموقع توفر رقم أو باقة أو موعد تفعيل أو نتيجة تعتمد على شركة الاتصالات أو واتساب.</p>
-            <h4>٥. الاستخدام والتحديثات</h4>
-            <p>استخدم الموقع لإجراء استفسارات وطلبات مشروعة. قد تتغير المعلومات أو هذه الشروط عند تحديث الموقع؛ راجع التفاصيل الظاهرة قبل إرسال أي طلب.</p>
+            <h4>?. ????? ?????????</h4>
+            <p>????????? ???????? ??????? ?????????? ??? ?????. ?? ???? ?????? ???? ??? ?? ???? ?? ???? ????? ?? ????? ????? ??? ???? ????????? ?? ??????.</p>
+            <h4>?. ????????? ??????????</h4>
+            <p>?????? ?????? ?????? ????????? ?????? ??????. ?? ????? ????????? ?? ??? ?????? ??? ????? ??????? ???? ???????? ??????? ??? ????? ?? ???.</p>
         </div>`
     },
     contact: {
-        title: "تواصل معنا",
+        title: "????? ????",
         html: `<div class="modal-content contact-content">
             <div class="contact-intro">
-                <span class="contact-eyebrow">قنوات التواصل</span>
-                <h4>إحنا هنا عشان نساعدك</h4>
-                <p>تواصل مباشرة مع أحد الأرقام الموضحة للاستفسار عن الطلب أو مراجعة تفاصيله.</p>
+                <span class="contact-eyebrow">????? ???????</span>
+                <h4>???? ??? ???? ??????</h4>
+                <p>????? ?????? ?? ??? ??????? ??????? ????????? ?? ????? ?? ?????? ???????.</p>
             </div>
             <div class="contact-people">
                 <article class="contact-person">
-                    <h5>حسام</h5>
+                    <h5>????</h5>
                     <p dir="ltr">+20 110 009 7958</p>
                     <div class="contact-actions">
                 <a class="contact-action call" href="tel:+201100097958">
                     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    اتصال هاتفي
+                    ????? ?????
                 </a>
                 <a class="contact-action whatsapp" href="https://wa.me/201100097958" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" width="22" height="22" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                    واتساب
+                    ??????
                 </a>
             </div>
                 </article>
                 <article class="contact-person">
-                    <h5>سعد</h5>
+                    <h5>???</h5>
                     <p dir="ltr">+20 111 553 0303</p>
                     <div class="contact-actions">
-                        <a class="contact-action call" href="tel:+201115530303"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>اتصال هاتفي</a>
-                        <a class="contact-action whatsapp" href="https://wa.me/201115530303" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>واتساب</a>
+                        <a class="contact-action call" href="tel:+201115530303"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>????? ?????</a>
+                        <a class="contact-action whatsapp" href="https://wa.me/201115530303" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>??????</a>
                     </div>
                 </article>
             </div>
-            <p class="contact-note">أوقات الرد قد تختلف. يُرجى تأكيد السعر والتوفر قبل إتمام الطلب.</p>
+            <p class="contact-note">????? ???? ?? ?????. ????? ????? ????? ??????? ??? ????? ?????.</p>
         </div>`
     },
     "service-explain": {
-        title: "شرح الخدمة",
+        title: "??? ??????",
         html: `<div class="modal-content">
-            <h4>إزاي الخدمة بتشتغل؟</h4>
-            <p>الموقع يجهز لك طلبًا واضحًا على واتساب؛ إرسال الطلب ومتابعته يتمان من خلال المحادثة.</p>
-            <h4>خطوات الاشتراك</h4>
+            <h4>???? ?????? ???????</h4>
+            <p>?????? ???? ?? ????? ?????? ??? ??????? ????? ????? ???????? ????? ?? ???? ????????.</p>
+            <h4>????? ????????</h4>
             <ol>
-                <li><strong>اختار الباقة أو طلب الخط</strong> — راجع السعة والسعر وطريقة اختيار الرقم إن وُجدت.</li>
-                <li><strong>اكتب بيانات النموذج</strong> — الاسم والمحافظة فقط، حسب نوع الطلب.</li>
-                <li><strong>راجع رسالة واتساب</strong> — النموذج يفتح رسالة جاهزة؛ راجعها وأرسلها بنفسك لبدء الاستفسار.</li>
-                <li><strong>أكد التفاصيل قبل الإتمام</strong> — تحقق من السعر والتوفر وطريقة التفعيل أو الاستلام مباشرة مع جهة التواصل.</li>
+                <li><strong>????? ?????? ?? ??? ????</strong> � ???? ????? ?????? ?????? ?????? ????? ?? ?????.</li>
+                <li><strong>???? ?????? ???????</strong> � ????? ????????? ???? ??? ??? ?????.</li>
+                <li><strong>???? ????? ??????</strong> � ??????? ???? ????? ?????? ?????? ??????? ????? ???? ?????????.</li>
+                <li><strong>??? ???????? ??? ???????</strong> � ???? ?? ????? ??????? ?????? ??????? ?? ???????? ?????? ?? ??? ???????.</li>
             </ol>
-            <h4>الخيارات المعروضة</h4>
+            <h4>???????? ????????</h4>
             <ul>
-                <li>طلب خط جديد مع اختيار طريقة الرقم من الخيارات الظاهرة في نموذج الطلب.</li>
-                <li>باقات وحدات وباقات ميجا؛ وتعرض المقارنة السعة والسعر المرجعي والتوفير وتكلفة الوحدة المحسوبة.</li>
-                <li>طلب خط جديد بسعر 250 جنيهًا كما هو معروض، أو طلب عرض فريق العمل لخطين بسعر 380 جنيهًا كما هو موضح في نموذج العرض.</li>
+                <li>??? ?? ???? ?? ?????? ????? ????? ?? ???????? ??????? ?? ????? ?????.</li>
+                <li>????? ????? ?????? ????? ????? ???????? ????? ?????? ??????? ???????? ?????? ?????? ????????.</li>
+                <li>??? ?? ???? ???? 250 ?????? ??? ?? ?????? ?? ??? ??? ???? ????? ????? ???? 380 ?????? ??? ?? ???? ?? ????? ?????.</li>
             </ul>
-            <p>الموقع منصة مستقلة لعرض المعلومات، وليس جهة تفعيل أو توصيل. راجع السعر والتوفر وأي شروط إضافية مع جهة التواصل قبل إتمام الطلب.</p>
+            <p>?????? ???? ?????? ???? ?????????? ???? ??? ????? ?? ?????. ???? ????? ??????? ??? ???? ?????? ?? ??? ??????? ??? ????? ?????.</p>
         </div>`
     }
 };
@@ -1379,14 +1640,66 @@ const modalTitle = document.getElementById('modalTitle');
 const modalBody = document.getElementById('modalBody');
 const modalClose = document.getElementById('modalClose');
 let modalCloseTimer = null;
+let modalPreviousFocus = null;
 
 function showModal(isDeveloper = false) {
+    if (!modalOverlay.classList.contains('active')) modalPreviousFocus = document.activeElement;
+    modalBody.querySelectorAll('.form-group').forEach(group => {
+        const label = group.querySelector('.form-label');
+        const control = group.querySelector('input, select');
+        if (!label || !control) return;
+        label.htmlFor = control.id;
+        control.autocomplete = control instanceof HTMLSelectElement ? 'address-level1' : 'name';
+        const errorMessage = group.querySelector('.form-error');
+        if (errorMessage) {
+            errorMessage.id = `${control.id}-error`;
+            control.setAttribute('aria-describedby', errorMessage.id);
+            control.setAttribute('aria-invalid', 'false');
+        }
+        control.addEventListener('input', () => {
+            if (control.value.trim()) {
+                group.classList.remove('error');
+                control.setAttribute('aria-invalid', 'false');
+            }
+        });
+    });
+    modalBody.querySelectorAll('.whatsapp-btn[type="submit"]').forEach(button => {
+        const textNode = [...button.childNodes].find(node => node.nodeType === Node.TEXT_NODE);
+        if (textNode) textNode.textContent = '???? ????? ??? ????????';
+    });
+    modalBody.querySelectorAll('.number-type-grid').forEach(group => {
+        group.setAttribute('role', 'radiogroup');
+        group.setAttribute('aria-label', '????? ?????? ?????');
+        group.querySelectorAll('.number-type-option').forEach(option => {
+            option.setAttribute('role', 'radio');
+            option.setAttribute('aria-checked', String(option.classList.contains('selected')));
+            option.tabIndex = option.classList.contains('selected') ? 0 : -1;
+            option.addEventListener('keydown', event => {
+                const options = [...group.querySelectorAll('.number-type-option')];
+                const currentIndex = options.indexOf(option);
+                if (event.key === ' ' || event.key === 'Enter') {
+                    event.preventDefault();
+                    option.click();
+                    return;
+                }
+                if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+                event.preventDefault();
+                const direction = event.key === 'ArrowLeft' ? 1 : -1;
+                const next = options[(currentIndex + direction + options.length) % options.length];
+                next.focus();
+                next.click();
+            });
+        });
+    });
     window.clearTimeout(modalCloseTimer);
     modalCloseTimer = null;
     modalOverlay.classList.remove('closing');
     modalOverlay.classList.toggle('developer-modal-active', isDeveloper);
     document.body.classList.add('modal-open');
-    requestAnimationFrame(() => modalOverlay.classList.add('active'));
+    requestAnimationFrame(() => {
+        modalOverlay.classList.add('active');
+        modalClose.focus();
+    });
 }
 
 function closeModal() {
@@ -1401,6 +1714,8 @@ function closeModal() {
         modalOverlay.classList.remove('closing', 'developer-modal-active');
         document.body.classList.remove('modal-open');
         modalBody.replaceChildren();
+        if (modalPreviousFocus instanceof HTMLElement && modalPreviousFocus.isConnected) modalPreviousFocus.focus();
+        modalPreviousFocus = null;
     }, closeDelay);
 }
 
@@ -1413,17 +1728,40 @@ function openModalByKey(key) {
 document.addEventListener('click', (e) => { const t = e.target.closest('[data-modal]'); if (t) openModalByKey(t.dataset.modal); });
 modalClose.addEventListener('click', closeModal);
 modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+document.addEventListener('keydown', (event) => {
+    if (!modalOverlay.classList.contains('active')) return;
+    if (event.key === 'Escape') {
+        closeModal();
+        return;
+    }
+    if (event.key !== 'Tab') return;
+    const focusable = [...modalOverlay.querySelectorAll('a[href], button:not(:disabled), input:not(:disabled), select:not(:disabled), summary, [tabindex]:not([tabindex="-1"])')]
+        .filter(element => element instanceof HTMLElement && element.getClientRects().length > 0);
+    if (!focusable.length) {
+        event.preventDefault();
+        modalOverlay.querySelector('.modal-panel').focus();
+        return;
+    }
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+    }
+});
 
 // ===== DEVELOPER MODAL =====
 function openDevModal() {
-    modalTitle.textContent = "مطور الموقع";
+    modalTitle.textContent = "???? ??????";
     modalBody.innerHTML = `
         <div class="dev-modal">
-            <div class="dev-avatar-wrapper"><div class="dev-avatar">👨‍💻</div></div>
+            <div class="dev-avatar-wrapper"><div class="dev-avatar">?????</div></div>
             <div class="dev-name">Sam Emad</div>
             <div class="dev-role">Full-Stack Developer</div>
-            <p class="dev-bio">مسؤول عن تصميم وتطوير موقع etisalat. مهتم بتقديم تجربة مستخدم مميزة وحلول برمجية مبتكرة.</p>
+            <p class="dev-bio">????? ?? ????? ?????? ???? etisalat. ???? ?????? ????? ?????? ????? ????? ?????? ??????.</p>
             <div class="dev-links">
                 <a href="https://www.instagram.com/sam_emad3/" target="_blank" rel="noopener noreferrer" class="dev-link instagram">
                     <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -1441,130 +1779,390 @@ function openDevModal() {
 
 // ===== NUMBER MODAL WITH PRICE =====
 function openNumberModal() {
-    modalTitle.textContent = "طلب رقم جديد"; selectedNumberType = 'من اختياركم';
+    modalTitle.textContent = "??? ??? ????"; selectedNumberType = '?? ????????';
     const govOptions = governorates.map(g => `<option value="${g}">${g}</option>`).join('');
     modalBody.innerHTML = `
         <div class="number-modal-content">
-            <p>اختار إزاي عايز رقمك يوصلك، وسيب بياناتك وهنتواصل معاك.</p>
+            <p>????? ???? ???? ???? ?????? ???? ??????? ???????? ????.</p>
             <div class="id-card-notice">
                 <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-                <div class="id-card-notice-text"><strong>تنبيه مهم:</strong> عشان نقدر نفعل الخط، هتحتاج تبعت <strong>صورة بطاقة الرقم القومي</strong> على الواتساب بعد ما تسيب بياناتك. بدونه مش هنقدر نكمل التفعيل.</div>
+                <div class="id-card-notice-text"><strong>????? ???:</strong> ???? ???? ???? ????? ?????? ???? <strong>???? ????? ????? ??????</strong> ??? ???????? ??? ?? ???? ???????. ????? ?? ????? ???? ???????.</div>
             </div>
             <div style="display: flex; align-items: flex-start; gap: 12px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 14px 16px; margin-bottom: 20px;">
                 <svg viewBox="0 0 24 24" width="22" height="22" stroke="#34d399" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6;"><strong style="color: #34d399; font-weight: 700;">🎁 عرض الشهر الأول:</strong> أول شهر معانا <strong>ببلاش تماماً</strong> (2800 وحدة هدية). من بداية الشهر اللي بعده، هتبدأ تدفع سعر الباقة المختارة وتستمتع بنفس الوحدات شهرياً.</div>
+                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6;"><strong style="color: #34d399; font-weight: 700;">?? ??? ????? ?????:</strong> ??? ??? ????? <strong>????? ??????</strong> (2800 ???? ????). ?? ????? ????? ???? ????? ????? ???? ??? ?????? ???????? ??????? ???? ??????? ??????.</div>
             </div>
-            <label class="form-label">طريقة اختيار الرقم</label>
+            <label class="form-label">????? ?????? ?????</label>
             <div class="number-type-grid">
-                <div class="number-type-option" onclick="selectNumberType(this,'من اختياري')"><h5>رقم من اختياري 🎯</h5><p>هقولك الرقم اللي أنا عايزه</p></div>
-                <div class="number-type-option selected" onclick="selectNumberType(this,'من اختياركم')"><h5>رقم من اختياركم ✨</h5><p>انتوا ترشحوا لي رقم مناسب</p></div>
+                <div class="number-type-option" onclick="selectNumberType(this,'?? ???????')"><h5>??? ?? ??????? ??</h5><p>????? ????? ???? ??? ?????</p></div>
+                <div class="number-type-option selected" onclick="selectNumberType(this,'?? ????????')"><h5>??? ?? ???????? ?</h5><p>????? ?????? ?? ??? ?????</p></div>
             </div>
         </div>
         <div class="order-summary" style="margin-top:20px; margin-bottom:20px;">
             <div class="order-row total" style="border:none; padding:0; margin:0; justify-content:center; text-align:center;">
-                <span style="color:#fff;">سعر الخط:</span>
-                <span style="font-size:1.3rem;">250 جنيه</span>
+                <span style="color:#fff;">??? ????:</span>
+                <span style="font-size:1.3rem;">250 ????</span>
             </div>
         </div>
         <form onsubmit="handleNumberSubmit(event)">
-            <div class="form-group" id="num-group-name"><label class="form-label">الاسم بالكامل</label><input type="text" id="numName" class="form-input" placeholder="اكتب اسمك..." required><div class="form-error">يرجى كتابة الاسم</div></div>
-            <div class="form-group" id="num-group-gov"><label class="form-label">المحافظة</label><select id="numGov" class="form-select" required><option value="" disabled selected>اختر المحافظة...</option>${govOptions}</select><div class="form-error">يرجى اختيار المحافظة</div></div>
-            <button type="submit" class="whatsapp-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>إرسال طلب الرقم عبر WhatsApp</button>
+            <div class="form-group" id="num-group-name"><label class="form-label">????? ???????</label><input type="text" id="numName" class="form-input" placeholder="???? ????..." required><div class="form-error">???? ????? ?????</div></div>
+            <div class="form-group" id="num-group-gov"><label class="form-label">????????</label><select id="numGov" class="form-select" required><option value="" disabled selected>???? ????????...</option>${govOptions}</select><div class="form-error">???? ?????? ????????</div></div>
+            <button type="submit" class="whatsapp-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>????? ??? ????? ??? WhatsApp</button>
         </form>`;
     showModal();
 }
 
 // ===== TEAM MODAL WITH PRICE =====
 function openTeamModal() {
-    modalTitle.textContent = "طلب فريق عمل (خطين)";
+    modalTitle.textContent = "??? ???? ??? (????)";
     const govOptions = governorates.map(g=>`<option value="${g}">${g}</option>`).join('');
     modalBody.innerHTML = `
         <div class="team-modal-content">
-            <p>عشان تفعل ميزة المكالمات المجانية، هتحتاج تطلب خطين.</p>
+            <p>???? ???? ???? ????????? ????????? ?????? ???? ????.</p>
             <div class="id-card-notice">
                 <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-                <div class="id-card-notice-text"><strong>تنبيه مهم:</strong> عشان نقدر نفعل الخطين، هتحتاج تبعت <strong>صورة بطاقة الرقم القومي</strong> على الواتساب بعد ما تسيب بياناتك. بدونه مش هنقدر نكمل التفعيل.</div>
+                <div class="id-card-notice-text"><strong>????? ???:</strong> ???? ???? ???? ??????? ?????? ???? <strong>???? ????? ????? ??????</strong> ??? ???????? ??? ?? ???? ???????. ????? ?? ????? ???? ???????.</div>
             </div>
             <div style="display: flex; align-items: flex-start; gap: 12px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 14px 16px; margin-bottom: 20px;">
                 <svg viewBox="0 0 24 24" width="22" height="22" stroke="#34d399" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6;"><strong style="color: #34d399; font-weight: 700;">📌 نظام فريق العمل:</strong> أول شهر <strong>ببلاش تماماً</strong>. ومن الشهر التاني، المكالمات بينكم بتكون مجانية بحد أقصى <strong>1500 وحدة</strong> (من غير ما تخصم من باقتك)، وأي استخدام زيادة بيتحسب من وحدات الباقة الأساسية (2800 وحدة).</div>
+                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6;"><strong style="color: #34d399; font-weight: 700;">?? ???? ???? ?????:</strong> ??? ??? <strong>????? ??????</strong>. ??? ????? ??????? ????????? ????? ????? ?????? ??? ???? <strong>1500 ????</strong> (?? ??? ?? ???? ?? ?????)? ??? ??????? ????? ?????? ?? ????? ?????? ???????? (2800 ????).</div>
             </div>
             <ul>
-                <li>خط ليك وخط لصاحبك</li>
-                <li>مكالمات بينكم ببلاش</li>
-                <li>مش بيخصم من الباقة</li>
+                <li>?? ??? ??? ??????</li>
+                <li>??????? ????? ?????</li>
+                <li>?? ????? ?? ??????</li>
             </ul>
         </div>
         <div class="order-summary" style="margin-top:20px; margin-bottom:20px;">
             <div class="order-row total" style="border:none; padding:0; margin:0; justify-content:center; text-align:center;">
-                <span style="color:#fff;">سعر الخطين:</span>
-                <span style="font-size:1.3rem;">380 جنيه</span>
+                <span style="color:#fff;">??? ??????:</span>
+                <span style="font-size:1.3rem;">380 ????</span>
             </div>
         </div>
         <form onsubmit="handleTeamSubmit(event)">
-            <div class="form-group" id="team-group-name"><label class="form-label">اسمك بالكامل</label><input type="text" id="teamName" class="form-input" placeholder="اكتب اسمك..." required><div class="form-error">يرجى كتابة الاسم</div></div>
-            <div class="form-group" id="team-group-gov"><label class="form-label">المحافظة</label><select id="teamGov" class="form-select" required><option value="" disabled selected>اختر المحافظة...</option>${govOptions}</select><div class="form-error">يرجى اختيار المحافظة</div></div>
-            <button type="submit" class="whatsapp-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>إرسال الطلب عبر WhatsApp</button>
+            <div class="form-group" id="team-group-name"><label class="form-label">???? ???????</label><input type="text" id="teamName" class="form-input" placeholder="???? ????..." required><div class="form-error">???? ????? ?????</div></div>
+            <div class="form-group" id="team-group-gov"><label class="form-label">????????</label><select id="teamGov" class="form-select" required><option value="" disabled selected>???? ????????...</option>${govOptions}</select><div class="form-error">???? ?????? ????????</div></div>
+            <button type="submit" class="whatsapp-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>????? ????? ??? WhatsApp</button>
         </form>`;
     showModal();
 }
 
 // ===== FORM HANDLERS =====
 function selectNumberType(el, type) {
-    document.querySelectorAll('.number-type-option').forEach(o => o.classList.remove('selected'));
+    document.querySelectorAll('.number-type-option').forEach(option => {
+        const isSelected = option === el;
+        option.classList.toggle('selected', isSelected);
+        option.setAttribute('aria-checked', String(isSelected));
+        option.tabIndex = isSelected ? 0 : -1;
+    });
     el.classList.add('selected');
     selectedNumberType = type;
+}
+
+function showOrderReview(form, rows, message) {
+    form.hidden = true;
+    const review = document.createElement('section');
+    review.className = 'order-review';
+    review.setAttribute('aria-labelledby', 'orderReviewTitle');
+
+    const heading = document.createElement('h4');
+    heading.id = 'orderReviewTitle';
+    heading.textContent = '???? ???? ??? ????????';
+    const intro = document.createElement('p');
+    intro.textContent = '???? ?? ??? ????????. ?? ??? ????? ??????? ??? ??? ???????? ???????? ?? ??????.';
+    const list = document.createElement('dl');
+    list.className = 'order-review-list';
+
+    rows.forEach(([label, value]) => {
+        const row = document.createElement('div');
+        row.className = 'order-review-row';
+        const term = document.createElement('dt');
+        term.textContent = label;
+        const detail = document.createElement('dd');
+        detail.textContent = value;
+        row.append(term, detail);
+        list.appendChild(row);
+    });
+
+    const note = document.createElement('p');
+    note.className = 'order-review-note';
+    note.textContent = '??? ?????? ?? ???? ????? ????????. ???? ??????? ???? ????? ????? ?????? ???? ????? ??????? ??? ????? ????????.';
+    const actions = document.createElement('div');
+    actions.className = 'order-review-actions';
+    const editButton = document.createElement('button');
+    editButton.type = 'button';
+    editButton.textContent = '???? ???????';
+    editButton.addEventListener('click', () => {
+        review.remove();
+        form.hidden = false;
+        form.querySelector('input')?.focus();
+    });
+    const whatsappLink = document.createElement('a');
+    whatsappLink.href = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    whatsappLink.target = '_blank';
+    whatsappLink.rel = 'noopener noreferrer';
+    whatsappLink.textContent = '????? ???? WhatsApp';
+    actions.append(editButton, whatsappLink);
+    review.append(heading, intro, list, note, actions);
+    form.before(review);
+    editButton.focus();
 }
 
 function handleNumberSubmit(e) {
     e.preventDefault();
     const name = document.getElementById('numName');
     const gov = document.getElementById('numGov');
-    let v = true;
-    if (!name.value.trim()) { document.getElementById('num-group-name').classList.add('error'); v = false; } else { document.getElementById('num-group-name').classList.remove('error'); }
-    if (!gov.value) { document.getElementById('num-group-gov').classList.add('error'); v = false; } else { document.getElementById('num-group-gov').classList.remove('error'); }
-    if (!v) return;
-    const waUrl = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(`مرحبًا، أريد طلب رقم جديد.\nالاسم: ${name.value}\nالمحافظة: ${gov.value}\nطريقة الاختيار: ${selectedNumberType}\nسعر الخط: 250 جنيه`)}`;
-    const tempLink = document.createElement('a'); tempLink.href = waUrl; tempLink.target = '_blank'; tempLink.rel = 'noopener noreferrer'; document.body.appendChild(tempLink); tempLink.click(); document.body.removeChild(tempLink);
-    closeModal(); showToast('تم تحويلك إلى WhatsApp', 'success');
+    const cleanName = name.value.trim();
+    const nameGroup = document.getElementById('num-group-name');
+    nameGroup.classList.toggle('error', !cleanName);
+    name.setAttribute('aria-invalid', String(!cleanName));
+    if (!cleanName || !gov.value) return;
+    showOrderReview(e.currentTarget, [
+        ['??? ?????', '??? ??? ????'],
+        ['?????', cleanName],
+        ['????????', gov.value],
+        ['????? ?????? ?????', selectedNumberType],
+        ['??? ???? ???????', '250 ????']
+    ], `??????? ???? ??? ??? ????.\n?????: ${cleanName}\n????????: ${gov.value}\n????? ????????: ${selectedNumberType}\n??? ????: 250 ????`);
 }
 
 function handleTeamSubmit(e) {
     e.preventDefault();
     const name = document.getElementById('teamName');
     const gov = document.getElementById('teamGov');
-    let v = true;
-    if (!name.value.trim()) { document.getElementById('team-group-name').classList.add('error'); v = false; } else { document.getElementById('team-group-name').classList.remove('error'); }
-    if (!gov.value) { document.getElementById('team-group-gov').classList.add('error'); v = false; } else { document.getElementById('team-group-gov').classList.remove('error'); }
-    if (!v) return;
-    const waUrl = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(`مرحبًا، أريد الاشتراك في عرض فريق العمل (خطين).\nالاسم: ${name.value}\nالمحافظة: ${gov.value}\nسعر الخطين: 380 جنيه`)}`;
-    const tempLink = document.createElement('a'); tempLink.href = waUrl; tempLink.target = '_blank'; tempLink.rel = 'noopener noreferrer'; document.body.appendChild(tempLink); tempLink.click(); document.body.removeChild(tempLink);
-    closeModal(); showToast('تم تحويلك إلى WhatsApp', 'success');
+    const cleanName = name.value.trim();
+    document.getElementById('team-group-name').classList.toggle('error', !cleanName);
+    name.setAttribute('aria-invalid', String(!cleanName));
+    if (!cleanName || !gov.value) return;
+    showOrderReview(e.currentTarget, [
+        ['??? ?????', '???? ??? (????)'],
+        ['?????', cleanName],
+        ['????????', gov.value],
+        ['????? ??????? ??????', '380 ????']
+    ], `??????? ???? ???????? ?? ??? ???? ????? (????).\n?????: ${cleanName}\n????????: ${gov.value}\n??? ??????: 380 ????`);
 }
 
 // ===== PACKAGES =====
 function switchTab(type, tabButton) {
-    document.querySelectorAll('.packages-tabs .tab-btn').forEach(button => button.classList.toggle('active', button === tabButton));
-    renderPackages(type === 'units' ? unitsPlans : megaPlans, type === 'units' ? 'وحدات' : 'ميجا', type);
+    activePlanType = type;
+    document.querySelectorAll('.packages-tabs .tab-btn').forEach(button => {
+        const isActive = button === tabButton;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-selected', String(isActive));
+        button.tabIndex = isActive ? 0 : -1;
+    });
+    document.getElementById('packagesGrid').setAttribute('aria-labelledby', tabButton.id);
+    renderPackages(type === 'units' ? unitsPlans : megaPlans, type === 'units' ? '?????' : '????', type);
 }
+
+document.querySelector('.packages-tabs').addEventListener('keydown', event => {
+    const tabs = [...document.querySelectorAll('.packages-tabs [role="tab"]')];
+    const currentIndex = tabs.indexOf(event.target);
+    if (currentIndex === -1 || !['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+    event.preventDefault();
+    const nextIndex = event.key === 'Home'
+        ? 0
+        : event.key === 'End'
+            ? tabs.length - 1
+            : (currentIndex + (event.key === 'ArrowLeft' ? 1 : -1) + tabs.length) % tabs.length;
+    tabs[nextIndex].focus();
+    tabs[nextIndex].click();
+});
+
+function normalizePackageSearch(value) {
+    return value.toLocaleLowerCase('ar')
+        .normalize('NFKC')
+        .replace(/[\u064B-\u065F\u0670]/g, '')
+        .replace(/[???]/g, '?')
+        .replace(/?/g, '?')
+        .replace(/[?-?]/g, digit => String(digit.charCodeAt(0) - 0x0660))
+        .trim();
+}
+
+function applyPackageFilters() {
+    const isUnits = activePlanType === 'units';
+    renderPackages(isUnits ? unitsPlans : megaPlans, isUnits ? '?????' : '????', activePlanType);
+}
+
+function findBudgetRecommendation() {
+    const type = document.getElementById('budgetPlanType').value;
+    const budget = Number(document.getElementById('budgetAmount').value);
+    const plans = type === 'units' ? unitsPlans : megaPlans;
+    const affordablePlans = plans.filter(plan => plan.sell <= budget);
+    const plan = affordablePlans.length
+        ? affordablePlans.reduce((best, current) => current.value > best.value ? current : best)
+        : plans.reduce((cheapest, current) => current.sell < cheapest.sell ? current : cheapest);
+    return { type, budget, plan, fitsBudget: affordablePlans.length > 0 };
+}
+
+function getPlanShareUrl(plan, typeName) {
+    const message = `???? ${typeName} ???? ${plan.value} ${plan.unit} ???? ${plan.sell} ????.\n??????? ???????: ${plan.company - plan.sell} ????.\n???? ????? ??????? ??????? ?? ??? ??????? ??? ?????.`;
+    return `https://wa.me/?text=${encodeURIComponent(message)}`;
+}
+
+function renderBudgetRecommendation() {
+    const recommendation = findBudgetRecommendation();
+    const { type, budget, plan, fitsBudget } = recommendation;
+    const typeName = type === 'units' ? '?????' : '????';
+    document.getElementById('budgetAmountValue').textContent = `${budget} ????`;
+    const status = fitsBudget
+        ? `???? ${plan.value} ${plan.unit} ???? ${plan.sell} ????${budget > plan.sell ? `? ?????? ${budget - plan.sell} ???? ?? ????????` : ''}.`
+        : `???????? ??? ?? ??? ??? ????? ???? ?????? ???? ?? ${plan.sell} ???? (????? ${plan.sell - budget} ????).`;
+    document.getElementById('budgetRecommendation').innerHTML = `
+        <div class="budget-recommendation-copy">
+            <strong>${fitsBudget ? '?? ???? ????? ?????????' : '?? ???? ???? ?????????'}</strong>
+            <span>${status} ????? ???????? ???????? ????? ??????? ??? ?????.</span>
+        </div>
+        <div class="budget-recommendation-actions">
+            <button type="button" data-budget-order="${type}:${plan.id}">${fitsBudget ? '???? ??????' : '??? ????????'}</button>
+            <a class="budget-share" href="${getPlanShareUrl(plan, typeName)}" target="_blank" rel="noopener noreferrer">??????</a>
+        </div>`;
+}
+
+function getQuizRecommendation(type, budget, priority) {
+    const plans = type === 'units' ? unitsPlans : megaPlans;
+    const affordablePlans = plans.filter(plan => plan.sell <= budget);
+    if (!affordablePlans.length) {
+            return {
+                plan: plans.reduce((cheapest, current) => current.sell < cheapest.sell ? current : cheapest),
+                withinBudget: false
+            };
+    }
+    const plan = priority === 'value'
+            ? affordablePlans.reduce((best, current) => current.sell / current.value < best.sell / best.value ? current : best)
+            : affordablePlans.reduce((best, current) => current.value > best.value ? current : best);
+    return { plan, withinBudget: true };
+}
+
+function renderPlanQuizResult(type, budget, priority) {
+    const result = document.getElementById('planQuizResult');
+    const recommendation = getQuizRecommendation(type, budget, priority);
+    const { plan, withinBudget } = recommendation;
+    const typeName = type === 'units' ? '?????' : '????';
+    const reason = priority === 'value' ? '??? ????? ??? ???? ??? ????????' : '???? ??? ??? ????????';
+    const title = document.createElement('h4');
+    title.textContent = withinBudget ? '?????? ?????? ????????' : '???? ?????? ???? ?????????';
+    const details = document.createElement('p');
+    details.textContent = withinBudget
+            ? `???? ${plan.value} ${plan.unit} ???? ${plan.sell} ????. ?? ???????? ????? ???? ${reason} ??? ???????? (${budget} ????).`
+            : `???????? ??? ?? ??? ??? ?????. ???? ???? ?? ${plan.value} ${plan.unit} ???? ${plan.sell} ????? ?? ?????? ${plan.sell - budget} ????.`;
+    const note = document.createElement('p');
+    note.textContent = `????? ?? ???? ${plan.unit}: ${(plan.sell * 1000 / plan.value).toFixed(2)} ???? ??? ??????? ????????. ???? ?? ????? ??????? ??????? ??? ?????.`;
+    const actions = document.createElement('div');
+    actions.className = 'plan-quiz-actions';
+
+    const viewButton = document.createElement('button');
+    viewButton.type = 'button';
+    viewButton.className = 'quiz-secondary';
+    viewButton.dataset.quizAction = 'view';
+    viewButton.dataset.planType = type;
+    viewButton.dataset.planId = String(plan.id);
+    viewButton.textContent = '??? ?????? ?? ???????';
+
+    const orderButton = document.createElement('button');
+    orderButton.type = 'button';
+    orderButton.dataset.quizAction = 'order';
+    orderButton.dataset.planType = type;
+    orderButton.dataset.planId = String(plan.id);
+    orderButton.textContent = '???? ??? ??????';
+    actions.append(viewButton, orderButton);
+    result.replaceChildren(title, details, note, actions);
+    result.hidden = false;
+}
+
+document.getElementById('planQuizForm').addEventListener('submit', event => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+    }
+    const budget = Number(document.getElementById('quizBudget').value);
+    if (!Number.isFinite(budget)) {
+            document.getElementById('quizBudget').focus();
+            return;
+    }
+    renderPlanQuizResult(
+            document.getElementById('quizUsage').value,
+            budget,
+            document.getElementById('quizPriority').value
+    );
+});
+
+document.getElementById('planQuizResult').addEventListener('click', event => {
+    const action = event.target.closest('[data-quiz-action]');
+    if (!action) return;
+    const type = action.dataset.planType;
+    const plans = type === 'units' ? unitsPlans : megaPlans;
+    const plan = plans.find(item => item.id === Number(action.dataset.planId));
+    if (!plan) {
+            showToast('???? ?????? ??? ?????? ????????', 'error');
+            return;
+    }
+    if (action.dataset.quizAction === 'order') {
+            openOrderModal(plan, type === 'units' ? '?????' : '????');
+            return;
+    }
+    showFavoritesOnly = false;
+    const favoritesFilter = document.getElementById('favoritesFilter');
+    favoritesFilter.setAttribute('aria-pressed', 'false');
+    favoritesFilter.textContent = '? ???????';
+    document.getElementById('packageSearch').value = '';
+    document.getElementById('packageSort').value = 'recommended';
+    switchTab(type, document.getElementById(type === 'units' ? 'unitsTab' : 'megaTab'));
+    const recommendedButton = document.querySelector(`#packagesGrid [data-plan-id="${plan.id}"][data-plan-type="${type}"]`);
+    const recommendedCard = recommendedButton?.closest('.pkg-card');
+    document.querySelectorAll('.pkg-card.is-recommended').forEach(card => card.classList.remove('is-recommended'));
+    if (recommendedCard) {
+        recommendedCard.classList.remove('is-recommended');
+        void recommendedCard.offsetWidth;
+        recommendedCard.classList.add('is-recommended');
+        recommendedCard.scrollIntoView({
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+            block: 'center'
+        });
+    }
+    recommendedButton?.focus({ preventScroll: true });
+});
+
+function togglePlanFavorite(button) {
+    const planKey = `${button.dataset.favoriteType}:${button.dataset.favoriteId}`;
+    if (favoritePlans.has(planKey)) favoritePlans.delete(planKey);
+    else favoritePlans.add(planKey);
+    localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify([...favoritePlans]));
+    applyPackageFilters();
+    const selector = `.pkg-favorite-btn[data-favorite-id="${button.dataset.favoriteId}"][data-favorite-type="${button.dataset.favoriteType}"]`;
+    (document.querySelector(selector) || document.getElementById('favoritesFilter')).focus();
+}
+
+document.getElementById('packageSearch').addEventListener('input', applyPackageFilters);
+document.getElementById('packageSort').addEventListener('change', applyPackageFilters);
+document.getElementById('budgetPlanType').addEventListener('change', renderBudgetRecommendation);
+document.getElementById('budgetAmount').addEventListener('input', renderBudgetRecommendation);
+document.getElementById('favoritesFilter').addEventListener('click', event => {
+    showFavoritesOnly = !showFavoritesOnly;
+    event.currentTarget.setAttribute('aria-pressed', String(showFavoritesOnly));
+    event.currentTarget.textContent = showFavoritesOnly ? '? ??????? ???' : '? ???????';
+    applyPackageFilters();
+});
 
 function updateCompareUI() {
     const dock = document.getElementById('compareDock');
     const count = plansForComparison.length;
     dock.classList.toggle('is-visible', count > 0);
     document.body.classList.toggle('compare-active', count > 0);
-    document.getElementById('compareCount').textContent = `${count} من 2 باقة`;
+    document.getElementById('compareCount').textContent = `${count} ?? 2 ????`;
     document.getElementById('compareHint').textContent = count === 0
-        ? 'اختار باقتين من نفس النوع للمقارنة'
+        ? '????? ?????? ?? ??? ????? ????????'
         : count === 1
-            ? 'اختار باقة تانية من نفس النوع'
-            : 'جاهز! شوف الفرق واختار الأنسب ليك';
+            ? '????? ???? ????? ?? ??? ?????'
+            : '????! ??? ????? ?????? ?????? ???';
     document.getElementById('openCompare').disabled = count !== 2;
     document.querySelectorAll('.pkg-compare-btn').forEach(button => {
         const selected = plansForComparison.some(item => item.type === button.dataset.compareType && item.plan.id === Number(button.dataset.compareId));
         const incompatible = count > 0 && plansForComparison[0].type !== button.dataset.compareType;
         button.setAttribute('aria-pressed', String(selected));
-        button.textContent = selected ? 'تمت الإضافة ✓' : '＋ قارن الباقة';
+        button.textContent = selected ? '??? ??????? ?' : '+ ???? ??????';
         button.disabled = !selected && (count === 2 || incompatible);
     });
 }
@@ -1576,17 +2174,17 @@ function togglePlanComparison(button) {
     if (existingIndex !== -1) {
         plansForComparison.splice(existingIndex, 1);
     } else if (plansForComparison.length === 2) {
-        showToast('امسح اختيارًا قبل إضافة باقة تانية', 'error');
+        showToast('???? ???????? ??? ????? ???? ?????', 'error');
     } else if (plansForComparison.length && plansForComparison[0].type !== type) {
-        showToast('اختار باقتين من نفس النوع للمقارنة', 'error');
+        showToast('????? ?????? ?? ??? ????? ????????', 'error');
     } else {
         const group = type === 'units' ? unitsPlans : megaPlans;
         const plan = group.find(item => item.id === planId);
         if (!plan) {
-            showToast('تعذر العثور على الباقة المطلوبة', 'error');
+            showToast('???? ?????? ??? ?????? ????????', 'error');
             return;
         }
-        plansForComparison.push({ type, typeName: type === 'units' ? 'وحدات' : 'ميجا', plan });
+        plansForComparison.push({ type, typeName: type === 'units' ? '?????' : '????', plan });
     }
     updateCompareUI();
 }
@@ -1596,43 +2194,83 @@ function openPlanComparison() {
     const [first, second] = plansForComparison;
     const packages = [first, second];
     const values = packages.map(({ plan }) => ({
-        price: `${plan.sell} جنيه`,
-        original: `${plan.company} جنيه`,
-        saving: `${plan.company - plan.sell} جنيه`,
-        rate: `${(plan.sell / plan.value * 1000).toFixed(4)} جنيه`
+        price: `${plan.sell} ????`,
+        original: `${plan.company} ????`,
+        saving: `${plan.company - plan.sell} ????`,
+        rate: `${(plan.sell / plan.value * 1000).toFixed(4)} ????`
     }));
     const calculationCards = packages.map(({ plan, typeName }) => {
         const pricePerUnit = plan.sell / plan.value;
         const pricePerThousand = plan.sell * 1000 / plan.value;
         return `<article class="compare-calculation">
-            <h4>باقة ${plan.value} ${plan.unit}</h4>
-            <p>حساب سعر الوحدة: <strong>${plan.sell} جنيه ÷ ${plan.value} ${plan.unit} = ${pricePerUnit.toFixed(8)} جنيه لكل ${plan.unit}</strong> (تقريب عشري؛ الكسر الدقيق هو ${plan.sell} ÷ ${plan.value}).</p>
-            <p>تكلفة كل ١٠٠٠ ${plan.unit}: <strong>${plan.sell} × ١٠٠٠ ÷ ${plan.value} = ${pricePerThousand.toFixed(4)} جنيه</strong>.</p>
-            <p>التوفير المعروض: <strong>${plan.company} − ${plan.sell} = ${plan.company - plan.sell} جنيه</strong> مقارنة بالسعر المرجعي الظاهر.</p>
+            <h4>???? ${plan.value} ${plan.unit}</h4>
+            <p>???? ??? ??????: <strong>${plan.sell} ???? � ${plan.value} ${plan.unit} = ${pricePerUnit.toFixed(8)} ???? ??? ${plan.unit}</strong> (????? ????? ????? ?????? ?? ${plan.sell} � ${plan.value}).</p>
+            <p>????? ?? ???? ${plan.unit}: <strong>${plan.sell} � ???? � ${plan.value} = ${pricePerThousand.toFixed(4)} ????</strong>.</p>
+            <p>??????? ???????: <strong>${plan.company} - ${plan.sell} = ${plan.company - plan.sell} ????</strong> ?????? ?????? ??????? ??????.</p>
         </article>`;
     }).join('');
-    modalTitle.textContent = 'مقارنة الباقات';
+    modalTitle.textContent = '?????? ???????';
     modalBody.innerHTML = `
         <div class="compare-table-wrap">
             <table class="compare-table">
-                <thead><tr><th scope="col">التفاصيل</th>${packages.map(({ plan }) => `<th scope="col">${plan.value} ${plan.unit}</th>`).join('')}</tr></thead>
+                <thead><tr><th scope="col">????????</th>${packages.map(({ plan }) => `<th scope="col">${plan.value} ${plan.unit}</th>`).join('')}</tr></thead>
                 <tbody>
-                    <tr><th scope="row">سعر البيع</th>${values.map(item => `<td>${item.price}</td>`).join('')}</tr>
-                    <tr><th scope="row">السعر المرجعي المعروض</th>${values.map(item => `<td>${item.original}</td>`).join('')}</tr>
-                    <tr><th scope="row">قيمة التوفير</th>${values.map(item => `<td class="compare-saving">${item.saving}</td>`).join('')}</tr>
-                    <tr><th scope="row"><span class="compare-rate-label">تكلفة كل ١٠٠٠ ${first.plan.unit}<button class="compare-details-toggle" type="button" aria-expanded="false" aria-controls="compareCalculations">تفاصيل</button></span></th>${values.map(item => `<td>${item.rate}</td>`).join('')}</tr>
-                    <tr><th scope="row">اختيار الباقة</th>${packages.map(({ plan, type }) => `<td><button type="button" class="compare-order" data-compare-order="${type}:${plan.id}">اختارها</button></td>`).join('')}</tr>
+                    <tr><th scope="row">??? ?????</th>${values.map(item => `<td>${item.price}</td>`).join('')}</tr>
+                    <tr><th scope="row">????? ??????? ???????</th>${values.map(item => `<td>${item.original}</td>`).join('')}</tr>
+                    <tr><th scope="row">???? ???????</th>${values.map(item => `<td class="compare-saving">${item.saving}</td>`).join('')}</tr>
+                    <tr><th scope="row"><span class="compare-rate-label">????? ?? ???? ${first.plan.unit}<button class="compare-details-toggle" type="button" aria-expanded="false" aria-controls="compareCalculations">??????</button></span></th>${values.map(item => `<td>${item.rate}</td>`).join('')}</tr>
+                    <tr><th scope="row">?????? ??????</th>${packages.map(({ plan, type }) => `<td><button type="button" class="compare-order" data-compare-order="${type}:${plan.id}">???????</button></td>`).join('')}</tr>
                 </tbody>
             </table>
         </div>
         <div class="compare-calculations" id="compareCalculations" hidden>${calculationCards}</div>
-        <p class="compare-calculation-note">الحساب مبني على سعر البيع والسعة المعروضين على الموقع؛ تكلفة الوحدة متوسط حسابي للمقارنة وليست تعريفة رسمية أو ضمانًا لطريقة احتساب شركة الاتصالات.</p>`;
+        <p class="compare-calculation-note">?????? ???? ??? ??? ????? ?????? ????????? ??? ??????? ????? ?????? ????? ????? ???????? ????? ?????? ????? ?? ?????? ?????? ?????? ???? ?????????.</p>`;
     showModal();
 }
 
 document.getElementById('packagesGrid').addEventListener('click', event => {
-    const button = event.target.closest('.pkg-compare-btn');
-    if (button) togglePlanComparison(button);
+    const favoriteButton = event.target.closest('.pkg-favorite-btn');
+    if (favoriteButton) {
+        togglePlanFavorite(favoriteButton);
+        return;
+    }
+    const compareButton = event.target.closest('.pkg-compare-btn');
+    if (compareButton) {
+        togglePlanComparison(compareButton);
+        return;
+    }
+    const orderButton = event.target.closest('.pkg-btn');
+    if (orderButton) {
+        const plans = orderButton.dataset.planType === 'units' ? unitsPlans : megaPlans;
+        const plan = plans.find(item => item.id === Number(orderButton.dataset.planId));
+        if (!plan) {
+            showToast('???? ?????? ??? ?????? ????????', 'error');
+            return;
+        }
+        openOrderModal(plan, orderButton.dataset.planType === 'units' ? '?????' : '????');
+        return;
+    }
+    if (event.target.closest('.clear-package-filters')) {
+        document.getElementById('packageSearch').value = '';
+        document.getElementById('packageSort').value = 'recommended';
+        showFavoritesOnly = false;
+        const favoritesButton = document.getElementById('favoritesFilter');
+        favoritesButton.setAttribute('aria-pressed', 'false');
+        favoritesButton.textContent = '? ???????';
+        applyPackageFilters();
+    }
+});
+document.getElementById('budgetRecommendation').addEventListener('click', event => {
+    const action = event.target.closest('[data-budget-order]');
+    if (!action) return;
+    const [type, id] = action.dataset.budgetOrder.split(':');
+    const plans = type === 'units' ? unitsPlans : megaPlans;
+    const plan = plans.find(item => item.id === Number(id));
+    if (!plan) {
+        showToast('???? ?????? ??? ?????? ????????', 'error');
+        return;
+    }
+    openOrderModal(plan, type === 'units' ? '?????' : '????');
 });
 document.getElementById('clearCompare').addEventListener('click', () => {
     plansForComparison = [];
@@ -1645,7 +2283,7 @@ modalBody.addEventListener('click', event => {
     const details = document.getElementById('compareCalculations');
     const isExpanded = button.getAttribute('aria-expanded') === 'true';
     button.setAttribute('aria-expanded', String(!isExpanded));
-    button.textContent = isExpanded ? 'تفاصيل' : 'إخفاء التفاصيل';
+    button.textContent = isExpanded ? '??????' : '????? ????????';
     details.hidden = isExpanded;
 });
 document.addEventListener('click', event => {
@@ -1654,36 +2292,75 @@ document.addEventListener('click', event => {
     const [type, id] = button.dataset.compareOrder.split(':');
     const plan = (type === 'units' ? unitsPlans : megaPlans).find(item => item.id === Number(id));
     if (!plan) {
-        showToast('تعذر العثور على الباقة المطلوبة', 'error');
+        showToast('???? ?????? ??? ?????? ????????', 'error');
         return;
     }
-    openOrderModal(plan, type === 'units' ? 'وحدات' : 'ميجا');
+    openOrderModal(plan, type === 'units' ? '?????' : '????');
 });
 
 function renderPackages(plans, typeName, planType) {
-    const grid=document.getElementById('packagesGrid'); grid.innerHTML='';
-    plans.forEach((plan,i)=>{ const saving=plan.company-plan.sell; const card=document.createElement('div'); card.className='glass-card pkg-card fade-up';
-    card.innerHTML=`<div class="pkg-header">${i===2?'<div class="pkg-badge">الأكثر طلباً 🔥</div>':''}<div class="pkg-type">باقة ${typeName}</div><div class="pkg-value">${plan.value} <span>${plan.unit}</span></div></div><div class="pkg-body"><div class="pkg-pricing"><span class="pkg-old-price">~~${plan.company} جنيه~~</span><div class="pkg-new-price">${plan.sell} <small>جنيه</small></div><div class="pkg-save">وفر ${saving} جنيه</div></div><div class="pkg-actions"><button class="pkg-compare-btn" type="button" data-compare-id="${plan.id}" data-compare-type="${planType}" aria-pressed="false">＋ قارن الباقة</button><button class="pkg-btn" onclick="openOrderModal(${JSON.stringify(plan).replace(/"/g,'&quot;')},'${typeName}')">اشترك الآن</button></div></div>`;
-    grid.appendChild(card); });
+    const grid = document.getElementById('packagesGrid');
+    const searchQuery = normalizePackageSearch(document.getElementById('packageSearch').value);
+    const sortOrder = document.getElementById('packageSort').value;
+    const visiblePlans = plans.filter(plan => {
+        const planKey = `${planType}:${plan.id}`;
+        const searchText = normalizePackageSearch(`${plan.value} ${plan.unit} ${plan.sell} ???? ${plan.company} ${plan.company - plan.sell}`);
+        return (!showFavoritesOnly || favoritePlans.has(planKey)) && (!searchQuery || searchText.includes(searchQuery));
+    });
+    if (sortOrder === 'price-asc') visiblePlans.sort((a, b) => a.sell - b.sell);
+    if (sortOrder === 'price-desc') visiblePlans.sort((a, b) => b.sell - a.sell);
+    if (sortOrder === 'capacity-desc') visiblePlans.sort((a, b) => b.value - a.value);
+    if (sortOrder === 'saving-desc') visiblePlans.sort((a, b) => (b.company - b.sell) - (a.company - a.sell));
+    document.getElementById('packagesResultsStatus').textContent = visiblePlans.length
+        ? `??? ${visiblePlans.length} ?? ${plans.length} ?????`
+        : showFavoritesOnly && !searchQuery
+            ? '?? ??? ?? ???? ??? ??????? ???.'
+            : '?? ???? ????? ?????? ?????.';
+    grid.replaceChildren();
+    if (!visiblePlans.length) {
+        const emptyState = document.createElement('div');
+        emptyState.className = 'packages-empty';
+        emptyState.innerHTML = `<strong>${showFavoritesOnly && !searchQuery ? '?????? ??? ?????' : '?? ?????? ???? ??????'}</strong><span>${showFavoritesOnly && !searchQuery ? '???? ??????? ???? ????? ?????? ??? ??? ?????.' : '??? ????? ????? ?? ???????.'}</span><br><button class="clear-package-filters" type="button">${showFavoritesOnly && !searchQuery ? '??? ?? ???????' : '??? ????? ????????'}</button>`;
+        grid.appendChild(emptyState);
+        updateCompareUI();
+        return;
+    }
+    visiblePlans.forEach(plan => {
+        const saving = plan.company - plan.sell;
+        const isFavorite = favoritePlans.has(`${planType}:${plan.id}`);
+        const card = document.createElement('article');
+        card.className = 'glass-card pkg-card fade-up';
+        card.innerHTML = `<div class="pkg-header">${plan.id === 3 ? '<div class="pkg-badge">?????? ????? ??</div>' : ''}<button class="pkg-favorite-btn" type="button" data-favorite-id="${plan.id}" data-favorite-type="${planType}" aria-label="${isFavorite ? '?????' : '?????'} ???? ${plan.value} ${plan.unit} ${isFavorite ? '??' : '???'} ???????" aria-pressed="${isFavorite}">${isFavorite ? '?' : '?'}</button><div class="pkg-type">???? ${typeName}</div><div class="pkg-value">${plan.value} <span>${plan.unit}</span></div></div><div class="pkg-body"><div class="pkg-pricing"><span class="pkg-old-price">${plan.company} ????</span><div class="pkg-new-price">${plan.sell} <small>????</small></div><div class="pkg-save">??? ${saving} ????</div></div><div class="pkg-actions"><button class="pkg-compare-btn" type="button" data-compare-id="${plan.id}" data-compare-type="${planType}" aria-pressed="false">+ ???? ??????</button><button class="pkg-btn" type="button" data-plan-id="${plan.id}" data-plan-type="${planType}">????? ????</button><a class="pkg-share-btn" href="${getPlanShareUrl(plan, typeName)}" target="_blank" rel="noopener noreferrer" aria-label="?????? ?????? ???? ${plan.value} ${plan.unit} ??? WhatsApp">???? ?????? ??? WhatsApp</a></div></div>`;
+        grid.appendChild(card);
+    });
     observeFadeUp();
     updateCompareUI();
 }
 
 function openOrderModal(plan, typeName) {
-    currentSelectedPlan={...plan,typeName}; modalTitle.textContent="طلب اشتراك جديد";
+    currentSelectedPlan={...plan,typeName}; modalTitle.textContent="??? ?????? ????";
     const saving=plan.company-plan.sell; const govOptions=governorates.map(g=>`<option value="${g}">${g}</option>`).join('');
-    modalBody.innerHTML=`<div class="order-summary"><div class="order-row"><span>نوع الباقة:</span><span>${typeName}</span></div><div class="order-row"><span>القيمة:</span><span>${plan.value} ${plan.unit}</span></div><div class="order-row total"><span>سعر البيع:</span><span>${plan.sell} جنيه</span></div><div class="order-row" style="color:#34d399;"><span>💰 التوفير:</span><span>${saving} جنيه</span></div></div><form onsubmit="handleOrderSubmit(event)"><div class="form-group" id="group-name"><label class="form-label">الاسم بالكامل</label><input type="text" id="clientName" class="form-input" placeholder="اكتب اسمك هنا..." required><div class="form-error">يرجى كتابة الاسم</div></div><div class="form-group" id="group-gov"><label class="form-label">المحافظة</label><select id="clientGov" class="form-select" required><option value="" disabled selected>اختر المحافظة...</option>${govOptions}</select><div class="form-error">يرجى اختيار المحافظة</div></div><button type="submit" class="whatsapp-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>إرسال الطلب عبر WhatsApp</button></form>`;
+    modalBody.innerHTML=`<div class="order-summary"><div class="order-row"><span>??? ??????:</span><span>${typeName}</span></div><div class="order-row"><span>??????:</span><span>${plan.value} ${plan.unit}</span></div><div class="order-row total"><span>??? ?????:</span><span>${plan.sell} ????</span></div><div class="order-row" style="color:#34d399;"><span>?? ???????:</span><span>${saving} ????</span></div></div><form onsubmit="handleOrderSubmit(event)"><div class="form-group" id="group-name"><label class="form-label">????? ???????</label><input type="text" id="clientName" class="form-input" placeholder="???? ???? ???..." required><div class="form-error">???? ????? ?????</div></div><div class="form-group" id="group-gov"><label class="form-label">????????</label><select id="clientGov" class="form-select" required><option value="" disabled selected>???? ????????...</option>${govOptions}</select><div class="form-error">???? ?????? ????????</div></div><button type="submit" class="whatsapp-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>????? ????? ??? WhatsApp</button></form>`;
     showModal();
 }
 
 function handleOrderSubmit(e) {
-    e.preventDefault(); const name=document.getElementById('clientName'), gov=document.getElementById('clientGov'); let v=true;
-    if(!name.value.trim()){document.getElementById('group-name').classList.add('error');v=false;}else{document.getElementById('group-name').classList.remove('error');}
-    if(!gov.value){document.getElementById('group-gov').classList.add('error');v=false;}else{document.getElementById('group-gov').classList.remove('error');}
-    if(!v) return;
-    const waUrl = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(`مرحبًا، أريد الاشتراك في باقة.\nالاسم: ${name.value}\nالمحافظة: ${gov.value}\nنوع الباقة: ${currentSelectedPlan.typeName}\nالباقة: ${currentSelectedPlan.value} ${currentSelectedPlan.unit}\nسعر البيع: ${currentSelectedPlan.sell} جنيه\nالتوفير: ${currentSelectedPlan.company-currentSelectedPlan.sell} جنيه`)}`;
-    const tempLink = document.createElement('a'); tempLink.href = waUrl; tempLink.target = '_blank'; tempLink.rel = 'noopener noreferrer'; document.body.appendChild(tempLink); tempLink.click(); document.body.removeChild(tempLink);
-    closeModal(); showToast('تم تحويلك إلى WhatsApp','success');
+    e.preventDefault();
+    const name = document.getElementById('clientName');
+    const gov = document.getElementById('clientGov');
+    const cleanName = name.value.trim();
+    document.getElementById('group-name').classList.toggle('error', !cleanName);
+    name.setAttribute('aria-invalid', String(!cleanName));
+    if (!cleanName || !gov.value || !currentSelectedPlan) return;
+    const saving = currentSelectedPlan.company - currentSelectedPlan.sell;
+    showOrderReview(e.currentTarget, [
+        ['??? ??????', currentSelectedPlan.typeName],
+        ['?????', `${currentSelectedPlan.value} ${currentSelectedPlan.unit}`],
+        ['??? ????? ???????', `${currentSelectedPlan.sell} ????`],
+        ['??????? ???????', `${saving} ????`],
+        ['?????', cleanName],
+        ['????????', gov.value]
+    ], `??????? ???? ???????? ?? ????.\n?????: ${cleanName}\n????????: ${gov.value}\n??? ??????: ${currentSelectedPlan.typeName}\n??????: ${currentSelectedPlan.value} ${currentSelectedPlan.unit}\n??? ?????: ${currentSelectedPlan.sell} ????\n???????: ${saving} ????`);
 }
 
 // ===== TOAST =====
@@ -1711,7 +2388,7 @@ class Particle {
         this.size = Math.random() * 1.2 + 0.3;
         this.speedX = (Math.random() * 0.15) - 0.075;
         this.speedY = (Math.random() * 0.15) - 0.075;
-        // ألوان الجزيئات: أزرق وذهبي وأبيض
+        // ????? ????????: ???? ????? ?????
         this.color = ['#3b82f6','#60a5fa','#ffffff'][Math.floor(Math.random()*3)];
     }
     update() {
@@ -1725,7 +2402,7 @@ class Particle {
 function initParticles() { particles = []; for (let i = 0; i < getParticleCount(); i++) particles.push(new Particle()); }
 
 function animateCanvas() {
-    if (!isTabVisible) return;
+    if (!isTabVisible || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     particles.forEach(p => { p.update(); p.draw(); });
     if (window.innerWidth >= 768) {
@@ -1769,8 +2446,20 @@ function observeFadeUp() {
 
 // ===== NAV =====
 const hamburger = document.getElementById('hamburger'), navLinks = document.getElementById('navLinks');
-hamburger.addEventListener('click', () => { hamburger.classList.toggle('active'); navLinks.classList.toggle('active'); });
-document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('active'); navLinks.classList.remove('active'); }));
+function setMobileNavigation(open) {
+    hamburger.classList.toggle('active', open);
+    navLinks.classList.toggle('active', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+    hamburger.setAttribute('aria-label', open ? '????? ????? ??????' : '??? ????? ??????');
+}
+hamburger.addEventListener('click', () => setMobileNavigation(!navLinks.classList.contains('active')));
+document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => setMobileNavigation(false)));
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && navLinks.classList.contains('active')) {
+        setMobileNavigation(false);
+        hamburger.focus();
+    }
+});
 const readingProgress = document.querySelector('.reading-progress');
 const readingProgressBar = document.getElementById('readingProgressBar');
 const backToTop = document.getElementById('backToTop');
@@ -1799,11 +2488,30 @@ backToTop.addEventListener('click', () => {
 });
 updateScrollUI();
 
+// ===== OFFLINE SUPPORT =====
+const offlineBanner = document.getElementById('offlineBanner');
+
+function updateOfflineNotice() {
+    offlineBanner.hidden = navigator.onLine;
+}
+
+window.addEventListener('online', updateOfflineNotice);
+window.addEventListener('offline', updateOfflineNotice);
+updateOfflineNotice();
+
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+            .catch(error => console.error('???? ????? ???? ?????? ????? ??? ?????:', error));
+    });
+}
+
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
     resizeCanvas(); animateCanvas(); loadServices(); observeFadeUp();
-    renderPackages(unitsPlans, 'وحدات', 'units');
-    // تم حذف استدعاء renderLines لأن القسم تم حذفه
+    renderBudgetRecommendation();
+    renderPackages(unitsPlans, '?????', 'units');
+    // ?? ??? ??????? renderLines ??? ????? ?? ????
 });
 </script>
 </body>
