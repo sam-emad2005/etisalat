@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>etisalat | ???? ?????? ???????</title>
-<meta name="description" content="?????? ????? ??????? ?????????? ???? ??????? ????????? ????? ?????? ???????? ??????.">
+<title>etisalat | عروض وخدمات اتصالات</title>
+<meta name="description" content="استعرض باقات الوحدات والإنترنت، قارن الأسعار والتوفير، واختر الباقة المناسبة بسهولة.">
 <meta name="theme-color" content="#e60000">
 <link rel="icon" type="image/jpeg" href="favicon.jpg">
 <link rel="icon" type="image/svg+xml" href="site-icon.svg">
 <link rel="apple-touch-icon" href="favicon.jpg">
 <link rel="manifest" href="manifest.webmanifest">
-<meta property="og:title" content="etisalat | ???? ?????? ???????">
-<meta property="og:description" content="?????? ??????? ????? ??????? ???????? ????? ?????? ??.">
+<meta property="og:title" content="etisalat | عروض وخدمات اتصالات">
+<meta property="og:description" content="استعرض الباقات وقارن الأسعار والتوفير واختر الأنسب لك.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,7 @@
     --modal-bg: #0a0a0a;
     --footer-bg: #000000;
     
-    --accent-primary: #3b82f6; /* ???? ???? */
+    --accent-primary: #3b82f6; /* أزرق ملكي */
     --accent-gold: #60a5fa;
     --accent-deep: #1e40af;
     --accent-soft: rgba(59,130,246,0.14);
@@ -394,7 +394,7 @@ body.compare-active .back-to-top { bottom: 96px; }
 .number-type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
 .number-type-option { background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 16px; cursor: pointer; transition: 0.3s; text-align: center; position: relative; }
 .number-type-option:hover, .number-type-option.selected { border-color: var(--accent-gold); background: rgba(59, 130, 246, 0.08); }
-.number-type-option.selected::after { content: '?'; position: absolute; top: 8px; left: 8px; width: 20px; height: 20px; border-radius: 50%; background: var(--accent-gold); color: #000; font-size: 0.7rem; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.number-type-option.selected::after { content: '✓'; position: absolute; top: 8px; left: 8px; width: 20px; height: 20px; border-radius: 50%; background: var(--accent-gold); color: #000; font-size: 0.7rem; font-weight: 800; display: flex; align-items: center; justify-content: center; }
 .number-type-option h5 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
 .number-type-option p { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin: 0; }
 .order-summary { background: rgba(255,255,255,0.02); border-radius: 16px; padding: 15px; margin-bottom: 25px; border: 1px dashed var(--border-subtle); position: relative; }
@@ -426,7 +426,7 @@ body.compare-active .back-to-top { bottom: 96px; }
 .faq-item summary { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 62px; padding: 16px 20px; color: var(--text-primary); font-size: 0.92rem; font-weight: 800; cursor: pointer; list-style: none; }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary::after { content: '+'; display: grid; place-items: center; flex: 0 0 28px; width: 28px; height: 28px; border: 1px solid var(--accent-line); border-radius: 9px; color: var(--accent-primary); font-size: 1.1rem; transition: transform 0.2s ease; }
-.faq-item[open] summary::after { content: '-'; }
+.faq-item[open] summary::after { content: '−'; }
 .faq-item summary:focus-visible { outline: 3px solid var(--accent-gold); outline-offset: -3px; }
 .faq-answer { padding: 0 20px 18px; color: var(--text-muted); font-size: 0.86rem; line-height: 1.85; }
 .faq-answer a { color: var(--accent-primary); font-weight: 800; }
@@ -437,7 +437,7 @@ body.compare-active .back-to-top { bottom: 96px; }
     html { scroll-behavior: auto; }
     *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
-.order-summary::before { content: '???? ?????'; position: absolute; top: -10px; right: 15px; background: var(--modal-bg); padding: 0 10px; font-size: 0.75rem; color: var(--accent-gold); font-weight: 700; }
+.order-summary::before { content: 'ملخص العرض'; position: absolute; top: -10px; right: 15px; background: var(--modal-bg); padding: 0 10px; font-size: 0.75rem; color: var(--accent-gold); font-weight: 700; }
 .order-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; color: rgba(255,255,255,0.7); }
 .order-row.total { border-top: 1px solid var(--border-subtle); padding-top: 10px; margin-top: 10px; font-weight: 800; color: #fff; font-size: 1.1rem; }
 .order-row.total span:last-child { color: var(--accent-gold); }
@@ -531,7 +531,7 @@ body[data-theme="light"] .contact-action.whatsapp { color: #128c50; }
 .toast.success .toast-dot { background: #10b981; box-shadow: 0 0 10px #10b981; }
 .toast.error .toast-dot { background: #ef4444; box-shadow: 0 0 10px #ef4444; }
 
-/* ? PROFESSIONAL FADE UP ANIMATION */
+/* ⭐ PROFESSIONAL FADE UP ANIMATION */
 .fade-up {
     opacity: 0;
     transform: translateY(40px) scale(0.98);
@@ -648,7 +648,7 @@ body[data-theme="light"] .theme-toggle .moon-icon { display: block; }
 .accent-option[aria-pressed="true"] { border-color: var(--accent-line); background: color-mix(in srgb,var(--accent-primary) 10%,transparent); color: var(--text-primary); }
 .accent-swatch { position: relative; width: 28px; height: 28px; display: grid; place-items: center; border: 3px solid var(--modal-bg); border-radius: 50%; background: var(--swatch); box-shadow: 0 0 0 1px color-mix(in srgb,var(--swatch) 45%,transparent),0 4px 10px color-mix(in srgb,var(--swatch) 25%,transparent); transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .accent-swatch::after { content: ''; display: block; width: 100%; height: 100%; border-radius: inherit; background: linear-gradient(135deg,rgba(255,255,255,0.2),transparent 65%); }
-.accent-option[aria-pressed="true"] .accent-swatch::before { content: '?'; position: absolute; z-index: 1; color: #fff; font-size: 0.75rem; font-weight: 900; text-shadow: 0 1px 3px rgba(0,0,0,0.55); }
+.accent-option[aria-pressed="true"] .accent-swatch::before { content: '✓'; position: absolute; z-index: 1; color: #fff; font-size: 0.75rem; font-weight: 900; text-shadow: 0 1px 3px rgba(0,0,0,0.55); }
 .accent-option:hover .accent-swatch,
 .accent-option[aria-pressed="true"] .accent-swatch { transform: scale(1.08); box-shadow: 0 0 0 2px var(--swatch),0 4px 12px color-mix(in srgb,var(--swatch) 32%,transparent); }
 .site-customizer[open] .customizer-toggle { background: color-mix(in srgb,var(--accent-primary) 10%,var(--surface-glass)); }
@@ -1029,20 +1029,20 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
 </head>
 <body class="page-loading">
 
-<a class="skip-link" href="#main-content">???? ??? ??????? ???????</a>
-<div class="offline-banner" id="offlineBanner" role="status" aria-live="polite" hidden>??? ??? ???? ?????????. ?? ???? ??????? ???????? ?????? ?? ????? ?????? ???? ???? ??? ?????.</div>
-<div class="reading-progress" role="progressbar" aria-label="???? ???????" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="readingProgressBar"></span></div>
-<button class="back-to-top" id="backToTop" type="button" aria-label="?????? ??? ???? ??????" title="?????? ??? ???? ??????">
+<a class="skip-link" href="#main-content">تخطي إلى المحتوى الرئيسي</a>
+<div class="offline-banner" id="offlineBanner" role="status" aria-live="polite" hidden>أنت غير متصل بالإنترنت. قد تكون الأسعار المعروضة محفوظة من زيارة سابقة؛ تأكد منها قبل الطلب.</div>
+<div class="reading-progress" role="progressbar" aria-label="تقدم القراءة" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="readingProgressBar"></span></div>
+<button class="back-to-top" id="backToTop" type="button" aria-label="العودة إلى أعلى الصفحة" title="العودة إلى أعلى الصفحة">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m18 15-6-6-6 6"/><path d="M12 9v12"/></svg>
 </button>
-<aside class="compare-dock" id="compareDock" aria-live="polite" aria-label="?????? ???????">
+<aside class="compare-dock" id="compareDock" aria-live="polite" aria-label="مقارنة الباقات">
     <div class="compare-dock-copy">
-        <strong id="compareCount">0 ?? 2 ????</strong>
-        <span id="compareHint">????? ?????? ?? ??? ????? ????????</span>
+        <strong id="compareCount">0 من 2 باقة</strong>
+        <span id="compareHint">اختار باقتين من نفس النوع للمقارنة</span>
     </div>
     <div class="compare-dock-actions">
-        <button type="button" id="clearCompare">???</button>
-        <button class="compare-open" type="button" id="openCompare" disabled>???? ????</button>
+        <button type="button" id="clearCompare">مسح</button>
+        <button class="compare-open" type="button" id="openCompare" disabled>قارن الآن</button>
     </div>
 </aside>
 
@@ -1050,21 +1050,21 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
 <div id="preloader">
     <div class="loader-logo"><img src="favicon.jpg" alt=""></div>
     <div class="loader-bar-container"><div class="loader-bar"></div></div>
-    <div class="loader-text">???? ???????...</div>
+    <div class="loader-text">جاري التحميل...</div>
 </div>
 
 <canvas id="networkCanvas"></canvas>
 
 <div class="toast-container" id="toastContainer">
-    <div class="toast" id="toast"><div class="toast-dot"></div><span id="toastMessage">?????</span></div>
+    <div class="toast" id="toast"><div class="toast-dot"></div><span id="toastMessage">رسالة</span></div>
 </div>
 
 <!-- MODAL SYSTEM -->
 <div class="modal-overlay" id="modalOverlay">
     <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
         <div class="modal-header">
-            <h3 id="modalTitle">?????</h3>
-            <button class="modal-close" id="modalClose" aria-label="?????">
+            <h3 id="modalTitle">عنوان</h3>
+            <button class="modal-close" id="modalClose" aria-label="إغلاق">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
         </div>
@@ -1081,69 +1081,69 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
                 <div class="logo-text">etisalat</div>
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#hero" data-section="hero"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>????????</a></li>
-                <li><a href="#get-number" data-section="get-number"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>????</a></li>
-                <!-- ?? ??? ???? ?????? -->
-                <li><a href="#packages" data-section="packages"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>???????</a></li>
-                <li><a href="#team" data-section="team"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>???? ?????</a></li>
-                <li><a href="#faq" data-section="faq"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>??????? ???????</a></li>
+                <li><a href="#hero" data-section="hero"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>الرئيسية</a></li>
+                <li><a href="#get-number" data-section="get-number"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>رقمي</a></li>
+                <!-- تم حذف رابط الخطوط -->
+                <li><a href="#packages" data-section="packages"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>الباقات</a></li>
+                <li><a href="#team" data-section="team"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>فريق العمل</a></li>
+                <li><a href="#faq" data-section="faq"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>الأسئلة الشائعة</a></li>
             </ul>
             <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" type="button" aria-label="????? ????? ???????" title="????? ????? ???????">
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="تفعيل الوضع النهاري" title="تفعيل الوضع النهاري">
                     <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
                     <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>
-                    <span>??????</span>
+                    <span>المظهر</span>
                 </button>
                 <details class="site-customizer" id="siteCustomizer">
-                    <summary class="customizer-toggle" aria-label="????? ??????" title="????? ??????">
+                    <summary class="customizer-toggle" aria-label="تخصيص الموقع" title="تخصيص الموقع">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42m-9.88 9.88-1.42 1.42"/><circle cx="12" cy="12" r="4"/></svg>
-                        <span>?????</span>
+                        <span>تخصيص</span>
                     </summary>
                     <div class="customizer-panel">
                         <div class="customizer-heading">
-                            <strong>???? ?????? ??? ????</strong>
-                            <span>????? ???? ?????? ?????? ???? ?????</span>
+                            <strong>خلّي الموقع على ذوقك</strong>
+                            <span>اختار الخط والحجم واللون اللي يريحك</span>
                         </div>
                         <div class="customizer-options">
                             <div class="customizer-field">
-                                <label id="fontSizeLabel">??? ?? ??????</label>
+                                <label id="fontSizeLabel">حجم خط الموقع</label>
                                 <div class="font-size-controls" role="group" aria-labelledby="fontSizeLabel">
-                                    <button class="font-size-button" id="decreaseFontSize" type="button" aria-label="????? ?? ??????" title="????? ????">-</button>
+                                    <button class="font-size-button" id="decreaseFontSize" type="button" aria-label="تصغير خط الموقع" title="تصغير الخط">−</button>
                                     <output class="font-size-value" id="fontSizeValue" aria-live="polite">100%</output>
-                                    <button class="font-size-button" id="increaseFontSize" type="button" aria-label="????? ?? ??????" title="????? ????">+</button>
+                                    <button class="font-size-button" id="increaseFontSize" type="button" aria-label="تكبير خط الموقع" title="تكبير الخط">+</button>
                                 </div>
                             </div>
                             <div class="customizer-field">
-                                <label for="fontSelect">?? ??????</label>
+                                <label for="fontSelect">خط الموقع</label>
                                 <select id="fontSelect">
-                                    <option value="Cairo">??????? � Cairo</option>
-                                    <option value="Tajawal">????? � Tajawal</option>
-                                    <option value="Almarai">??????? � Almarai</option>
-                                    <option value="Alexandria">?????????? � Alexandria</option>
-                                    <option value="Changa">?????? � Changa</option>
-                                    <option value="IBMPlexSansArabic">?? ?? ?? ????? � IBM Plex Arabic</option>
-                                    <option value="Mada">??? � Mada</option>
-                                    <option value="NotoSansArabic">???? ???? � Noto Sans Arabic</option>
-                                    <option value="Rubik">????? � Rubik</option>
+                                    <option value="Cairo">القاهرة — Cairo</option>
+                                    <option value="Tajawal">تجوال — Tajawal</option>
+                                    <option value="Almarai">المراعي — Almarai</option>
+                                    <option value="Alexandria">الإسكندرية — Alexandria</option>
+                                    <option value="Changa">تشانجا — Changa</option>
+                                    <option value="IBMPlexSansArabic">آي بي إم بليكس — IBM Plex Arabic</option>
+                                    <option value="Mada">مدى — Mada</option>
+                                    <option value="NotoSansArabic">نوتو عربي — Noto Sans Arabic</option>
+                                    <option value="Rubik">روبيك — Rubik</option>
                                 </select>
                             </div>
                             <div class="customizer-field">
-                                <label id="accentLabel">??? ??????</label>
+                                <label id="accentLabel">لون الموقع</label>
                                 <div class="accent-options" id="accentOptions" role="group" aria-labelledby="accentLabel">
-                                    <button class="accent-option" type="button" data-accent="blue" aria-label="????" title="????"><span class="accent-swatch" style="--swatch:#3b82f6"></span><span>????</span></button>
-                                    <button class="accent-option" type="button" data-accent="teal" aria-label="??????" title="??????"><span class="accent-swatch" style="--swatch:#0f9f91"></span><span>??????</span></button>
-                                    <button class="accent-option" type="button" data-accent="purple" aria-label="??????" title="??????"><span class="accent-swatch" style="--swatch:#8b5cf6"></span><span>??????</span></button>
-                                    <button class="accent-option" type="button" data-accent="rose" aria-label="????" title="????"><span class="accent-swatch" style="--swatch:#e60000"></span><span>????</span></button>
-                                    <button class="accent-option" type="button" data-accent="amber" aria-label="????" title="????"><span class="accent-swatch" style="--swatch:#d97706"></span><span>????</span></button>
-                                    <button class="accent-option" type="button" data-accent="green" aria-label="????" title="????"><span class="accent-swatch" style="--swatch:#16a34a"></span><span>????</span></button>
-                                    <button class="accent-option" type="button" data-accent="cyan" aria-label="?????" title="?????"><span class="accent-swatch" style="--swatch:#0891b2"></span><span>?????</span></button>
+                                    <button class="accent-option" type="button" data-accent="blue" aria-label="أزرق" title="أزرق"><span class="accent-swatch" style="--swatch:#3b82f6"></span><span>أزرق</span></button>
+                                    <button class="accent-option" type="button" data-accent="teal" aria-label="تركواز" title="تركواز"><span class="accent-swatch" style="--swatch:#0f9f91"></span><span>تركواز</span></button>
+                                    <button class="accent-option" type="button" data-accent="purple" aria-label="بنفسجي" title="بنفسجي"><span class="accent-swatch" style="--swatch:#8b5cf6"></span><span>بنفسجي</span></button>
+                                    <button class="accent-option" type="button" data-accent="rose" aria-label="أحمر" title="أحمر"><span class="accent-swatch" style="--swatch:#e60000"></span><span>أحمر</span></button>
+                                    <button class="accent-option" type="button" data-accent="amber" aria-label="عنبر" title="عنبر"><span class="accent-swatch" style="--swatch:#d97706"></span><span>عنبر</span></button>
+                                    <button class="accent-option" type="button" data-accent="green" aria-label="أخضر" title="أخضر"><span class="accent-swatch" style="--swatch:#16a34a"></span><span>أخضر</span></button>
+                                    <button class="accent-option" type="button" data-accent="cyan" aria-label="سماوي" title="سماوي"><span class="accent-swatch" style="--swatch:#0891b2"></span><span>سماوي</span></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </details>
             </div>
-            <button class="hamburger" id="hamburger" type="button" aria-label="??? ????? ??????" aria-controls="navLinks" aria-expanded="false"><span></span><span></span><span></span></button>
+            <button class="hamburger" id="hamburger" type="button" aria-label="فتح قائمة التنقل" aria-controls="navLinks" aria-expanded="false"><span></span><span></span><span></span></button>
         </nav>
     </div>
 </header>
@@ -1152,17 +1152,17 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
 <!-- Hero -->
 <section id="hero" class="hero">
     <div class="container hero-content fade-up">
-        <div class="section-badge">?? ????? ?????? ?? ?????????</div>
-        <h1>???? ????...<br><span class="gradient-word">????? ???.</span></h1>
-        <p>???? ?????? ??????? ??????? ?????? ????????? ?? ????? ???? ?????? ?? ???? ??????.</p>
+        <div class="section-badge">🚀 الجيل القادم من الاتصالات</div>
+        <h1>اتصل أكتر...<br><span class="gradient-word">وادفع أقل.</span></h1>
+        <p>خطوط وباقات مكالمات وإنترنت بأسعار اقتصادية، مع تجربة سهلة وسريعة من خلال الموقع.</p>
         <div class="hero-actions">
-            <a class="hero-action primary" href="#get-number">???? ??? ????</a>
-            <a class="hero-action secondary" href="#packages">????? ???????</a>
+            <a class="hero-action primary" href="#get-number">اطلب خطك الآن</a>
+            <a class="hero-action secondary" href="#packages">اكتشف الباقات</a>
         </div>
-        <div class="hero-proof" aria-label="?????? ???">
-            <span><b>01</b> ???? ????? ??????</span>
-            <span><b>02</b> ????? ??? ????</span>
-            <span><b>03</b> ??? ????? ??? ??????</span>
+        <div class="hero-proof" aria-label="مميزات خطك">
+            <span><b>01</b> عروض واضحة ومحدثة</span>
+            <span><b>02</b> خطوات طلب سهلة</span>
+            <span><b>03</b> دعم مباشر عبر واتساب</span>
         </div>
     </div>
 </section>
@@ -1171,17 +1171,17 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
 <section id="get-number" class="get-number-section">
     <div class="container">
         <div class="get-number-container fade-up">
-            <div class="section-badge">?? ?????? ??????</div>
-            <h2 class="get-number-title">???? ????? ?????...<br>???? ??? <span>????!</span></h2>
-            <p class="get-number-desc">???? ?????? ?? ?? ??????? ??????? ???? ?????? ???? ???? ???? ?? ?? ????? ?????. ?? ??? ?????? ???? ??? ??????? ?????? ????? ?????? ???? ?????? ??????? ????? ???.</p>
+            <div class="section-badge">📱 الخطوة الأولى</div>
+            <h2 class="get-number-title">ابدأ بخطوة واحدة...<br>احصل على <span>رقمك!</span></h2>
+            <p class="get-number-desc">عشان تستفيد من كل الباقات والعروض اللي عندنا، لازم يكون معاك خط من عندنا الأول. لو لسه معاكش، اطلب خطك دلوقتي، وبعدها اختار الباقة اللي تناسبك واستفيد بأفضل سعر.</p>
             <div class="number-features">
-                <div class="number-feature"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>??? ???? ?????? ???</div>
-                <div class="number-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>????? ???? ????</div>
-                <div class="number-feature"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>????? ????? ??? ????????</div>
+                <div class="number-feature"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>رقم مميز تختاره أنت</div>
+                <div class="number-feature"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>تفعيل فوري للخط</div>
+                <div class="number-feature"><svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>اختار باقتك بعد الاستلام</div>
             </div>
             <button class="get-number-btn" onclick="openNumberModal()">
                 <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                ???? ???? ?????? ??????
+                اطلب رقمك الجديد دلوقتي
             </button>
         </div>
     </div>
@@ -1191,8 +1191,8 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
 <section id="services" class="services">
     <div class="container">
         <div class="services-header fade-up">
-            <div class="section-badge">???? ????</div>
-            <h2 class="section-title">????? ?????? ???? ????? ?????????</h2>
+            <div class="section-badge">ماذا نقدم</div>
+            <h2 class="section-title">خدمات معمولة عشان تناسب احتياجاتك</h2>
         </div>
         <div class="services-grid" id="servicesGrid">
             <div class="skeleton-card"><div class="skeleton sk-icon"></div><div class="skeleton sk-title"></div><div class="skeleton sk-text"></div><div class="skeleton sk-text short"></div></div>
@@ -1203,84 +1203,84 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
     </div>
 </section>
 
-<!-- ? ?? ??? ??? ?????? ??????? -->
+<!-- ⭐ تم حذف قسم الخطوط بالكامل -->
 
 <!-- Packages -->
 <section id="packages" class="packages-section">
     <div class="container">
         <div class="services-header fade-up">
-            <div class="section-badge">?? ???? ?????</div>
-            <h2 class="section-title">????? ?????? ???? ??????</h2>
+            <div class="section-badge">💎 عروض حصرية</div>
+            <h2 class="section-title">اختار الباقة اللي تناسبك</h2>
         </div>
-        <div class="packages-tabs fade-up" role="tablist" aria-label="??? ???????">
-            <button class="tab-btn active" id="unitsTab" type="button" role="tab" aria-controls="packagesGrid" aria-selected="true" tabindex="0" onclick="switchTab('units', this)">????? ???????</button>
-            <button class="tab-btn" id="megaTab" type="button" role="tab" aria-controls="packagesGrid" aria-selected="false" tabindex="-1" onclick="switchTab('mega', this)">????? ??????</button>
+        <div class="packages-tabs fade-up" role="tablist" aria-label="نوع الباقات">
+            <button class="tab-btn active" id="unitsTab" type="button" role="tab" aria-controls="packagesGrid" aria-selected="true" tabindex="0" onclick="switchTab('units', this)">باقات الوحدات</button>
+            <button class="tab-btn" id="megaTab" type="button" role="tab" aria-controls="packagesGrid" aria-selected="false" tabindex="-1" onclick="switchTab('mega', this)">باقات الميجا</button>
         </div>
-        <p class="price-review-note">??? ?????? ???????: <time id="pricesLastReviewed">??? ????</time>. ????? ????? ????? ??????? ??? ?????.</p>
+        <p class="price-review-note">آخر مراجعة للأسعار: <time id="pricesLastReviewed">غير محدد</time>. يُرجى تأكيد السعر والتوفر قبل الطلب.</p>
         <section class="plan-quiz fade-up" aria-labelledby="planQuizTitle">
-            <div class="section-badge">?? ????? ????</div>
-            <h3 id="planQuizTitle">?? ???? ?????? ???? ??? ? ?????</h3>
-            <p class="plan-quiz-intro">?????? ???????? ???????? ??? ??? ???????? ????????? ????????? ?? ??? ?? ???? ?? ?????? ?????.</p>
+            <div class="section-badge">🧭 ترشيح سريع</div>
+            <h3 id="planQuizTitle">مش عارف تختار؟ جاوب على ٣ أسئلة</h3>
+            <p class="plan-quiz-intro">هنقارن الخيارات المعروضة حسب نوع استخدامك وميزانيتك وأولويتك، من غير ما نطلب أي بيانات شخصية.</p>
             <form id="planQuizForm">
                 <div class="plan-quiz-fields">
                     <div class="plan-quiz-field">
-                        <label for="quizUsage">??? ??????? ???</label>
+                        <label for="quizUsage">أهم استخدام ليك</label>
                         <select id="quizUsage" required>
-                            <option value="units">??????? ??????</option>
-                            <option value="mega">?????? ?????</option>
+                            <option value="units">مكالمات ووحدات</option>
+                            <option value="mega">إنترنت وميجا</option>
                         </select>
                     </div>
                     <div class="plan-quiz-field">
-                        <label for="quizBudget">???????? ??????? (????)</label>
+                        <label for="quizBudget">ميزانيتك الشهرية (جنيه)</label>
                         <input id="quizBudget" type="number" min="50" max="500" step="5" value="150" required inputmode="numeric">
                     </div>
                     <div class="plan-quiz-field">
-                        <label for="quizPriority">???????? ????</label>
+                        <label for="quizPriority">الأولوية عندك</label>
                         <select id="quizPriority" required>
-                            <option value="capacity">???? ??? ??? ?????????</option>
-                            <option value="value">???? ????? ??? ????</option>
+                            <option value="capacity">أكبر سعة ضمن الميزانية</option>
+                            <option value="value">أفضل تكلفة لكل وحدة</option>
                         </select>
                     </div>
-                    <button class="plan-quiz-submit" type="submit">???? ??????</button>
+                    <button class="plan-quiz-submit" type="submit">اعرف ترشيحي</button>
                 </div>
             </form>
             <div class="plan-quiz-result" id="planQuizResult" role="status" aria-live="polite" aria-atomic="true" hidden></div>
         </section>
         <section class="budget-finder fade-up" aria-labelledby="budgetFinderTitle">
             <div class="budget-finder-copy">
-                <div class="section-badge">? ?????? ????</div>
-                <h3 id="budgetFinderTitle">???? ???????? ????? ??</h3>
-                <p>??? ???????? ???? ??????? ????? ?? ???? ??? ?????? ?? ??????? ????????.</p>
+                <div class="section-badge">✨ اختيار أذكى</div>
+                <h3 id="budgetFinderTitle">خلّي ميزانيتك تختار لك</h3>
+                <p>حدد ميزانيتك ونوع الباقة، ونرشح لك أعلى سعة مناسبة من الأسعار المعروضة.</p>
             </div>
             <div class="budget-finder-controls">
                 <div class="budget-field">
-                    <label for="budgetPlanType">??? ???? ???</label>
+                    <label for="budgetPlanType">أنا بدور على</label>
                     <select id="budgetPlanType">
-                        <option value="units">?????</option>
-                        <option value="mega">?????? (????)</option>
+                        <option value="units">وحدات</option>
+                        <option value="mega">إنترنت (ميجا)</option>
                     </select>
                 </div>
                 <div class="budget-field">
-                    <label for="budgetAmount">???????? ???????: <output class="budget-value" id="budgetAmountValue" for="budgetAmount">150 ????</output></label>
+                    <label for="budgetAmount">ميزانيتي الشهرية: <output class="budget-value" id="budgetAmountValue" for="budgetAmount">150 جنيه</output></label>
                     <input id="budgetAmount" type="range" min="50" max="500" step="5" value="150">
                 </div>
             </div>
             <div class="budget-recommendation" id="budgetRecommendation" aria-live="polite" aria-atomic="true"></div>
-            <p class="budget-finder-note">??????? ???????? ???? ????? ??? ????? ???? ????? ?????????. ???? ?? ????? ??????? ??????? ?? ??? ??????? ??? ????? ?????.</p>
+            <p class="budget-finder-note">الترشيح للمقارنة فقط، بناءً على السعة وسعر البيع المعروضين. تأكد من السعر والتوفر والشروط مع جهة التواصل قبل إتمام الطلب.</p>
         </section>
-        <div class="packages-toolbar fade-up" aria-label="????? ????? ????????">
-            <input class="packages-search" id="packageSearch" type="search" placeholder="???? ?????? ?? ?????..." aria-label="???? ?? ???????">
-            <select class="packages-sort" id="packageSort" aria-label="????? ???????">
-                <option value="recommended">??????? ???????</option>
-                <option value="price-asc">?????: ?? ????? ??????</option>
-                <option value="price-desc">?????: ?? ?????? ?????</option>
-                <option value="capacity-desc">?????: ?????? ?????</option>
-                <option value="saving-desc">???????: ?????? ?????</option>
+        <div class="packages-toolbar fade-up" aria-label="أدوات البحث والترتيب">
+            <input class="packages-search" id="packageSearch" type="search" placeholder="ابحث بالسعة أو السعر..." aria-label="ابحث في الباقات">
+            <select class="packages-sort" id="packageSort" aria-label="ترتيب الباقات">
+                <option value="recommended">الترتيب المقترح</option>
+                <option value="price-asc">السعر: من الأقل للأعلى</option>
+                <option value="price-desc">السعر: من الأعلى للأقل</option>
+                <option value="capacity-desc">السعة: الأكبر أولًا</option>
+                <option value="saving-desc">التوفير: الأعلى أولًا</option>
             </select>
-            <button class="favorites-filter" id="favoritesFilter" type="button" aria-pressed="false">? ???????</button>
+            <button class="favorites-filter" id="favoritesFilter" type="button" aria-pressed="false">♡ المفضلة</button>
         </div>
         <p class="packages-results-status" id="packagesResultsStatus" role="status" aria-live="polite"></p>
-        <div class="packages-grid" id="packagesGrid" role="tabpanel" aria-labelledby="unitsTab" tabindex="0" aria-label="??????? ???????"></div>
+        <div class="packages-grid" id="packagesGrid" role="tabpanel" aria-labelledby="unitsTab" tabindex="0" aria-label="الباقات المتاحة"></div>
     </div>
 </section>
 
@@ -1288,19 +1288,19 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
 <section id="team" class="team-section">
     <div class="container">
         <div class="team-container fade-up">
-            <div class="section-badge">?? ???? ?????</div>
-            <h2 class="team-title">???? ??? ?????? ??? ??? <span>??????!</span></h2>
-            <p class="team-desc">?? ??? ?????? ?? ?? ?? ?????? ??????? ??? ????? ??? ?????? ??? ?? ??????? ?? ???? "???? ?????"? ???? ???? ???? ?? ??? ?? ???? ????? ???????? ????? ????? ?? ??? ?? ????? ?????? ???????? ?????.</p>
+            <div class="section-badge">👥 ميزة حصرية</div>
+            <h2 class="team-title">خليك إنت وصاحبك على نفس <span>الفريق!</span></h2>
+            <p class="team-desc">لو إنت وصاحبك أو حد من قرايبك بتكلموا بعض كتير، ليه تدفعوا على كل مكالمة؟ مع نظام "فريق العمل"، تقدر تجمع خطين مع بعض في مكان واحد، وتتكلموا بينكم ببلاش من غير ما وحدات الباقة الأساسية تتأثر.</p>
             <div class="team-steps">
-                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><span class="team-step-text">???? ?? ???</span></div>
-                <span class="team-arrow">?</span>
-                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span class="team-step-text">???? ????</span></div>
-                <span class="team-arrow">?</span>
-                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><span class="team-step-text">??????? ??????</span></div>
-                <span class="team-arrow">?</span>
-                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><span class="team-step-text">????? ????</span></div>
+                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><span class="team-step-text">خطين مع بعض</span></div>
+                <span class="team-arrow">←</span>
+                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span class="team-step-text">فريق واحد</span></div>
+                <span class="team-arrow">←</span>
+                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><span class="team-step-text">مكالمات مجانية</span></div>
+                <span class="team-arrow">←</span>
+                <div class="team-step"><div class="team-step-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><span class="team-step-text">توفير أكتر</span></div>
             </div>
-            <button class="team-btn" onclick="openTeamModal()">???? ???? ????? ???? ???? ??????</button>
+            <button class="team-btn" onclick="openTeamModal()">عايز تعمل فريق؟ اطلب خطين دلوقتي</button>
         </div>
     </div>
 </section>
@@ -1310,9 +1310,9 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
     <div class="container">
         <div class="app-container fade-up">
             <div class="app-content">
-                <div class="section-badge">?? ???? ???? ??? ???</div>
-                <h2>?? ?????? ?? ???? ????</h2>
-                <p>?????? ?????? ???????? ??????? ???? ????? ??? ????? ?????? ?????? ???? ?????? ?? ?????.</p>
+                <div class="section-badge">📱 موقع واحد لكل شيء</div>
+                <h2>كل خدماتك في مكان واحد</h2>
+                <p>استعرض الخطوط والباقات والعروض اللي عندنا بكل سهولة وسرعة، واختار اللي يناسبك في ثواني.</p>
             </div>
         </div>
     </div>
@@ -1321,33 +1321,33 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
 <section id="faq" class="faq-section">
     <div class="container">
         <div class="faq-header fade-up">
-            <div class="section-badge">?? ?????? ?????</div>
-            <h2 class="section-title">????? ????? ?? ????</h2>
+            <div class="section-badge">💬 إجابات واضحة</div>
+            <h2 class="section-title">أسئلة بتدور في بالك</h2>
         </div>
         <div class="faq-list fade-up">
             <details class="faq-item">
-                <summary>?? ?????? ???? ?????? ????? ????????</summary>
-                <div class="faq-answer">??? ?????? ???? ?????? ???? ????????? ?????????? ???? ?????? ?????? ?????? ?? ??? ?????. ???????? ???????? ??? ????????.</div>
+                <summary>هل الموقع تابع رسميًا لشركة اتصالات؟</summary>
+                <div class="faq-answer">لا، الموقع منصة مستقلة لعرض المعلومات والخيارات، وليس موقعًا رسميًا للشركة أو جهة تفعيل. العلامات التجارية ملك لأصحابها.</div>
             </details>
             <details class="faq-item">
-                <summary>???? ???? ???? ?? ???</summary>
-                <div class="faq-answer">????? ????? ????? ????? ?????????? ?? ???? ???? ?????. ??? ????? ??? ??????? ???? ?????? ?????? ?????? ?????? ??????? ????? ???? ???????.</div>
+                <summary>إزاي أطلب باقة أو خط؟</summary>
+                <div class="faq-answer">اختار العرض واملأ الاسم والمحافظة، ثم راجع ملخص الطلب. عند الضغط على التأكيد يفتح واتساب برسالة جاهزة؛ راجعها وأرسلها بنفسك لبدء التواصل.</div>
             </details>
             <details class="faq-item">
-                <summary>?? ??????? ??????? ????????</summary>
-                <div class="faq-answer">??????? ??????? ???????? ???????? ??? ?????? ??? ?? ????? ??? ?????? ??????? ??? ???? ??????. ???? ????? ??????? ??????? ?? ??? ??????? ??? ????? ?????.</div>
+                <summary>هل الأسعار والتوفر نهائيان؟</summary>
+                <div class="faq-answer">الأسعار والسعات المعروضة للمقارنة وقد تتغير، كما أن تاريخ آخر مراجعة للأسعار غير محدد حاليًا. أكّد السعر والتوفر والشروط مع جهة التواصل قبل إتمام الطلب.</div>
             </details>
             <details class="faq-item">
-                <summary>??? ????? ??? ????? ??????? ?????? ???????</summary>
-                <div class="faq-answer">??????? ??????? ????? ??????? ?? ?????? ????????. ???? ??????? ???? ????? ????? ????? ?????? ????????? ???????? ????? ?????? ?? ??? ?????? ??? ????????.</div>
+                <summary>إيه الفرق بين باقات الوحدات وباقات الميجا؟</summary>
+                <div class="faq-answer">الوحدات والميجا نوعان مختلفان من السعات المعروضة. قارن الباقات داخل النوع نفسه، وراجع تفاصيل الاستخدام والتغطية وشروط الشبكة مع جهة الخدمة قبل الاشتراك.</div>
             </details>
             <details class="faq-item">
-                <summary>?? ??????? ?????? ???????? ?? ???????</summary>
-                <div class="faq-answer">??. ?????? ?? ???? ????? ????????? ???? ????? ?????? ??? ???????? ??? ????? ??? ??? ????? ??????? ???? ??????. ?? ????? ?????? ????? ??? ??? ?????? ?? ??? ???????.</div>
+                <summary>هل بياناتي بتتبعت تلقائيًا من الموقع؟</summary>
+                <div class="faq-answer">لا. الموقع لا يرسل الطلب تلقائيًا؛ يجهز رسالة واتساب بعد مراجعتك، ولا تُرسل إلا إذا اخترت إرسالها داخل واتساب. لا تشارك بيانات حساسة إلا بعد التحقق من جهة التواصل.</div>
             </details>
             <details class="faq-item">
-                <summary>?? ???? ?????? ?????? ???? ???????</summary>
-                <div class="faq-answer">??? ????? ?????? ??? ?????? ??? ????? ???? ?? ????? ???? ?????? ??? ??????. ?????? ??????? ??????? ?? ???? ????? ??? ???? ????? ??? ?? ?????? ?? ?????? ??? ?????.</div>
+                <summary>هل أقدر أستخدم الموقع بدون إنترنت؟</summary>
+                <div class="faq-answer">بعد زيارة الموقع وهو مستضاف على اتصال آمن، قد تُعرض نسخة محفوظة دون إنترنت. بيانات الأسعار المخزنة قد تكون قديمة ولا يمكن إرسال طلب أو التحقق من التوفر دون اتصال.</div>
             </details>
         </div>
     </div>
@@ -1358,20 +1358,20 @@ body[data-theme="light"] .contact-eyebrow { color: var(--accent-deep); -webkit-t
 <footer>
     <div class="container">
         <div class="footer-links">
-            <span class="footer-link" data-modal="about">?? ??????</span>
-            <span class="footer-link" data-modal="terms">???? ?????????</span>
-            <span class="footer-link" data-modal="contact">????? ????</span>
-            <span class="footer-link" data-modal="service-explain">??? ??????</span>
-            <a class="footer-link" href="#faq">??????? ???????</a>
+            <span class="footer-link" data-modal="about">عن الموقع</span>
+            <span class="footer-link" data-modal="terms">شروط الاستخدام</span>
+            <span class="footer-link" data-modal="contact">تواصل معنا</span>
+            <span class="footer-link" data-modal="service-explain">شرح الخدمة</span>
+            <a class="footer-link" href="#faq">الأسئلة الشائعة</a>
         </div>
-        <p class="footer-copyright">&copy; 2026 etisalat. ???? ?????? ??????.</p>
+        <p class="footer-copyright">&copy; 2026 etisalat. جميع الحقوق محفوظة.</p>
         <p class="footer-disclaimer">
-            ?????: ?????? ?? ???? ?????? ???? ?????? ???????? ???????? ???????? ??? ???? ???? ???? ??? ???? ???????? ??? ????? ?? ????? ??? ???? ??? ?? ?? ????? ?? ???? ????.
-            ???? ??????? ????????? ????????? ???????? ???????? ??? ?????? ?? ??? ????????? ????? ????????? ??? ???? ??????? ???????? ??????? ??????.
+            تنويه: الموقع ده منصة مستقلة لعرض الخطوط والباقات والخدمات والعروض، ومش موقع رسمي تابع لأي شركة اتصالات، ومش بيمثل أو ينتمي لأي شركة إلا لو تم توضيح ده بشكل صريح.
+            جميع الأسماء والشعارات والعلامات التجارية المذكورة على الموقع هي ملك لأصحابها، وبيتم استخدامها فقط لغرض التعريف بالخدمات والعروض ووصفها.
         </p>
         <button class="footer-dev" type="button" onclick="openDevModal()">
             <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            <span>???? ??????</span>
+            <span>مطور الموقع</span>
         </button>
     </div>
 </footer>
@@ -1435,7 +1435,7 @@ increaseFontSize.addEventListener('click', () => {
 
 function applyTheme(theme) {
     document.body.dataset.theme = theme;
-    const nextLabel = theme === 'dark' ? '????? ????? ???????' : '????? ????? ??????';
+    const nextLabel = theme === 'dark' ? 'تفعيل الوضع النهاري' : 'تفعيل الوضع الليلي';
     themeToggle.setAttribute('aria-label', nextLabel);
     themeToggle.setAttribute('title', nextLabel);
     themeToggle.setAttribute('aria-pressed', String(theme === 'light'));
@@ -1495,28 +1495,28 @@ accentOptions.forEach(option => {
 });
 
 const FALLBACK_SERVICES = [
-    { title: "???? ??????", desc: "???? ???? ?????? ????? ?????? ????? ??????.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>' },
-    { title: "????? ???????", desc: "??????? ????? ????? ?????? ????????.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>' },
-    { title: "????? ??????", desc: "????? ????? ?????? ????? ????? ?? ????????? .", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>' },
-    { title: "???? ?????", desc: "???? ????? ???????? ?? ?????? ???? ???????? ??????.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>' }
+    { title: "خطوط موبايل", desc: "خطوط مرنة بأرقام مميزة وأسعار تناسب الجميع.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>' },
+    { title: "باقات مكالمات", desc: "مكالمات بجودة عالية وأسعار اقتصادية.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>' },
+    { title: "باقات إنترنت", desc: "سرعات فائقة وتغطية واسعة تناسب كل احتياجاتك .", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>' },
+    { title: "عروض حصرية", desc: "عروض محدثة باستمرار مع خصومات خاصة لمستخدمي الموقع.", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>' }
 ];
 
 const unitsPlans = [
-    { id:1, value:2800, unit:'????', base:70, company:108, sell:80 },
-    { id:2, value:3100, unit:'????', base:80, company:123, sell:90 },
-    { id:3, value:4250, unit:'????', base:115, company:177, sell:125 },
-    { id:4, value:6500, unit:'????', base:145, company:223, sell:155 },
-    { id:5, value:9000, unit:'????', base:175, company:269, sell:185 },
-    { id:6, value:12000, unit:'????', base:225, company:300, sell:235 }
+    { id:1, value:2800, unit:'وحدة', base:70, company:108, sell:80 },
+    { id:2, value:3100, unit:'وحدة', base:80, company:123, sell:90 },
+    { id:3, value:4250, unit:'وحدة', base:115, company:177, sell:125 },
+    { id:4, value:6500, unit:'وحدة', base:145, company:223, sell:155 },
+    { id:5, value:9000, unit:'وحدة', base:175, company:269, sell:185 },
+    { id:6, value:12000, unit:'وحدة', base:225, company:300, sell:235 }
 ];
 
 const megaPlans = [
-    { id:1, value:4250, unit:'????', base:75, company:150, sell:95 },
-    { id:2, value:6000, unit:'????', base:99, company:180, sell:120 },
-    { id:3, value:10500, unit:'????', base:145, company:350, sell:165 },
-    { id:4, value:18000, unit:'????', base:235, company:370, sell:255 },
-    { id:5, value:29000, unit:'????', base:350, company:500, sell:370 },
-    { id:6, value:45000, unit:'????', base:450, company:700, sell:470 }
+    { id:1, value:4250, unit:'ميجا', base:75, company:150, sell:95 },
+    { id:2, value:6000, unit:'ميجا', base:99, company:180, sell:120 },
+    { id:3, value:10500, unit:'ميجا', base:145, company:350, sell:165 },
+    { id:4, value:18000, unit:'ميجا', base:235, company:370, sell:255 },
+    { id:5, value:29000, unit:'ميجا', base:350, company:500, sell:370 },
+    { id:6, value:45000, unit:'ميجا', base:450, company:700, sell:470 }
 ];
 
 const FAVORITES_STORAGE_KEY = 'etisalat-favorite-plans';
@@ -1524,112 +1524,112 @@ const savedFavoritePlans = JSON.parse(localStorage.getItem(FAVORITES_STORAGE_KEY
 const favoritePlans = new Set(Array.isArray(savedFavoritePlans) ? savedFavoritePlans.filter(item => typeof item === 'string') : []);
 let activePlanType = 'units';
 let showFavoritesOnly = false;
-const governorates = ["???????","??????","??????????","????????","????? ??????","???????","??????","???????","???????????","????????","??????","?????????","?????? ??????","??????","?????","?????","??? ????","???????","?????","???????","???? ?????","??? ?????","?????","??????","???","???? ?????","?????"];
+const governorates = ["القاهرة","الجيزة","الإسكندرية","الدقهلية","البحر الأحمر","البحيرة","الفيوم","الغربية","الإسماعيلية","المنوفية","المنيا","القليوبية","الوادي الجديد","السويس","أسوان","أسيوط","بني سويف","بورسعيد","دمياط","الشرقية","جنوب سيناء","كفر الشيخ","مطروح","الأقصر","قنا","شمال سيناء","سوهاج"];
 
 let currentSelectedPlan = null;
-let selectedNumberType = '?? ????????';
+let selectedNumberType = 'من اختياركم';
 let plansForComparison = [];
 
 // ===== MODAL CONTENT DATABASE =====
 const MODAL_CONTENT = {
     about: {
-        title: "?? ??????",
+        title: "عن الموقع",
         html: `<div class="modal-content">
-            <h4>???? ?????? ???? ????????</h4>
-            <p>?????? ????? ??????? ?????? ???????? ???????? ??? ??????? ???? ????? ????? ?????? ??? ?? ???? ????. ?????? ?? ???? ?????? ????? ???????? ??? ?? ???? ???? ????????? ?? ??? ????? ????.</p>
-            <h4>??? ???? ???? ????? ????</h4>
+            <h4>منصة مستقلة لعرض الخيارات</h4>
+            <p>الموقع بيعرض معلومات الخطوط والباقات الموجودة على صفحاته، عشان تراجع السعة والسعر قبل ما تبعت طلبك. الموقع مش تابع رسميًا لشركة اتصالات، ومش هو مقدم خدمة الاتصالات أو جهة تفعيل الخط.</p>
+            <h4>إيه اللي تقدر تعمله هنا؟</h4>
             <ul>
-                <li>?????? ????? ??????? ?????? ?????? ???????? ????????.</li>
-                <li>?????? ?????? ?? ????? ???? ??? ????? ?????? ???????? ???????.</li>
-                <li>????? ??? ?? ?? ???? ??? ?????? ??????? ???????? ???????.</li>
+                <li>مراجعة باقات الوحدات وباقات الميجا والأسعار المعروضة.</li>
+                <li>مقارنة باقتين من النوع نفسه حسب السعة والسعر والتوفير المحسوب.</li>
+                <li>إرسال طلب خط أو باقة إلى واتساب لمراجعة التفاصيل والتوفر.</li>
             </ul>
-            <p>????? ??????? ????????? ??????? ??? ??????? ??? ????? ?????. ?? ????? ?? ???? ??? ???? ???? ????? ???? ????????? ???????.</p>
+            <p>السعر والتوفر النهائيان يتأكدان عند التواصل قبل إتمام الطلب. أي تفعيل أو خدمة على الخط تخضع لشروط شركة الاتصالات المعنية.</p>
         </div>`
     },
     terms: {
-        title: "???? ?????????",
+        title: "شروط الاستخدام",
         html: `<div class="modal-content">
-            <h4>?. ????? ??????</h4>
-            <p>?????? ???? ?????? ???? ??????? ?????? ????????? ???? ?????? ?????? ????? ??????? ??? ???? ????? ?????? ?????.</p>
-            <h4>?. ??????? ???????</h4>
+            <h4>١. طبيعة الموقع</h4>
+            <p>الموقع منصة مستقلة لعرض معلومات الخطوط والباقات، وليس موقعًا رسميًا لشركة اتصالات ولا ينفذ تفعيل الشبكة بنفسه.</p>
+            <h4>٢. الأسعار والتوفر</h4>
             <ul>
-                <li>??????? ??????? ??????? ??? ???????? ???????? ??? ?????? ??? ??????? ????? ????? ????? ??????? ??? ????? ?????.</li>
-                <li>????? ??????? ???????? ?????? ?????? ????? ?????? ????? ??? ?????? ?????? ???????? ????? ?????? ???? ?? ????? ?????? ??? ???? ?????????.</li>
-                <li>??????? ???????? ????? ??????? ???? ?? ?????? ???? ????? ????????? ???????.</li>
-                <li>??????? ??? ??????? ??????? ???? ???????? ??? ???? ??????:</li>
+                <li>الأسعار والسعات الظاهرة تخص الخيارات المعروضة على الموقع وقت التصفح، ويلزم تأكيد السعر والتوفر قبل إتمام الطلب.</li>
+                <li>السعر المرجعي والتوفير وتكلفة الوحدة أرقام حسابية مبنية على بيانات الباقة الظاهرة، وليست ضمانًا لسعر أو طريقة احتساب لدى شركة الاتصالات.</li>
+                <li>التفعيل والتغطية وشروط استخدام الخط أو الباقة تخضع لشركة الاتصالات المعنية.</li>
+                <li>للاطلاع على تحديثات العروض، يمكن الانضمام إلى جروب واتساب:</li>
                 <li style="padding-right: 0; margin-top: 10px;">
                     <a href="https://chat.whatsapp.com/LxZjuhozUld41bAgejGvVf" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: rgba(37, 211, 102, 0.15); border: 1px solid rgba(37, 211, 102, 0.3); border-radius: 50px; color: #25D366; font-weight: 700; font-size: 0.85rem; transition: all 0.3s ease; text-decoration: none;">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                        ???? ????? ????????
+                        انضم لجروب الواتساب
                     </a>
                 </li>
             </ul>
-            <h4>?. ????? ?????????</h4>
+            <h4>٣. الطلب والبيانات</h4>
             <ul>
-                <li>????? ????? ??????? ???? ????? ?????????? ?? ???? ????? ?????? ????? ???????? ???????? ?? ?????.</li>
-                <li>???? ??????? ????????? ????? ??? ???????? ??? ??? ??????? ?? ??????? ????.</li>
-                <li>????? ??????? ??????? ????? ????? ??? ??????? ????? ??? ?????? ????? ?????? ???????? ?????? ???????.</li>
+                <li>نموذج الطلب بالموقع يطلب الاسم والمحافظة، ثم يفتح رسالة واتساب مجهزة للمراجعة والإرسال من جانبك.</li>
+                <li>راجع الرسالة والبيانات بنفسك قبل إرسالها، ولا تضف معلومات لا يحتاجها طلبك.</li>
+                <li>إرسال الرسالة ومتابعة الطلب يتمان عبر واتساب، وتخضع هذه الخدمة لشروط وسياسة الخصوصية الخاصة بواتساب.</li>
             </ul>
-            <h4>?. ????? ?????????</h4>
-            <p>????????? ???????? ??????? ?????????? ??? ?????. ?? ???? ?????? ???? ??? ?? ???? ?? ???? ????? ?? ????? ????? ??? ???? ????????? ?? ??????.</p>
-            <h4>?. ????????? ??????????</h4>
-            <p>?????? ?????? ?????? ????????? ?????? ??????. ?? ????? ????????? ?? ??? ?????? ??? ????? ??????? ???? ???????? ??????? ??? ????? ?? ???.</p>
+            <h4>٤. إخلاء المسؤولية</h4>
+            <p>المعلومات المعروضة للتعريف والمقارنة، وقد تتغير. لا يضمن الموقع توفر رقم أو باقة أو موعد تفعيل أو نتيجة تعتمد على شركة الاتصالات أو واتساب.</p>
+            <h4>٥. الاستخدام والتحديثات</h4>
+            <p>استخدم الموقع لإجراء استفسارات وطلبات مشروعة. قد تتغير المعلومات أو هذه الشروط عند تحديث الموقع؛ راجع التفاصيل الظاهرة قبل إرسال أي طلب.</p>
         </div>`
     },
     contact: {
-        title: "????? ????",
+        title: "تواصل معنا",
         html: `<div class="modal-content contact-content">
             <div class="contact-intro">
-                <span class="contact-eyebrow">????? ???????</span>
-                <h4>???? ??? ???? ??????</h4>
-                <p>????? ?????? ?? ??? ??????? ??????? ????????? ?? ????? ?? ?????? ???????.</p>
+                <span class="contact-eyebrow">قنوات التواصل</span>
+                <h4>إحنا هنا عشان نساعدك</h4>
+                <p>تواصل مباشرة مع أحد الأرقام الموضحة للاستفسار عن الطلب أو مراجعة تفاصيله.</p>
             </div>
             <div class="contact-people">
                 <article class="contact-person">
-                    <h5>????</h5>
+                    <h5>حسام</h5>
                     <p dir="ltr">+20 110 009 7958</p>
                     <div class="contact-actions">
                 <a class="contact-action call" href="tel:+201100097958">
                     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    ????? ?????
+                    اتصال هاتفي
                 </a>
                 <a class="contact-action whatsapp" href="https://wa.me/201100097958" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" width="22" height="22" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                    ??????
+                    واتساب
                 </a>
             </div>
                 </article>
                 <article class="contact-person">
-                    <h5>???</h5>
+                    <h5>سعد</h5>
                     <p dir="ltr">+20 111 553 0303</p>
                     <div class="contact-actions">
-                        <a class="contact-action call" href="tel:+201115530303"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>????? ?????</a>
-                        <a class="contact-action whatsapp" href="https://wa.me/201115530303" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>??????</a>
+                        <a class="contact-action call" href="tel:+201115530303"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>اتصال هاتفي</a>
+                        <a class="contact-action whatsapp" href="https://wa.me/201115530303" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>واتساب</a>
                     </div>
                 </article>
             </div>
-            <p class="contact-note">????? ???? ?? ?????. ????? ????? ????? ??????? ??? ????? ?????.</p>
+            <p class="contact-note">أوقات الرد قد تختلف. يُرجى تأكيد السعر والتوفر قبل إتمام الطلب.</p>
         </div>`
     },
     "service-explain": {
-        title: "??? ??????",
+        title: "شرح الخدمة",
         html: `<div class="modal-content">
-            <h4>???? ?????? ???????</h4>
-            <p>?????? ???? ?? ????? ?????? ??? ??????? ????? ????? ???????? ????? ?? ???? ????????.</p>
-            <h4>????? ????????</h4>
+            <h4>إزاي الخدمة بتشتغل؟</h4>
+            <p>الموقع يجهز لك طلبًا واضحًا على واتساب؛ إرسال الطلب ومتابعته يتمان من خلال المحادثة.</p>
+            <h4>خطوات الاشتراك</h4>
             <ol>
-                <li><strong>????? ?????? ?? ??? ????</strong> � ???? ????? ?????? ?????? ?????? ????? ?? ?????.</li>
-                <li><strong>???? ?????? ???????</strong> � ????? ????????? ???? ??? ??? ?????.</li>
-                <li><strong>???? ????? ??????</strong> � ??????? ???? ????? ?????? ?????? ??????? ????? ???? ?????????.</li>
-                <li><strong>??? ???????? ??? ???????</strong> � ???? ?? ????? ??????? ?????? ??????? ?? ???????? ?????? ?? ??? ???????.</li>
+                <li><strong>اختار الباقة أو طلب الخط</strong> — راجع السعة والسعر وطريقة اختيار الرقم إن وُجدت.</li>
+                <li><strong>اكتب بيانات النموذج</strong> — الاسم والمحافظة فقط، حسب نوع الطلب.</li>
+                <li><strong>راجع رسالة واتساب</strong> — النموذج يفتح رسالة جاهزة؛ راجعها وأرسلها بنفسك لبدء الاستفسار.</li>
+                <li><strong>أكد التفاصيل قبل الإتمام</strong> — تحقق من السعر والتوفر وطريقة التفعيل أو الاستلام مباشرة مع جهة التواصل.</li>
             </ol>
-            <h4>???????? ????????</h4>
+            <h4>الخيارات المعروضة</h4>
             <ul>
-                <li>??? ?? ???? ?? ?????? ????? ????? ?? ???????? ??????? ?? ????? ?????.</li>
-                <li>????? ????? ?????? ????? ????? ???????? ????? ?????? ??????? ???????? ?????? ?????? ????????.</li>
-                <li>??? ?? ???? ???? 250 ?????? ??? ?? ?????? ?? ??? ??? ???? ????? ????? ???? 380 ?????? ??? ?? ???? ?? ????? ?????.</li>
+                <li>طلب خط جديد مع اختيار طريقة الرقم من الخيارات الظاهرة في نموذج الطلب.</li>
+                <li>باقات وحدات وباقات ميجا؛ وتعرض المقارنة السعة والسعر المرجعي والتوفير وتكلفة الوحدة المحسوبة.</li>
+                <li>طلب خط جديد بسعر 250 جنيهًا كما هو معروض، أو طلب عرض فريق العمل لخطين بسعر 380 جنيهًا كما هو موضح في نموذج العرض.</li>
             </ul>
-            <p>?????? ???? ?????? ???? ?????????? ???? ??? ????? ?? ?????. ???? ????? ??????? ??? ???? ?????? ?? ??? ??????? ??? ????? ?????.</p>
+            <p>الموقع منصة مستقلة لعرض المعلومات، وليس جهة تفعيل أو توصيل. راجع السعر والتوفر وأي شروط إضافية مع جهة التواصل قبل إتمام الطلب.</p>
         </div>`
     }
 };
@@ -1665,11 +1665,11 @@ function showModal(isDeveloper = false) {
     });
     modalBody.querySelectorAll('.whatsapp-btn[type="submit"]').forEach(button => {
         const textNode = [...button.childNodes].find(node => node.nodeType === Node.TEXT_NODE);
-        if (textNode) textNode.textContent = '???? ????? ??? ????????';
+        if (textNode) textNode.textContent = 'راجع الطلب قبل المتابعة';
     });
     modalBody.querySelectorAll('.number-type-grid').forEach(group => {
         group.setAttribute('role', 'radiogroup');
-        group.setAttribute('aria-label', '????? ?????? ?????');
+        group.setAttribute('aria-label', 'طريقة اختيار الرقم');
         group.querySelectorAll('.number-type-option').forEach(option => {
             option.setAttribute('role', 'radio');
             option.setAttribute('aria-checked', String(option.classList.contains('selected')));
@@ -1755,13 +1755,13 @@ document.addEventListener('keydown', (event) => {
 
 // ===== DEVELOPER MODAL =====
 function openDevModal() {
-    modalTitle.textContent = "???? ??????";
+    modalTitle.textContent = "مطور الموقع";
     modalBody.innerHTML = `
         <div class="dev-modal">
-            <div class="dev-avatar-wrapper"><div class="dev-avatar">?????</div></div>
+            <div class="dev-avatar-wrapper"><div class="dev-avatar">👨‍💻</div></div>
             <div class="dev-name">Sam Emad</div>
             <div class="dev-role">Full-Stack Developer</div>
-            <p class="dev-bio">????? ?? ????? ?????? ???? etisalat. ???? ?????? ????? ?????? ????? ????? ?????? ??????.</p>
+            <p class="dev-bio">مسؤول عن تصميم وتطوير موقع etisalat. مهتم بتقديم تجربة مستخدم مميزة وحلول برمجية مبتكرة.</p>
             <div class="dev-links">
                 <a href="https://www.instagram.com/sam_emad3/" target="_blank" rel="noopener noreferrer" class="dev-link instagram">
                     <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -1779,70 +1779,70 @@ function openDevModal() {
 
 // ===== NUMBER MODAL WITH PRICE =====
 function openNumberModal() {
-    modalTitle.textContent = "??? ??? ????"; selectedNumberType = '?? ????????';
+    modalTitle.textContent = "طلب رقم جديد"; selectedNumberType = 'من اختياركم';
     const govOptions = governorates.map(g => `<option value="${g}">${g}</option>`).join('');
     modalBody.innerHTML = `
         <div class="number-modal-content">
-            <p>????? ???? ???? ???? ?????? ???? ??????? ???????? ????.</p>
+            <p>اختار إزاي عايز رقمك يوصلك، وسيب بياناتك وهنتواصل معاك.</p>
             <div class="id-card-notice">
                 <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-                <div class="id-card-notice-text"><strong>????? ???:</strong> ???? ???? ???? ????? ?????? ???? <strong>???? ????? ????? ??????</strong> ??? ???????? ??? ?? ???? ???????. ????? ?? ????? ???? ???????.</div>
+                <div class="id-card-notice-text"><strong>تنبيه مهم:</strong> عشان نقدر نفعل الخط، هتحتاج تبعت <strong>صورة بطاقة الرقم القومي</strong> على الواتساب بعد ما تسيب بياناتك. بدونه مش هنقدر نكمل التفعيل.</div>
             </div>
             <div style="display: flex; align-items: flex-start; gap: 12px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 14px 16px; margin-bottom: 20px;">
                 <svg viewBox="0 0 24 24" width="22" height="22" stroke="#34d399" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6;"><strong style="color: #34d399; font-weight: 700;">?? ??? ????? ?????:</strong> ??? ??? ????? <strong>????? ??????</strong> (2800 ???? ????). ?? ????? ????? ???? ????? ????? ???? ??? ?????? ???????? ??????? ???? ??????? ??????.</div>
+                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6;"><strong style="color: #34d399; font-weight: 700;">🎁 عرض الشهر الأول:</strong> أول شهر معانا <strong>ببلاش تماماً</strong> (2800 وحدة هدية). من بداية الشهر اللي بعده، هتبدأ تدفع سعر الباقة المختارة وتستمتع بنفس الوحدات شهرياً.</div>
             </div>
-            <label class="form-label">????? ?????? ?????</label>
+            <label class="form-label">طريقة اختيار الرقم</label>
             <div class="number-type-grid">
-                <div class="number-type-option" onclick="selectNumberType(this,'?? ???????')"><h5>??? ?? ??????? ??</h5><p>????? ????? ???? ??? ?????</p></div>
-                <div class="number-type-option selected" onclick="selectNumberType(this,'?? ????????')"><h5>??? ?? ???????? ?</h5><p>????? ?????? ?? ??? ?????</p></div>
+                <div class="number-type-option" onclick="selectNumberType(this,'من اختياري')"><h5>رقم من اختياري 🎯</h5><p>هقولك الرقم اللي أنا عايزه</p></div>
+                <div class="number-type-option selected" onclick="selectNumberType(this,'من اختياركم')"><h5>رقم من اختياركم ✨</h5><p>انتوا ترشحوا لي رقم مناسب</p></div>
             </div>
         </div>
         <div class="order-summary" style="margin-top:20px; margin-bottom:20px;">
             <div class="order-row total" style="border:none; padding:0; margin:0; justify-content:center; text-align:center;">
-                <span style="color:#fff;">??? ????:</span>
-                <span style="font-size:1.3rem;">250 ????</span>
+                <span style="color:#fff;">سعر الخط:</span>
+                <span style="font-size:1.3rem;">250 جنيه</span>
             </div>
         </div>
         <form onsubmit="handleNumberSubmit(event)">
-            <div class="form-group" id="num-group-name"><label class="form-label">????? ???????</label><input type="text" id="numName" class="form-input" placeholder="???? ????..." required><div class="form-error">???? ????? ?????</div></div>
-            <div class="form-group" id="num-group-gov"><label class="form-label">????????</label><select id="numGov" class="form-select" required><option value="" disabled selected>???? ????????...</option>${govOptions}</select><div class="form-error">???? ?????? ????????</div></div>
-            <button type="submit" class="whatsapp-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>????? ??? ????? ??? WhatsApp</button>
+            <div class="form-group" id="num-group-name"><label class="form-label">الاسم بالكامل</label><input type="text" id="numName" class="form-input" placeholder="اكتب اسمك..." required><div class="form-error">يرجى كتابة الاسم</div></div>
+            <div class="form-group" id="num-group-gov"><label class="form-label">المحافظة</label><select id="numGov" class="form-select" required><option value="" disabled selected>اختر المحافظة...</option>${govOptions}</select><div class="form-error">يرجى اختيار المحافظة</div></div>
+            <button type="submit" class="whatsapp-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>إرسال طلب الرقم عبر WhatsApp</button>
         </form>`;
     showModal();
 }
 
 // ===== TEAM MODAL WITH PRICE =====
 function openTeamModal() {
-    modalTitle.textContent = "??? ???? ??? (????)";
+    modalTitle.textContent = "طلب فريق عمل (خطين)";
     const govOptions = governorates.map(g=>`<option value="${g}">${g}</option>`).join('');
     modalBody.innerHTML = `
         <div class="team-modal-content">
-            <p>???? ???? ???? ????????? ????????? ?????? ???? ????.</p>
+            <p>عشان تفعل ميزة المكالمات المجانية، هتحتاج تطلب خطين.</p>
             <div class="id-card-notice">
                 <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-                <div class="id-card-notice-text"><strong>????? ???:</strong> ???? ???? ???? ??????? ?????? ???? <strong>???? ????? ????? ??????</strong> ??? ???????? ??? ?? ???? ???????. ????? ?? ????? ???? ???????.</div>
+                <div class="id-card-notice-text"><strong>تنبيه مهم:</strong> عشان نقدر نفعل الخطين، هتحتاج تبعت <strong>صورة بطاقة الرقم القومي</strong> على الواتساب بعد ما تسيب بياناتك. بدونه مش هنقدر نكمل التفعيل.</div>
             </div>
             <div style="display: flex; align-items: flex-start; gap: 12px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 14px 16px; margin-bottom: 20px;">
                 <svg viewBox="0 0 24 24" width="22" height="22" stroke="#34d399" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6;"><strong style="color: #34d399; font-weight: 700;">?? ???? ???? ?????:</strong> ??? ??? <strong>????? ??????</strong>. ??? ????? ??????? ????????? ????? ????? ?????? ??? ???? <strong>1500 ????</strong> (?? ??? ?? ???? ?? ?????)? ??? ??????? ????? ?????? ?? ????? ?????? ???????? (2800 ????).</div>
+                <div style="font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6;"><strong style="color: #34d399; font-weight: 700;">📌 نظام فريق العمل:</strong> أول شهر <strong>ببلاش تماماً</strong>. ومن الشهر التاني، المكالمات بينكم بتكون مجانية بحد أقصى <strong>1500 وحدة</strong> (من غير ما تخصم من باقتك)، وأي استخدام زيادة بيتحسب من وحدات الباقة الأساسية (2800 وحدة).</div>
             </div>
             <ul>
-                <li>?? ??? ??? ??????</li>
-                <li>??????? ????? ?????</li>
-                <li>?? ????? ?? ??????</li>
+                <li>خط ليك وخط لصاحبك</li>
+                <li>مكالمات بينكم ببلاش</li>
+                <li>مش بيخصم من الباقة</li>
             </ul>
         </div>
         <div class="order-summary" style="margin-top:20px; margin-bottom:20px;">
             <div class="order-row total" style="border:none; padding:0; margin:0; justify-content:center; text-align:center;">
-                <span style="color:#fff;">??? ??????:</span>
-                <span style="font-size:1.3rem;">380 ????</span>
+                <span style="color:#fff;">سعر الخطين:</span>
+                <span style="font-size:1.3rem;">380 جنيه</span>
             </div>
         </div>
         <form onsubmit="handleTeamSubmit(event)">
-            <div class="form-group" id="team-group-name"><label class="form-label">???? ???????</label><input type="text" id="teamName" class="form-input" placeholder="???? ????..." required><div class="form-error">???? ????? ?????</div></div>
-            <div class="form-group" id="team-group-gov"><label class="form-label">????????</label><select id="teamGov" class="form-select" required><option value="" disabled selected>???? ????????...</option>${govOptions}</select><div class="form-error">???? ?????? ????????</div></div>
-            <button type="submit" class="whatsapp-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>????? ????? ??? WhatsApp</button>
+            <div class="form-group" id="team-group-name"><label class="form-label">اسمك بالكامل</label><input type="text" id="teamName" class="form-input" placeholder="اكتب اسمك..." required><div class="form-error">يرجى كتابة الاسم</div></div>
+            <div class="form-group" id="team-group-gov"><label class="form-label">المحافظة</label><select id="teamGov" class="form-select" required><option value="" disabled selected>اختر المحافظة...</option>${govOptions}</select><div class="form-error">يرجى اختيار المحافظة</div></div>
+            <button type="submit" class="whatsapp-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>إرسال الطلب عبر WhatsApp</button>
         </form>`;
     showModal();
 }
@@ -1867,9 +1867,9 @@ function showOrderReview(form, rows, message) {
 
     const heading = document.createElement('h4');
     heading.id = 'orderReviewTitle';
-    heading.textContent = '???? ???? ??? ????????';
+    heading.textContent = 'راجع طلبك قبل المتابعة';
     const intro = document.createElement('p');
-    intro.textContent = '???? ?? ??? ????????. ?? ??? ????? ??????? ??? ??? ???????? ???????? ?? ??????.';
+    intro.textContent = 'تأكد من صحة التفاصيل. لن يتم إرسال الرسالة إلا بعد مراجعتها وإرسالها من واتساب.';
     const list = document.createElement('dl');
     list.className = 'order-review-list';
 
@@ -1886,12 +1886,12 @@ function showOrderReview(form, rows, message) {
 
     const note = document.createElement('p');
     note.className = 'order-review-note';
-    note.textContent = '??? ?????? ?? ???? ????? ????????. ???? ??????? ???? ????? ????? ?????? ???? ????? ??????? ??? ????? ????????.';
+    note.textContent = 'فتح واتساب لا يرسل الطلب تلقائيًا. راجع الرسالة هناك واضغط إرسال بنفسك، وأكد السعر والتوفر قبل إتمام الاشتراك.';
     const actions = document.createElement('div');
     actions.className = 'order-review-actions';
     const editButton = document.createElement('button');
     editButton.type = 'button';
-    editButton.textContent = '???? ???????';
+    editButton.textContent = 'رجوع للتعديل';
     editButton.addEventListener('click', () => {
         review.remove();
         form.hidden = false;
@@ -1901,7 +1901,7 @@ function showOrderReview(form, rows, message) {
     whatsappLink.href = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     whatsappLink.target = '_blank';
     whatsappLink.rel = 'noopener noreferrer';
-    whatsappLink.textContent = '????? ???? WhatsApp';
+    whatsappLink.textContent = 'تأكيد وفتح WhatsApp';
     actions.append(editButton, whatsappLink);
     review.append(heading, intro, list, note, actions);
     form.before(review);
@@ -1918,12 +1918,12 @@ function handleNumberSubmit(e) {
     name.setAttribute('aria-invalid', String(!cleanName));
     if (!cleanName || !gov.value) return;
     showOrderReview(e.currentTarget, [
-        ['??? ?????', '??? ??? ????'],
-        ['?????', cleanName],
-        ['????????', gov.value],
-        ['????? ?????? ?????', selectedNumberType],
-        ['??? ???? ???????', '250 ????']
-    ], `??????? ???? ??? ??? ????.\n?????: ${cleanName}\n????????: ${gov.value}\n????? ????????: ${selectedNumberType}\n??? ????: 250 ????`);
+        ['نوع الطلب', 'طلب رقم جديد'],
+        ['الاسم', cleanName],
+        ['المحافظة', gov.value],
+        ['طريقة اختيار الرقم', selectedNumberType],
+        ['سعر الخط المعروض', '250 جنيه']
+    ], `مرحبًا، أريد طلب رقم جديد.\nالاسم: ${cleanName}\nالمحافظة: ${gov.value}\nطريقة الاختيار: ${selectedNumberType}\nسعر الخط: 250 جنيه`);
 }
 
 function handleTeamSubmit(e) {
@@ -1935,11 +1935,11 @@ function handleTeamSubmit(e) {
     name.setAttribute('aria-invalid', String(!cleanName));
     if (!cleanName || !gov.value) return;
     showOrderReview(e.currentTarget, [
-        ['??? ?????', '???? ??? (????)'],
-        ['?????', cleanName],
-        ['????????', gov.value],
-        ['????? ??????? ??????', '380 ????']
-    ], `??????? ???? ???????? ?? ??? ???? ????? (????).\n?????: ${cleanName}\n????????: ${gov.value}\n??? ??????: 380 ????`);
+        ['نوع الطلب', 'فريق عمل (خطين)'],
+        ['الاسم', cleanName],
+        ['المحافظة', gov.value],
+        ['السعر المعروض للخطين', '380 جنيه']
+    ], `مرحبًا، أريد الاشتراك في عرض فريق العمل (خطين).\nالاسم: ${cleanName}\nالمحافظة: ${gov.value}\nسعر الخطين: 380 جنيه`);
 }
 
 // ===== PACKAGES =====
@@ -1952,7 +1952,7 @@ function switchTab(type, tabButton) {
         button.tabIndex = isActive ? 0 : -1;
     });
     document.getElementById('packagesGrid').setAttribute('aria-labelledby', tabButton.id);
-    renderPackages(type === 'units' ? unitsPlans : megaPlans, type === 'units' ? '?????' : '????', type);
+    renderPackages(type === 'units' ? unitsPlans : megaPlans, type === 'units' ? 'وحدات' : 'ميجا', type);
 }
 
 document.querySelector('.packages-tabs').addEventListener('keydown', event => {
@@ -1973,15 +1973,15 @@ function normalizePackageSearch(value) {
     return value.toLocaleLowerCase('ar')
         .normalize('NFKC')
         .replace(/[\u064B-\u065F\u0670]/g, '')
-        .replace(/[???]/g, '?')
-        .replace(/?/g, '?')
-        .replace(/[?-?]/g, digit => String(digit.charCodeAt(0) - 0x0660))
+        .replace(/[أإآ]/g, 'ا')
+        .replace(/ى/g, 'ي')
+        .replace(/[٠-٩]/g, digit => String(digit.charCodeAt(0) - 0x0660))
         .trim();
 }
 
 function applyPackageFilters() {
     const isUnits = activePlanType === 'units';
-    renderPackages(isUnits ? unitsPlans : megaPlans, isUnits ? '?????' : '????', activePlanType);
+    renderPackages(isUnits ? unitsPlans : megaPlans, isUnits ? 'وحدات' : 'ميجا', activePlanType);
 }
 
 function findBudgetRecommendation() {
@@ -1996,26 +1996,26 @@ function findBudgetRecommendation() {
 }
 
 function getPlanShareUrl(plan, typeName) {
-    const message = `???? ${typeName} ???? ${plan.value} ${plan.unit} ???? ${plan.sell} ????.\n??????? ???????: ${plan.company - plan.sell} ????.\n???? ????? ??????? ??????? ?? ??? ??????? ??? ?????.`;
+    const message = `باقة ${typeName} بسعة ${plan.value} ${plan.unit} بسعر ${plan.sell} جنيه.\nالتوفير المعروض: ${plan.company - plan.sell} جنيه.\nراجع السعر والتوفر النهائي مع جهة التواصل قبل الطلب.`;
     return `https://wa.me/?text=${encodeURIComponent(message)}`;
 }
 
 function renderBudgetRecommendation() {
     const recommendation = findBudgetRecommendation();
     const { type, budget, plan, fitsBudget } = recommendation;
-    const typeName = type === 'units' ? '?????' : '????';
-    document.getElementById('budgetAmountValue').textContent = `${budget} ????`;
+    const typeName = type === 'units' ? 'وحدات' : 'ميجا';
+    document.getElementById('budgetAmountValue').textContent = `${budget} جنيه`;
     const status = fitsBudget
-        ? `???? ${plan.value} ${plan.unit} ???? ${plan.sell} ????${budget > plan.sell ? `? ?????? ${budget - plan.sell} ???? ?? ????????` : ''}.`
-        : `???????? ??? ?? ??? ??? ????? ???? ?????? ???? ?? ${plan.sell} ???? (????? ${plan.sell - budget} ????).`;
+        ? `باقة ${plan.value} ${plan.unit} بسعر ${plan.sell} جنيه${budget > plan.sell ? `، ويتبقى ${budget - plan.sell} جنيه من ميزانيتك` : ''}.`
+        : `ميزانيتك أقل من أقل سعر متاح؛ أقرب اختيار يبدأ من ${plan.sell} جنيه (زيادة ${plan.sell - budget} جنيه).`;
     document.getElementById('budgetRecommendation').innerHTML = `
         <div class="budget-recommendation-copy">
-            <strong>${fitsBudget ? '?? ???? ????? ?????????' : '?? ???? ???? ?????????'}</strong>
-            <span>${status} ????? ???????? ???????? ????? ??????? ??? ?????.</span>
+            <strong>${fitsBudget ? '🎯 أنسب ترشيح لميزانيتك' : '💡 أقرب باقة لميزانيتك'}</strong>
+            <span>${status} السعة والأسعار المعروضة قابلة للتأكيد قبل الطلب.</span>
         </div>
         <div class="budget-recommendation-actions">
-            <button type="button" data-budget-order="${type}:${plan.id}">${fitsBudget ? '???? ??????' : '??? ????????'}</button>
-            <a class="budget-share" href="${getPlanShareUrl(plan, typeName)}" target="_blank" rel="noopener noreferrer">??????</a>
+            <button type="button" data-budget-order="${type}:${plan.id}">${fitsBudget ? 'اطلب الباقة' : 'عرض تفاصيلها'}</button>
+            <a class="budget-share" href="${getPlanShareUrl(plan, typeName)}" target="_blank" rel="noopener noreferrer">شاركها</a>
         </div>`;
 }
 
@@ -2038,16 +2038,16 @@ function renderPlanQuizResult(type, budget, priority) {
     const result = document.getElementById('planQuizResult');
     const recommendation = getQuizRecommendation(type, budget, priority);
     const { plan, withinBudget } = recommendation;
-    const typeName = type === 'units' ? '?????' : '????';
-    const reason = priority === 'value' ? '??? ????? ??? ???? ??? ????????' : '???? ??? ??? ????????';
+    const typeName = type === 'units' ? 'وحدات' : 'ميجا';
+    const reason = priority === 'value' ? 'أقل تكلفة لكل وحدة ضمن الخيارات' : 'أكبر سعة ضمن الخيارات';
     const title = document.createElement('h4');
-    title.textContent = withinBudget ? '?????? ?????? ????????' : '???? ?????? ???? ?????????';
+    title.textContent = withinBudget ? 'ترشيحك الأقرب لاحتياجك' : 'أقرب اختيار متاح لميزانيتك';
     const details = document.createElement('p');
     details.textContent = withinBudget
-            ? `???? ${plan.value} ${plan.unit} ???? ${plan.sell} ????. ?? ???????? ????? ???? ${reason} ??? ???????? (${budget} ????).`
-            : `???????? ??? ?? ??? ??? ?????. ???? ???? ?? ${plan.value} ${plan.unit} ???? ${plan.sell} ????? ?? ?????? ${plan.sell - budget} ????.`;
+            ? `باقة ${plan.value} ${plan.unit} بسعر ${plan.sell} جنيه. تم اختيارها لأنها تحقق ${reason} ضمن ميزانيتك (${budget} جنيه).`
+            : `ميزانيتك أقل من أقل سعر معروض. أقرب باقة هي ${plan.value} ${plan.unit} بسعر ${plan.sell} جنيه، أي بزيادة ${plan.sell - budget} جنيه.`;
     const note = document.createElement('p');
-    note.textContent = `????? ?? ???? ${plan.unit}: ${(plan.sell * 1000 / plan.value).toFixed(2)} ???? ??? ??????? ????????. ???? ?? ????? ??????? ??????? ??? ?????.`;
+    note.textContent = `تكلفة كل ١٠٠٠ ${plan.unit}: ${(plan.sell * 1000 / plan.value).toFixed(2)} جنيه حسب الأسعار المعروضة. تأكد من السعر والتوفر والشروط قبل الطلب.`;
     const actions = document.createElement('div');
     actions.className = 'plan-quiz-actions';
 
@@ -2057,14 +2057,14 @@ function renderPlanQuizResult(type, budget, priority) {
     viewButton.dataset.quizAction = 'view';
     viewButton.dataset.planType = type;
     viewButton.dataset.planId = String(plan.id);
-    viewButton.textContent = '??? ?????? ?? ???????';
+    viewButton.textContent = 'عرض الباقة في القائمة';
 
     const orderButton = document.createElement('button');
     orderButton.type = 'button';
     orderButton.dataset.quizAction = 'order';
     orderButton.dataset.planType = type;
     orderButton.dataset.planId = String(plan.id);
-    orderButton.textContent = '???? ??? ??????';
+    orderButton.textContent = 'راجع طلب الباقة';
     actions.append(viewButton, orderButton);
     result.replaceChildren(title, details, note, actions);
     result.hidden = false;
@@ -2096,17 +2096,17 @@ document.getElementById('planQuizResult').addEventListener('click', event => {
     const plans = type === 'units' ? unitsPlans : megaPlans;
     const plan = plans.find(item => item.id === Number(action.dataset.planId));
     if (!plan) {
-            showToast('???? ?????? ??? ?????? ????????', 'error');
+            showToast('تعذر العثور على الباقة المطلوبة', 'error');
             return;
     }
     if (action.dataset.quizAction === 'order') {
-            openOrderModal(plan, type === 'units' ? '?????' : '????');
+            openOrderModal(plan, type === 'units' ? 'وحدات' : 'ميجا');
             return;
     }
     showFavoritesOnly = false;
     const favoritesFilter = document.getElementById('favoritesFilter');
     favoritesFilter.setAttribute('aria-pressed', 'false');
-    favoritesFilter.textContent = '? ???????';
+    favoritesFilter.textContent = '♡ المفضلة';
     document.getElementById('packageSearch').value = '';
     document.getElementById('packageSort').value = 'recommended';
     switchTab(type, document.getElementById(type === 'units' ? 'unitsTab' : 'megaTab'));
@@ -2142,7 +2142,7 @@ document.getElementById('budgetAmount').addEventListener('input', renderBudgetRe
 document.getElementById('favoritesFilter').addEventListener('click', event => {
     showFavoritesOnly = !showFavoritesOnly;
     event.currentTarget.setAttribute('aria-pressed', String(showFavoritesOnly));
-    event.currentTarget.textContent = showFavoritesOnly ? '? ??????? ???' : '? ???????';
+    event.currentTarget.textContent = showFavoritesOnly ? '♥ المفضلة فقط' : '♡ المفضلة';
     applyPackageFilters();
 });
 
@@ -2151,18 +2151,18 @@ function updateCompareUI() {
     const count = plansForComparison.length;
     dock.classList.toggle('is-visible', count > 0);
     document.body.classList.toggle('compare-active', count > 0);
-    document.getElementById('compareCount').textContent = `${count} ?? 2 ????`;
+    document.getElementById('compareCount').textContent = `${count} من 2 باقة`;
     document.getElementById('compareHint').textContent = count === 0
-        ? '????? ?????? ?? ??? ????? ????????'
+        ? 'اختار باقتين من نفس النوع للمقارنة'
         : count === 1
-            ? '????? ???? ????? ?? ??? ?????'
-            : '????! ??? ????? ?????? ?????? ???';
+            ? 'اختار باقة تانية من نفس النوع'
+            : 'جاهز! شوف الفرق واختار الأنسب ليك';
     document.getElementById('openCompare').disabled = count !== 2;
     document.querySelectorAll('.pkg-compare-btn').forEach(button => {
         const selected = plansForComparison.some(item => item.type === button.dataset.compareType && item.plan.id === Number(button.dataset.compareId));
         const incompatible = count > 0 && plansForComparison[0].type !== button.dataset.compareType;
         button.setAttribute('aria-pressed', String(selected));
-        button.textContent = selected ? '??? ??????? ?' : '+ ???? ??????';
+        button.textContent = selected ? 'تمت الإضافة ✓' : '＋ قارن الباقة';
         button.disabled = !selected && (count === 2 || incompatible);
     });
 }
@@ -2174,17 +2174,17 @@ function togglePlanComparison(button) {
     if (existingIndex !== -1) {
         plansForComparison.splice(existingIndex, 1);
     } else if (plansForComparison.length === 2) {
-        showToast('???? ???????? ??? ????? ???? ?????', 'error');
+        showToast('امسح اختيارًا قبل إضافة باقة تانية', 'error');
     } else if (plansForComparison.length && plansForComparison[0].type !== type) {
-        showToast('????? ?????? ?? ??? ????? ????????', 'error');
+        showToast('اختار باقتين من نفس النوع للمقارنة', 'error');
     } else {
         const group = type === 'units' ? unitsPlans : megaPlans;
         const plan = group.find(item => item.id === planId);
         if (!plan) {
-            showToast('???? ?????? ??? ?????? ????????', 'error');
+            showToast('تعذر العثور على الباقة المطلوبة', 'error');
             return;
         }
-        plansForComparison.push({ type, typeName: type === 'units' ? '?????' : '????', plan });
+        plansForComparison.push({ type, typeName: type === 'units' ? 'وحدات' : 'ميجا', plan });
     }
     updateCompareUI();
 }
@@ -2194,37 +2194,37 @@ function openPlanComparison() {
     const [first, second] = plansForComparison;
     const packages = [first, second];
     const values = packages.map(({ plan }) => ({
-        price: `${plan.sell} ????`,
-        original: `${plan.company} ????`,
-        saving: `${plan.company - plan.sell} ????`,
-        rate: `${(plan.sell / plan.value * 1000).toFixed(4)} ????`
+        price: `${plan.sell} جنيه`,
+        original: `${plan.company} جنيه`,
+        saving: `${plan.company - plan.sell} جنيه`,
+        rate: `${(plan.sell / plan.value * 1000).toFixed(4)} جنيه`
     }));
     const calculationCards = packages.map(({ plan, typeName }) => {
         const pricePerUnit = plan.sell / plan.value;
         const pricePerThousand = plan.sell * 1000 / plan.value;
         return `<article class="compare-calculation">
-            <h4>???? ${plan.value} ${plan.unit}</h4>
-            <p>???? ??? ??????: <strong>${plan.sell} ???? � ${plan.value} ${plan.unit} = ${pricePerUnit.toFixed(8)} ???? ??? ${plan.unit}</strong> (????? ????? ????? ?????? ?? ${plan.sell} � ${plan.value}).</p>
-            <p>????? ?? ???? ${plan.unit}: <strong>${plan.sell} � ???? � ${plan.value} = ${pricePerThousand.toFixed(4)} ????</strong>.</p>
-            <p>??????? ???????: <strong>${plan.company} - ${plan.sell} = ${plan.company - plan.sell} ????</strong> ?????? ?????? ??????? ??????.</p>
+            <h4>باقة ${plan.value} ${plan.unit}</h4>
+            <p>حساب سعر الوحدة: <strong>${plan.sell} جنيه ÷ ${plan.value} ${plan.unit} = ${pricePerUnit.toFixed(8)} جنيه لكل ${plan.unit}</strong> (تقريب عشري؛ الكسر الدقيق هو ${plan.sell} ÷ ${plan.value}).</p>
+            <p>تكلفة كل ١٠٠٠ ${plan.unit}: <strong>${plan.sell} × ١٠٠٠ ÷ ${plan.value} = ${pricePerThousand.toFixed(4)} جنيه</strong>.</p>
+            <p>التوفير المعروض: <strong>${plan.company} − ${plan.sell} = ${plan.company - plan.sell} جنيه</strong> مقارنة بالسعر المرجعي الظاهر.</p>
         </article>`;
     }).join('');
-    modalTitle.textContent = '?????? ???????';
+    modalTitle.textContent = 'مقارنة الباقات';
     modalBody.innerHTML = `
         <div class="compare-table-wrap">
             <table class="compare-table">
-                <thead><tr><th scope="col">????????</th>${packages.map(({ plan }) => `<th scope="col">${plan.value} ${plan.unit}</th>`).join('')}</tr></thead>
+                <thead><tr><th scope="col">التفاصيل</th>${packages.map(({ plan }) => `<th scope="col">${plan.value} ${plan.unit}</th>`).join('')}</tr></thead>
                 <tbody>
-                    <tr><th scope="row">??? ?????</th>${values.map(item => `<td>${item.price}</td>`).join('')}</tr>
-                    <tr><th scope="row">????? ??????? ???????</th>${values.map(item => `<td>${item.original}</td>`).join('')}</tr>
-                    <tr><th scope="row">???? ???????</th>${values.map(item => `<td class="compare-saving">${item.saving}</td>`).join('')}</tr>
-                    <tr><th scope="row"><span class="compare-rate-label">????? ?? ???? ${first.plan.unit}<button class="compare-details-toggle" type="button" aria-expanded="false" aria-controls="compareCalculations">??????</button></span></th>${values.map(item => `<td>${item.rate}</td>`).join('')}</tr>
-                    <tr><th scope="row">?????? ??????</th>${packages.map(({ plan, type }) => `<td><button type="button" class="compare-order" data-compare-order="${type}:${plan.id}">???????</button></td>`).join('')}</tr>
+                    <tr><th scope="row">سعر البيع</th>${values.map(item => `<td>${item.price}</td>`).join('')}</tr>
+                    <tr><th scope="row">السعر المرجعي المعروض</th>${values.map(item => `<td>${item.original}</td>`).join('')}</tr>
+                    <tr><th scope="row">قيمة التوفير</th>${values.map(item => `<td class="compare-saving">${item.saving}</td>`).join('')}</tr>
+                    <tr><th scope="row"><span class="compare-rate-label">تكلفة كل ١٠٠٠ ${first.plan.unit}<button class="compare-details-toggle" type="button" aria-expanded="false" aria-controls="compareCalculations">تفاصيل</button></span></th>${values.map(item => `<td>${item.rate}</td>`).join('')}</tr>
+                    <tr><th scope="row">اختيار الباقة</th>${packages.map(({ plan, type }) => `<td><button type="button" class="compare-order" data-compare-order="${type}:${plan.id}">اختارها</button></td>`).join('')}</tr>
                 </tbody>
             </table>
         </div>
         <div class="compare-calculations" id="compareCalculations" hidden>${calculationCards}</div>
-        <p class="compare-calculation-note">?????? ???? ??? ??? ????? ?????? ????????? ??? ??????? ????? ?????? ????? ????? ???????? ????? ?????? ????? ?? ?????? ?????? ?????? ???? ?????????.</p>`;
+        <p class="compare-calculation-note">الحساب مبني على سعر البيع والسعة المعروضين على الموقع؛ تكلفة الوحدة متوسط حسابي للمقارنة وليست تعريفة رسمية أو ضمانًا لطريقة احتساب شركة الاتصالات.</p>`;
     showModal();
 }
 
@@ -2244,10 +2244,10 @@ document.getElementById('packagesGrid').addEventListener('click', event => {
         const plans = orderButton.dataset.planType === 'units' ? unitsPlans : megaPlans;
         const plan = plans.find(item => item.id === Number(orderButton.dataset.planId));
         if (!plan) {
-            showToast('???? ?????? ??? ?????? ????????', 'error');
+            showToast('تعذر العثور على الباقة المطلوبة', 'error');
             return;
         }
-        openOrderModal(plan, orderButton.dataset.planType === 'units' ? '?????' : '????');
+        openOrderModal(plan, orderButton.dataset.planType === 'units' ? 'وحدات' : 'ميجا');
         return;
     }
     if (event.target.closest('.clear-package-filters')) {
@@ -2256,7 +2256,7 @@ document.getElementById('packagesGrid').addEventListener('click', event => {
         showFavoritesOnly = false;
         const favoritesButton = document.getElementById('favoritesFilter');
         favoritesButton.setAttribute('aria-pressed', 'false');
-        favoritesButton.textContent = '? ???????';
+        favoritesButton.textContent = '♡ المفضلة';
         applyPackageFilters();
     }
 });
@@ -2267,10 +2267,10 @@ document.getElementById('budgetRecommendation').addEventListener('click', event 
     const plans = type === 'units' ? unitsPlans : megaPlans;
     const plan = plans.find(item => item.id === Number(id));
     if (!plan) {
-        showToast('???? ?????? ??? ?????? ????????', 'error');
+        showToast('تعذر العثور على الباقة المطلوبة', 'error');
         return;
     }
-    openOrderModal(plan, type === 'units' ? '?????' : '????');
+    openOrderModal(plan, type === 'units' ? 'وحدات' : 'ميجا');
 });
 document.getElementById('clearCompare').addEventListener('click', () => {
     plansForComparison = [];
@@ -2283,7 +2283,7 @@ modalBody.addEventListener('click', event => {
     const details = document.getElementById('compareCalculations');
     const isExpanded = button.getAttribute('aria-expanded') === 'true';
     button.setAttribute('aria-expanded', String(!isExpanded));
-    button.textContent = isExpanded ? '??????' : '????? ????????';
+    button.textContent = isExpanded ? 'تفاصيل' : 'إخفاء التفاصيل';
     details.hidden = isExpanded;
 });
 document.addEventListener('click', event => {
@@ -2292,10 +2292,10 @@ document.addEventListener('click', event => {
     const [type, id] = button.dataset.compareOrder.split(':');
     const plan = (type === 'units' ? unitsPlans : megaPlans).find(item => item.id === Number(id));
     if (!plan) {
-        showToast('???? ?????? ??? ?????? ????????', 'error');
+        showToast('تعذر العثور على الباقة المطلوبة', 'error');
         return;
     }
-    openOrderModal(plan, type === 'units' ? '?????' : '????');
+    openOrderModal(plan, type === 'units' ? 'وحدات' : 'ميجا');
 });
 
 function renderPackages(plans, typeName, planType) {
@@ -2304,7 +2304,7 @@ function renderPackages(plans, typeName, planType) {
     const sortOrder = document.getElementById('packageSort').value;
     const visiblePlans = plans.filter(plan => {
         const planKey = `${planType}:${plan.id}`;
-        const searchText = normalizePackageSearch(`${plan.value} ${plan.unit} ${plan.sell} ???? ${plan.company} ${plan.company - plan.sell}`);
+        const searchText = normalizePackageSearch(`${plan.value} ${plan.unit} ${plan.sell} جنيه ${plan.company} ${plan.company - plan.sell}`);
         return (!showFavoritesOnly || favoritePlans.has(planKey)) && (!searchQuery || searchText.includes(searchQuery));
     });
     if (sortOrder === 'price-asc') visiblePlans.sort((a, b) => a.sell - b.sell);
@@ -2312,15 +2312,15 @@ function renderPackages(plans, typeName, planType) {
     if (sortOrder === 'capacity-desc') visiblePlans.sort((a, b) => b.value - a.value);
     if (sortOrder === 'saving-desc') visiblePlans.sort((a, b) => (b.company - b.sell) - (a.company - a.sell));
     document.getElementById('packagesResultsStatus').textContent = visiblePlans.length
-        ? `??? ${visiblePlans.length} ?? ${plans.length} ?????`
+        ? `عرض ${visiblePlans.length} من ${plans.length} باقات`
         : showFavoritesOnly && !searchQuery
-            ? '?? ??? ?? ???? ??? ??????? ???.'
-            : '?? ???? ????? ?????? ?????.';
+            ? 'لم تضف أي باقة إلى المفضلة بعد.'
+            : 'لا توجد باقات مطابقة لبحثك.';
     grid.replaceChildren();
     if (!visiblePlans.length) {
         const emptyState = document.createElement('div');
         emptyState.className = 'packages-empty';
-        emptyState.innerHTML = `<strong>${showFavoritesOnly && !searchQuery ? '?????? ??? ?????' : '?? ?????? ???? ??????'}</strong><span>${showFavoritesOnly && !searchQuery ? '???? ??????? ???? ????? ?????? ??? ??? ?????.' : '??? ????? ????? ?? ???????.'}</span><br><button class="clear-package-filters" type="button">${showFavoritesOnly && !searchQuery ? '??? ?? ???????' : '??? ????? ????????'}</button>`;
+        emptyState.innerHTML = `<strong>${showFavoritesOnly && !searchQuery ? 'مفضلتك لسه فاضية' : 'مش لاقيين باقة مطابقة'}</strong><span>${showFavoritesOnly && !searchQuery ? 'احفظ الباقات اللي عجبتك بالضغط على رمز القلب.' : 'جرب تعدّل البحث أو التصفية.'}</span><br><button class="clear-package-filters" type="button">${showFavoritesOnly && !searchQuery ? 'عرض كل الباقات' : 'مسح البحث والتصفية'}</button>`;
         grid.appendChild(emptyState);
         updateCompareUI();
         return;
@@ -2330,7 +2330,7 @@ function renderPackages(plans, typeName, planType) {
         const isFavorite = favoritePlans.has(`${planType}:${plan.id}`);
         const card = document.createElement('article');
         card.className = 'glass-card pkg-card fade-up';
-        card.innerHTML = `<div class="pkg-header">${plan.id === 3 ? '<div class="pkg-badge">?????? ????? ??</div>' : ''}<button class="pkg-favorite-btn" type="button" data-favorite-id="${plan.id}" data-favorite-type="${planType}" aria-label="${isFavorite ? '?????' : '?????'} ???? ${plan.value} ${plan.unit} ${isFavorite ? '??' : '???'} ???????" aria-pressed="${isFavorite}">${isFavorite ? '?' : '?'}</button><div class="pkg-type">???? ${typeName}</div><div class="pkg-value">${plan.value} <span>${plan.unit}</span></div></div><div class="pkg-body"><div class="pkg-pricing"><span class="pkg-old-price">${plan.company} ????</span><div class="pkg-new-price">${plan.sell} <small>????</small></div><div class="pkg-save">??? ${saving} ????</div></div><div class="pkg-actions"><button class="pkg-compare-btn" type="button" data-compare-id="${plan.id}" data-compare-type="${planType}" aria-pressed="false">+ ???? ??????</button><button class="pkg-btn" type="button" data-plan-id="${plan.id}" data-plan-type="${planType}">????? ????</button><a class="pkg-share-btn" href="${getPlanShareUrl(plan, typeName)}" target="_blank" rel="noopener noreferrer" aria-label="?????? ?????? ???? ${plan.value} ${plan.unit} ??? WhatsApp">???? ?????? ??? WhatsApp</a></div></div>`;
+        card.innerHTML = `<div class="pkg-header">${plan.id === 3 ? '<div class="pkg-badge">الأكثر طلباً 🔥</div>' : ''}<button class="pkg-favorite-btn" type="button" data-favorite-id="${plan.id}" data-favorite-type="${planType}" aria-label="${isFavorite ? 'إزالة' : 'إضافة'} باقة ${plan.value} ${plan.unit} ${isFavorite ? 'من' : 'إلى'} المفضلة" aria-pressed="${isFavorite}">${isFavorite ? '♥' : '♡'}</button><div class="pkg-type">باقة ${typeName}</div><div class="pkg-value">${plan.value} <span>${plan.unit}</span></div></div><div class="pkg-body"><div class="pkg-pricing"><span class="pkg-old-price">${plan.company} جنيه</span><div class="pkg-new-price">${plan.sell} <small>جنيه</small></div><div class="pkg-save">وفر ${saving} جنيه</div></div><div class="pkg-actions"><button class="pkg-compare-btn" type="button" data-compare-id="${plan.id}" data-compare-type="${planType}" aria-pressed="false">＋ قارن الباقة</button><button class="pkg-btn" type="button" data-plan-id="${plan.id}" data-plan-type="${planType}">اشترك الآن</button><a class="pkg-share-btn" href="${getPlanShareUrl(plan, typeName)}" target="_blank" rel="noopener noreferrer" aria-label="مشاركة تفاصيل باقة ${plan.value} ${plan.unit} عبر WhatsApp">شارك الباقة عبر WhatsApp</a></div></div>`;
         grid.appendChild(card);
     });
     observeFadeUp();
@@ -2338,9 +2338,9 @@ function renderPackages(plans, typeName, planType) {
 }
 
 function openOrderModal(plan, typeName) {
-    currentSelectedPlan={...plan,typeName}; modalTitle.textContent="??? ?????? ????";
+    currentSelectedPlan={...plan,typeName}; modalTitle.textContent="طلب اشتراك جديد";
     const saving=plan.company-plan.sell; const govOptions=governorates.map(g=>`<option value="${g}">${g}</option>`).join('');
-    modalBody.innerHTML=`<div class="order-summary"><div class="order-row"><span>??? ??????:</span><span>${typeName}</span></div><div class="order-row"><span>??????:</span><span>${plan.value} ${plan.unit}</span></div><div class="order-row total"><span>??? ?????:</span><span>${plan.sell} ????</span></div><div class="order-row" style="color:#34d399;"><span>?? ???????:</span><span>${saving} ????</span></div></div><form onsubmit="handleOrderSubmit(event)"><div class="form-group" id="group-name"><label class="form-label">????? ???????</label><input type="text" id="clientName" class="form-input" placeholder="???? ???? ???..." required><div class="form-error">???? ????? ?????</div></div><div class="form-group" id="group-gov"><label class="form-label">????????</label><select id="clientGov" class="form-select" required><option value="" disabled selected>???? ????????...</option>${govOptions}</select><div class="form-error">???? ?????? ????????</div></div><button type="submit" class="whatsapp-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>????? ????? ??? WhatsApp</button></form>`;
+    modalBody.innerHTML=`<div class="order-summary"><div class="order-row"><span>نوع الباقة:</span><span>${typeName}</span></div><div class="order-row"><span>القيمة:</span><span>${plan.value} ${plan.unit}</span></div><div class="order-row total"><span>سعر البيع:</span><span>${plan.sell} جنيه</span></div><div class="order-row" style="color:#34d399;"><span>💰 التوفير:</span><span>${saving} جنيه</span></div></div><form onsubmit="handleOrderSubmit(event)"><div class="form-group" id="group-name"><label class="form-label">الاسم بالكامل</label><input type="text" id="clientName" class="form-input" placeholder="اكتب اسمك هنا..." required><div class="form-error">يرجى كتابة الاسم</div></div><div class="form-group" id="group-gov"><label class="form-label">المحافظة</label><select id="clientGov" class="form-select" required><option value="" disabled selected>اختر المحافظة...</option>${govOptions}</select><div class="form-error">يرجى اختيار المحافظة</div></div><button type="submit" class="whatsapp-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>إرسال الطلب عبر WhatsApp</button></form>`;
     showModal();
 }
 
@@ -2354,13 +2354,13 @@ function handleOrderSubmit(e) {
     if (!cleanName || !gov.value || !currentSelectedPlan) return;
     const saving = currentSelectedPlan.company - currentSelectedPlan.sell;
     showOrderReview(e.currentTarget, [
-        ['??? ??????', currentSelectedPlan.typeName],
-        ['?????', `${currentSelectedPlan.value} ${currentSelectedPlan.unit}`],
-        ['??? ????? ???????', `${currentSelectedPlan.sell} ????`],
-        ['??????? ???????', `${saving} ????`],
-        ['?????', cleanName],
-        ['????????', gov.value]
-    ], `??????? ???? ???????? ?? ????.\n?????: ${cleanName}\n????????: ${gov.value}\n??? ??????: ${currentSelectedPlan.typeName}\n??????: ${currentSelectedPlan.value} ${currentSelectedPlan.unit}\n??? ?????: ${currentSelectedPlan.sell} ????\n???????: ${saving} ????`);
+        ['نوع الباقة', currentSelectedPlan.typeName],
+        ['السعة', `${currentSelectedPlan.value} ${currentSelectedPlan.unit}`],
+        ['سعر البيع المعروض', `${currentSelectedPlan.sell} جنيه`],
+        ['التوفير المعروض', `${saving} جنيه`],
+        ['الاسم', cleanName],
+        ['المحافظة', gov.value]
+    ], `مرحبًا، أريد الاشتراك في باقة.\nالاسم: ${cleanName}\nالمحافظة: ${gov.value}\nنوع الباقة: ${currentSelectedPlan.typeName}\nالباقة: ${currentSelectedPlan.value} ${currentSelectedPlan.unit}\nسعر البيع: ${currentSelectedPlan.sell} جنيه\nالتوفير: ${saving} جنيه`);
 }
 
 // ===== TOAST =====
@@ -2388,7 +2388,7 @@ class Particle {
         this.size = Math.random() * 1.2 + 0.3;
         this.speedX = (Math.random() * 0.15) - 0.075;
         this.speedY = (Math.random() * 0.15) - 0.075;
-        // ????? ????????: ???? ????? ?????
+        // ألوان الجزيئات: أزرق وذهبي وأبيض
         this.color = ['#3b82f6','#60a5fa','#ffffff'][Math.floor(Math.random()*3)];
     }
     update() {
@@ -2450,7 +2450,7 @@ function setMobileNavigation(open) {
     hamburger.classList.toggle('active', open);
     navLinks.classList.toggle('active', open);
     hamburger.setAttribute('aria-expanded', String(open));
-    hamburger.setAttribute('aria-label', open ? '????? ????? ??????' : '??? ????? ??????');
+    hamburger.setAttribute('aria-label', open ? 'إغلاق قائمة التنقل' : 'فتح قائمة التنقل');
 }
 hamburger.addEventListener('click', () => setMobileNavigation(!navLinks.classList.contains('active')));
 document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => setMobileNavigation(false)));
@@ -2502,7 +2502,7 @@ updateOfflineNotice();
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('./service-worker.js')
-            .catch(error => console.error('???? ????? ???? ?????? ????? ??? ?????:', error));
+            .catch(error => console.error('تعذر تسجيل عامل الخدمة للعمل دون اتصال:', error));
     });
 }
 
@@ -2510,8 +2510,8 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
 document.addEventListener('DOMContentLoaded', () => {
     resizeCanvas(); animateCanvas(); loadServices(); observeFadeUp();
     renderBudgetRecommendation();
-    renderPackages(unitsPlans, '?????', 'units');
-    // ?? ??? ??????? renderLines ??? ????? ?? ????
+    renderPackages(unitsPlans, 'وحدات', 'units');
+    // تم حذف استدعاء renderLines لأن القسم تم حذفه
 });
 </script>
 </body>
